@@ -1,8 +1,6 @@
 ## Welcome to DI 502: Data Informatics Course - Fall 2026
 
-This repository holds the markdown templates for your project documentation as well as further instructions on setting up Confluence, Jira, and online resources to help build your project.
-
-## Contents
+Contents
 
 - [How to start on Confluence](#how-to-start-on-confluence)
   - [Adding reviewer accounts](#adding-reviewer-accounts)
@@ -18,11 +16,11 @@ Below is an updated guide on how to set up your Confluence space and invite your
 
 1. Ideally create a new Confluence instance using this [link](https://www.atlassian.com/try/cloud/signup?bundle=confluence&edition=free) if you have not created one.
 2. Copy the link provided to invite your team members and us onto your Confluence space. (Link is valid for 30 days.) If you skip that step, you can manually invite members as such:
-    1. Invite other collaborators from this link: **`[group_name].atlassian.net/admin/users`**
-    2. To add them to your space, visit "space settings" for your project.
-    3. Under space permissions click "users".
-    4. Click "edit" and search for internal users. Add each collaborator.
-    5. For each, click select all for permissions.
+   1. Invite other collaborators from this link: **`[group_name].atlassian.net/admin/users`**
+   2. To add them to your space, visit "space settings" for your project.
+   3. Under space permissions click "users".
+   4. Click "edit" and search for internal users. Add each collaborator.
+   5. For each, click select all for permissions.
 
 ### Adding reviewer accounts
 
@@ -32,11 +30,12 @@ Each group must invite this email address to both their Confluence and Jira proj
 
 And the reviewer account assigned to your specific team:
 
-| Team        | Reviewer account                                                  |
-|-------------|-------------------------------------------------------------------|
-| Chunky      | [di.502.reviewer.2@proton.me](mailto:di.502.reviewer.2@proton.me) |
-| Eliza | [di.502.reviewer.3@proton.me](mailto:di.502.reviewer.3@proton.me) |
-| Promp Fiction   | [di.502.reviewer.4@proton.me](mailto:di.502.reviewer.4@proton.me) |
+
+| Team                    | Reviewer account                                                  |
+| ----------------------- | ----------------------------------------------------------------- |
+| Chunky                  | [di.502.reviewer.2@proton.me](mailto:di.502.reviewer.2@proton.me) |
+| Eliza                   | [di.502.reviewer.3@proton.me](mailto:di.502.reviewer.3@proton.me) |
+| Promp Fiction           | [di.502.reviewer.4@proton.me](mailto:di.502.reviewer.4@proton.me) |
 | Rag Against the Machine | [di.502.reviewer.5@proton.me](mailto:di.502.reviewer.5@proton.me) |
 
 When adding reviewer accounts, consider giving them **read-only** access. (Managing permissions is only possible during the 30 day premium trial. After that you will be on the free plan.)
@@ -46,13 +45,13 @@ Whether you choose to send an invite link, or invite manually, please send a rem
 ### Setting up Github actions workflow for Confluence integration
 
 1. Go to https://id.atlassian.com/manage-profile/security/api-tokens and choose Create API token (the classic kind, not "with scopes"). Copy it; Atlassian shows it only once.
-2. In Github, go to Settings → Secrets and variables → Actions. On the Secrets tab, add: 
-    * `CONFLUENCE_EMAIL`: Your user email
-    * `CONFLUENCE_API_TOKEN`: The api token you created
-3. On the Variables tab, add: 
-    * `CONFLUENCE_BASE_URL`: `https://<site>.atlassian.net`
-    * `CONFLUENCE_SPACE_KEY`: `KEY` in /wiki/spaces/<KEY>/… 
-    * `DOCS_DIR`: `docs/Markdown Template` (Directory where the template lives in)
+2. In Github, go to Settings → Secrets and variables → Actions. On the Secrets tab, add:
+   * `CONFLUENCE_EMAIL`: Your user email
+   * `CONFLUENCE_API_TOKEN`: The api token you created
+3. On the Variables tab, add:
+   * `CONFLUENCE_BASE_URL`: `https://<site>.atlassian.net`
+   * `CONFLUENCE_SPACE_KEY`: `KEY` in /wiki/spaces/<KEY>/…
+   * `DOCS_DIR`: `docs/Markdown Template` (Directory where the template lives in)
 
 ## Instructions on User Story Mapping and Sprint Planning
 
@@ -63,6 +62,7 @@ We recommend these resources if you haven't drafted a user story before:
 
 > [!TIP]
 > We highly recommend using these collaborative tools:
+>
 > * [Miro](https://miro.com/) for user story mapping to identify which features are needed for your application,
 > * [Scrum Powder - Sprint Planning](https://scrumpowder.com/planning) for story point estimation with poker planning and
 > * [Scrum Powder - Retro](https://scrumpowder.com/retro) for having sprint retrospectives.
@@ -82,14 +82,15 @@ We recommend these resources if you haven't drafted a user story before:
 
 Once you create user stories and tasks associated with them, make sure to:
 
-1. Assign specific people to the task, 
-2. Define acceptance criteria in the description field, and 
+1. Assign specific people to the task,
+2. Define acceptance criteria in the description field, and
 3. Report the story point estimates in the "Story Point Estimate" field.
 
 > [!WARNING]
 > We don't recommend adding "subtasks" to divide big tasks as they cannot have story points and thus cannot be tracked. Make sure each task can be completed in one sprint (3 weeks) at most and by one member at least.
 
 ## Additional resources on Agile/Scrum
+
 To be more familiar with Scrum framework, or Agile practices, be sure to check out the following websites and videos:
 
 * https://www.atlassian.com/agile/scrum
