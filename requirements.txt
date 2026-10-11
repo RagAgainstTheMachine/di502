@@ -1,0 +1,1 @@
+# Pinned dependencies, exact versions only (e.g. package==1.2.3)

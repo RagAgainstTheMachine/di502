@@ -1,0 +1,10 @@
+# All RAG parameters live here.
+chunking:
+  size:
+  overlap:
+models:
+  embedding:
+  llm:
+retrieval:
+  top_k:
+prompt_variant:

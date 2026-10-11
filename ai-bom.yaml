@@ -1,0 +1,10 @@
+# AI Bill of Materials (required from Sprint 2)
+# Lists everything that affects an answer: code, dependencies, models,
+# documents, prompts, configuration and the evaluation set.
+code:
+dependencies:
+models:
+documents:
+prompts:
+config:
+eval_set:
