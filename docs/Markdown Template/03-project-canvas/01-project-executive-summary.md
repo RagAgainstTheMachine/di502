@@ -1,6 +1,4 @@
-# Project Executive Summary: Türkiye AI Policy Assistant (DRAFT v0.7)
-
-> Draft prepared on 6 October 2026 for team review. Items in **[brackets]** are open: values to be measured, people to be named, or targets the team must confirm. All target levels below are **proposals** and must be confirmed or revised before the charter is baselined at the end of Sprint 1.
+# Project Executive Summary
 
 ## Background
 
@@ -35,7 +33,6 @@ In August 2026, Presidential Circular 2026/9 put the Türkiye AI Action Plan (20
 
 Staff in Turkish public institutions, and the researchers who study AI policy, can find what Türkiye's AI policy says in one place and in their own words, and can tell binding rules apart from plans, recommendations and bills.
 
-> **Status:** Background, Stakeholders and Vision agreed by Batuhan on 6 October 2026. Objectives revised on 6 October 2026 (v0.5): 10 pilot participants, test set of 30 in-scope + 10 out-of-scope questions, neutral participant wording, all objectives owned by the Product Owner (Archetype 1). v0.6: scope exclusion for unpublished implementation guidance added. v0.7 (6 Oct 2026, decided by Batuhan): primary user redefined as staff who must understand and explain the policy; the assistant works in Turkish; MEB plan, the four AI bills and the 2021–2025 Strategy kept as reserve documents.
 
 ### 2.2–2.4 Objectives, success criteria and business outcomes
 
@@ -78,19 +75,3 @@ Exclusions (case-specific legal assessments, predictions about the final AI law,
 [6] TBMM bills (kanun teklifleri) 2/2234, 2/3358, 2/3404, 2/3634.
 [7] S. K. Köse et al., "RAGTurk: Best Practices for Retrieval Augmented Generation in Turkish," EACL 2026 SIGTURK, arXiv:2602.03652.
 [8] T.C. Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı, 2026 Yılı Cumhurbaşkanlığı Yıllık Programı, October 2025.
-
----
-
-## Appendix (for the 7 October presentation): scope statement in the lecture format
-
-
-| Field               | Content                                                                                                                                                                                                                                                                                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Need                | Public institutions must carry out the 2026–2030 AI Action Plan, but the applicable rules are spread across documents from eight official sources with different legal weight, and there is no AI law yet.                                                                                                                                            |
-| Users               | Staff in the strategy, legal and training units of public institutions who must understand and explain Türkiye's AI policy (primary); AI-policy researchers and graduate students (secondary)                                                                                                                                                         |
-| Goal                | Answer AI-policy questions with references to the official source, and show whether each source is binding                                                                                                                                                                                                                                             |
-| Document repository | Action Plan 2026–2030 and Circular 2026/9; AI-related measures of the 2026 Presidential Annual Programme; Law 6698 and the KVKK generative-AI guide; TBMM AI Commission Report (law and recommendations sections); TÜBİTAK AI Policy. Reserve: MEB AI-in-education plan, four AI bills, National AI Strategy 2021–2025                             |
-| In scope            | Institutional obligations under the Action Plan, lead institutions per action, personal data in generative-AI use, whether an AI law exists, parliament's recommendations, an example institutional AI policy                                                                                                                                          |
-| Out of scope        | Case-specific legal assessments, predictions about the final AI law, each institution's role in the unpublished responsibility matrix, implementation guidance not yet published (roadmap templates, checklists), whether the plan applies to a specific body, institutions' internal rules, foreign regulation, changes since the 2021–2025 strategy |
-| Constraints         | Official sources only; every answer carries a "this is not legal advice" notice; bills are always shown as not in force; no personal data is requested from users; the assistant works in Turkish                                                                                                                                                      |
-| Acceptance criteria | At least 25 of 30 test questions answered correctly; at least 9 of 10 out-of-scope questions declined; legal status correct in at least 29 of 30 answers (team sets the targets)                                                                                                                                                                       |
