@@ -1,222 +1,39 @@
 # Assumptions & Constraints
 
-This page records what your plan rests on. It has two parts:
-
-- An **assumption** is something you treat as true for planning, but have not proven yet. It is a documented bet that you commit to checking.
-- A **constraint** is a fixed limit you must work within. It is not uncertain. It bounds the project, especially its scope.
-
-"The dataset will be sufficient" is a weak assumption. "Sufficient" is not defined, nobody can test it, and nobody is responsible for checking it. A strong version says what the bet is based on, how it will be checked, by whom and by when: "The supplied dataset of about 12,000 labelled queries covers the 8 intents in scope, with at least 300 examples each. The Data Scientist preparing the data checks this with an exploratory analysis by the end of Sprint 1." (numbers illustrative only)
-
-The project uses RAG as its basic solution; this is a constraint set by the Project Review Committee, so it should be reflected here.
-
-## Assumption, constraint, risk or out of scope?
-
-Each statement belongs in exactly one place. Use this table to decide where.
-
-| Entry | What it is | Question it answers | Where it goes |
-|---|---|---|---|
-| **Assumption** | An uncertain belief you plan around, not yet proven | What are we betting on, and how will we check it? | Table 1 on this page |
-| **Constraint** | A fixed limit, not uncertain; a rule that limits how the in-scope work is done | What can we not change? | Table 2 on this page |
-| **Risk** | An uncertain event that would hurt the project if it happens | What could go wrong, and what will we do about it? | [Risks](03-project-canvas_v2/11-risks.md) |
-| **Out-of-scope activity** | Work the team will not do at all | What are we not building? | [Major Activities](03-project-canvas_v2/04-major-activities.md), Status = Out of Scope |
-
-## How the entries connect
-
-**Every assumption has a risk on its flip side.** If you assume the dataset covers the in-scope categories, the matching risk is that some categories are under-represented and perform poorly. Log the assumption here and register the matching risk in [Risks](03-project-canvas_v2/11-risks.md). Cross-reference them by ID, for example A-03 ↔ R-07. An assumption that might not hold must always appear in Risks with a response plan.
-
-**A constraint often creates or removes work.** Write such a decision as three statements, one per place, each pointing to the others:
-
-1. The constraint (this page): the rule the system must obey.
-2. An in-scope activity ([Major Activities](03-project-canvas_v2/04-major-activities.md)): the work you do because of the rule.
-3. An out-of-scope activity ([Major Activities](03-project-canvas_v2/04-major-activities.md)): the features you give up because of it.
-
-The uncertain part of a constraint becomes a risk, and the in-scope activity is its mitigation.
-
-**Scope protects your assumptions.** Define the intended operating domain (users, inputs, languages, categories) and list what is out of scope. Your assumptions then only have to hold inside that boundary. A failure outside the boundary is a documented limitation, not a broken assumption.
-
-**One concern can produce several entries.** For example:
-
-| Entry | Example |
-|---|---|
-| Constraint | The project will be developed by four students. No additional recruitment is possible. |
-| Risk | A member of the team may leave the team or cannot dedicate the required time. |
-| Assumption | All defined team members will remain enrolled in the course and continue participation for the full duration of the project. |
-
-To make that assumption checkable, give it an owner and a validation date, for example "checked at each sprint start by the named member" (illustrative only).
-
-## Fields
-
-### Table 1: Assumptions
-
-| Field | What it means | Question it answers |
-|---|---|---|
-| **#** | ID in the form A-01, A-02, … | Which risk refers to this assumption? |
-| **Assumption** | The belief, stated with numbers or a named condition | What exactly are we betting on? |
-| **Basis** | The evidence the belief rests on | Based on what? |
-| **Validation** | How the belief will be checked, and the date or sprint | How and by when will we know? |
-| **Owner** | The named person who does the check | Who is responsible for checking? |
-| **Linked risk** | ID of the matching risk in [Risks](03-project-canvas_v2/11-risks.md) | What happens if the bet is wrong? |
-
-### Table 2: Constraints
-
-| Field | What it means | Question it answers |
-|---|---|---|
-| **#** | ID in the form C-01, C-02, … | Which activities and risks refer to this constraint? |
-| **Category** | One of the five layers used in [Risks](03-project-canvas_v2/11-risks.md): Data, Model, Infrastructure, Integration, People / process | What kind of limit is this? |
-| **Constraints** | The fixed limit, stated as a fact | What can we not change? |
-| **Linked activities / risks** | IDs or row numbers in [Major Activities](03-project-canvas_v2/04-major-activities.md) and [Risks](03-project-canvas_v2/11-risks.md) | What work does it create or remove, and what is uncertain about it? |
-
-Legal, budget and schedule limits all go under People / process. Technical limits go under Data, Model, Infrastructure or Integration, so that you can describe the technical side in more detail.
-
-## Rules
-
-Assumptions:
-
-1. An assumption could turn out false, and being wrong would visibly change the plan. If it couldn't be wrong, or being wrong wouldn't matter, delete it.
-2. An assumption is specific. It uses no undefined words such as "sufficient", "enough" or "stable" without a number.
-3. An assumption states its basis.
-4. An assumption has a validation method, a date or sprint, and a named owner.
-5. An assumption has a linked risk in [Risks](03-project-canvas_v2/11-risks.md).
-6. An assumption concerns a matter outside the project's control. A commitment the team makes about its own work is a plan, not an assumption.
-7. These are not assumptions:
-   - The performance of the selected LLM, embedding model or API ("the API will work seamlessly"). Handle these as risks.
-   - Expected user behaviour ("users will ask contextually related questions"). Define the input boundary as a constraint instead.
-   - Having enough resources, such as cloud credits. This is a constraint.
-   - "Milestones will be achieved on time". This is a goal.
-   - "The system will not have downtimes". This is a desired outcome; restate it as a risk.
-
-Constraints:
-
-8. A constraint is stated as a fact, not as a hope. Write "Compute is limited to the allocated credit", not "The credit will be enough".
-9. A constraint gives the number or names the rule; it uses no adjectives such as "limited" or "relatively short".
-10. Every constraint has a category, and constraints are grouped by category.
-11. A limit the system operates within is a constraint, for example a user-input boundary or English-only text. Work you will not do goes to [Major Activities](03-project-canvas_v2/04-major-activities.md) as Out of Scope.
-12. A constraint that creates or removes work has its matching in-scope and out-of-scope rows in [Major Activities](03-project-canvas_v2/04-major-activities.md), and each statement points to the others.
-13. "Limited computational resources" is a constraint. The assigned resources fluctuating or failing is a risk.
-
-Both:
-
-14. The same statement does not appear as both an assumption and a constraint. Duplicates are an internal inconsistency in the review error types.
-
-## Tests to apply to your draft
-
-**For each assumption, answer four questions.** If you cannot answer one, fix the row.
-
-1. **Based on what?** Name the evidence.
-2. **Could it be wrong, and would that change the plan?** If not, delete it.
-3. **Who checks it, how, and by when?**
-4. **Is it outside our control?** If not, it is a task or a plan, not an assumption.
-
-**For each constraint, answer three questions.**
-
-1. **Is it fixed?** If it is uncertain, it is an assumption or a risk.
-2. **Is there a number or a named rule?**
-3. **Does it create or remove work?** If yes, the matching rows exist in [Major Activities](03-project-canvas_v2/04-major-activities.md).
-
-## Not this / this
-
-The left column shows weak entries. Each row names the rule it breaks. The corrected version fixes only that defect. Numbers on the right are illustrative only.
-
-| Not this | Rule broken | This |
-|---|---|---|
-| "The dataset has enough entries to sufficiently answer questions." | Vague and untestable, with no owner or date (rules 2–4) | "The supplied dataset has at least 200 entries for each of the 6 in-scope topics. Basis: row counts on the dataset's public page. The Data Scientist preparing the data checks this with a per-topic count by the end of Sprint 1. Linked risk: R-02." |
-| "Users will ask contextually related questions about the indexed content." | Expected user behaviour is not an assumption (rule 7) | Constraint (Model): "The system handles single-turn, fact-seeking questions about the indexed content only." Plus risk: "Users ask out-of-scope questions and receive confident wrong answers." |
-| "The system will not perform complex actions, and will focus on simple questions and answers." | A scope limit written as an assumption (rule 11) | Constraint (Model): "The system answers questions only; it performs no actions on the user's behalf." Plus an out-of-scope row in [Major Activities](03-project-canvas_v2/04-major-activities.md): "Transactions or account actions for the user." |
-| "The project team will have consistent access to the necessary computational resources." | Available resources are a constraint, not an assumption (rule 7) | Constraint (Infrastructure): "Compute is limited to one shared GPU allocation from the university." Plus risk: "The assigned GPU allocation fluctuates or becomes unavailable." |
-| "The external data APIs will remain accessible and stable during the project period." | API behaviour is not an assumption (rule 7) | A row in [Dependencies](03-project-canvas_v2/06-dependencies.md) for the API, and a risk in [Risks](03-project-canvas_v2/11-risks.md): "The external data API changes its endpoints or is unavailable for more than 1 day." |
-| "The free-tier access limits of these APIs will be sufficient for development and testing." | "Sufficient" is vague, and the limit itself is a constraint (rules 2, 7) | Constraint (Integration): "The API free tier allows 500 calls per day." Assumption: "The test plan needs at most 300 calls per day. Basis: planned test-set size × runs per day. Checked by the owner of the evaluation scripts by the end of Sprint 2. Linked risk: R-05." |
-| "The project team will maintain continuous internal coordination and follow sprint planning practices." | Within the team's control, so not an assumption (rule 6) | Remove it. Coordination is planned work; put it in [Major Activities](03-project-canvas_v2/04-major-activities.md) (project management). |
-| "The cloud credit provided will be enough to complete the project." | A constraint stated as a hope (rule 8) | Constraint (People / process): "Compute spending is limited to the cloud credit allocated by the university." Assumption: "Planned experiments use at most 70% of that credit. Basis: cost of the Sprint 1 pilot run. Checked by the Data Scientist running experiments by the end of Sprint 2. Linked risk: R-04." |
-| "Team members have relatively limited time to work on the project." | Adjective instead of a number (rule 9) | Constraint (People / process): "Each team member works on the project at most 5 hours per week." |
-| "The system relies on third-party APIs, so any downtime or API change may affect performance." | Describes an uncertain event, so not a fixed limit (rule 8) | A row in [Dependencies](03-project-canvas_v2/06-dependencies.md) for the reliance, and a risk in [Risks](03-project-canvas_v2/11-risks.md) for the downtime. |
-| "English" listed both as Assumption 1 and as a constraint. | Duplicate entry (rule 14) | Keep only the constraint (Data): "The system is developed and evaluated on English-language text only." |
-
-A good entry to copy: "The dataset is not a data stream, so some information may not be up to date." It is a fixed, specific limit. It could be sharpened with the date range of the data.
-
-## Patterns to use if you are stuck
-
-Assumption patterns. Each one is concrete, could be false, and would change the plan if it were:
-
-- **Representativeness:** the historical data is representative of the data the system will see after deployment.
-- **Label quality:** labels have an error rate below about 5%, checked by manually reviewing a random sample of 200 records.
-- **Expert time:** domain experts are available at least 2 hours per week for labelling questions and result review.
-- **Environment access:** access to the production or staging environment is provided by week 4.
-- **Permission to use data:** using the data for training is permitted under the data agreement and privacy rules, confirmed with the data owner before training begins.
-- **Agreed target:** stakeholders agree that a stated metric value on the held-out test set is acceptable for the first release.
-
-Constraint patterns:
-
-- **User-input boundary:** "The system's functional scope is limited to single-turn, contextually related, fact-seeking queries about the indexed content."
-- **Language:** "Working with English text only."
-- **Team size:** "Four students; no additional recruitment is possible."
-- **Compute limit:** a fixed allocation or quota.
-- **Privacy rule**, written with its activities:
-  - Constraint: "The system shall not persist personally identifiable information (e.g., names, email addresses, national ID numbers) in any database, log or vector index."
-  - In scope ([Major Activities](03-project-canvas_v2/04-major-activities.md)): "Implement PII detection and masking on user inputs before logging." "Configure logs to keep only anonymized interaction data."
-  - Out of scope ([Major Activities](03-project-canvas_v2/04-major-activities.md)): "User accounts, personal profiles, and saved conversation history linked to an identity."
-  - Risk ([Risks](03-project-canvas_v2/11-risks.md)): "Users submit PII in free-text queries, and it ends up in logs or the retrieval index." The masking activity is the mitigation; a review of the logs is the check.
-
-## What doesn't belong here
-
-- **Risk plans** (mitigation, trigger, contingency, owner) go in [Risks](03-project-canvas_v2/11-risks.md). This page keeps only the ID of the linked risk.
-- **Features you will not build** go in [Major Activities](03-project-canvas_v2/04-major-activities.md) as Out of Scope.
-- **Who must deliver what, by when** goes in [Dependencies](03-project-canvas_v2/06-dependencies.md).
-- **The list of tools, compute and data access** goes in [Facilities & Resources](03-project-canvas_v2/09-facilities-and-resources.md). A fixed limit on one of them stays here as a constraint.
-- **Effort and cost figures** go in [Cost & Funding](03-project-canvas_v2/07-cost-and-funding.md).
-- **Goals and targets** go in the objectives of [Project Executive Summary](03-project-canvas_v2/01-project-executive-summary.md).
-- **Milestone dates** go in [Milestones](03-project-canvas_v2/02-milestones.md). A mandated deadline stays here as a constraint.
-
-CONFLICT: the template says the budget constraint is defined in the Project Executive Summary, but it also lists a set budget as a constraint on this page. Until this is resolved, make the two statements identical.
+This page records what the plan rests on. Assumptions are bets we have not proven yet; each has a basis, a check, an owner and a matching risk in [Risks](11-risks.md). Constraints are fixed limits, grouped by category; the work they create or remove is listed in [Major Activities](04-major-activities.md). Owners and their roles are listed in [Project Organization](08-project-organization.md).
 
 ## 1. Assumptions
 
-Add rows as needed.
-
 | # | Assumption | Basis | Validation (how, by when) | Owner | Linked risk |
 |---|---|---|---|---|---|
-| A-01 | | | | | |
-| A-02 | | | | | |
-| A-03 | | | | | |
+| A-01 | 10 pilot participants (public institution staff and AI-policy researchers, all outside the team) take part in all three sessions: the default-state test by 28/10/2026, the beta by 09/12/2026 and the pilot test by 23/12/2026. | Participants are recruited through the team members' and the department's professional contacts; both user groups in the [Project Executive Summary](01-project-executive-summary.md) (stakeholders 1 and 2) are eligible; the number of pop-up questions asked in each session is capped (cap: **[TBC]**) to keep the sessions short. | Written confirmation from 10 participants (stored under pseudonymous IDs only) before the default-state test, by 21/10/2026; attendance re-confirmed before the beta, by 02/12/2026. | Muhammed Batuhan Tezcan (Product Owner) | [R-01](11-risks.md) |
+| A-02 | At least 10 of the 40 evaluation questions can be collected from people outside the team (public institution staff or AI-policy researchers) by 28/10/2026. | The same contacts as A-01; required by D3 acceptance criterion 6 in [Deliverables](05-deliverables.md). | Count of questions marked as external in `docs/eval/eval-set-v1.csv`, 28/10/2026. | Elif Yeşim Koçoğlu (Data Scientist) | [R-02](11-risks.md) |
+| A-03 | No corpus document is amended, replaced or repealed, and none of the pending AI bills is enacted, before 30/12/2026. | The bills are at commission stage [6]; the Action Plan came into force in August 2026 and runs to 2030 [1, 2]. | Check the Resmî Gazete and the TBMM bill status pages at the start of each sprint (14/10, 28/10, 18/11 and 09/12/2026). | Deniz Şenkutlu (Data Engineer) | [R-03](11-risks.md) |
+| A-04 | Every corpus PDF except D04 contains a text layer with correct Turkish characters, so its text can be extracted without retyping and matches the PDF word for word in at least 9 of 10 randomly chosen passages. | D6 in [Deliverables](05-deliverables.md) identifies D04 as the only document to be typed in by hand. | Spot check of 10 random passages in a Sprint 1 learning spike, by 28/10/2026; formal check in the Dataset Report (D6), by 18/11/2026. | Utku Uçar (Data Engineer) | [R-04](11-risks.md) |
+| A-05 | The corpus documents may be stored, indexed and quoted with a citation in the assistant without separate permission from the publishing bodies. | All documents are published free of charge on official websites. Law No. 5846 (FSEK) Art. 31 lets officially published laws, regulations and circulars be reproduced freely; the guide, the commission report and the Annual Programme are not explicitly covered. | Read the terms of use on each source website and record the result in the Third-Party Dataset Register before indexing, by 28/10/2026. | Utku Uçar (Data Engineer) | [R-05](11-risks.md) |
+| A-06 | The legal status of each corpus document (law, binding on the public sector, guidance, plan, report or bill) can be determined from the document itself or its official publication record, without a legal opinion. | Each document names its issuer and type; Presidential Circular 2026/9 is the instrument that made the Action Plan binding on public institutions [1]. | A second team member checks the document inventory against the official sources; the Product Owner confirms it at the M4 checkpoint, 02/11/2026. | Deniz Şenkutlu (Data Engineer) | [R-06](11-risks.md) |
+| A-07 | The Project Review Committee and the Quality Team accept the target levels in the objectives (25 of 30 correct, 27 of 30 cited, 7 of 10 would use again, 29 of 30 legal status correct, 9 of 10 declined with a referral) without asking for higher levels. | The levels were set from the team's own research and reported Turkish RAG results [7]; see [Project Executive Summary](01-project-executive-summary.md). | Review feedback on Charter v1 (due 28/10/2026), read at the start of Sprint 2. | Muhammed Batuhan Tezcan (Product Owner) | [R-07](11-risks.md) |
+| A-08 | Development, evaluation runs and hosting from 14/10/2026 to 30/12/2026 use at most $70 of the $100 credit, leaving $30 in reserve. | The 7 corpus documents are indexed once; the evaluation set has 40 questions; the assistant is hosted online for about 4 weeks (02/12–30/12/2026). | Google Cloud billing report at the end of each sprint; billing budget alert set up with D10 in [Deliverables](05-deliverables.md). | Elif Yeşim Koçoğlu (Data Scientist) | [R-08](11-risks.md) |
+| A-09 | All four team members remain enrolled in DI 502 and take part in the project until 30/12/2026. | All four members are enrolled and hold an assigned role (see [Project Organization](08-project-organization.md)). | Checked at each sprint planning. | Muhammed Batuhan Tezcan (Product Owner) | [R-09](11-risks.md) |
 
 ## 2. Constraints
 
-Group constraints by category. Add rows as needed.
-
 | # | Category | Constraints | Linked activities / risks |
 |---|---|---|---|
-| C-01 | | | |
-| C-02 | | | |
-| C-03 | | | |
+| C-01 | Data | The corpus consists of exactly 7 official documents: D01–D05, D08 and D10. Other documents, including the pending AI bills kept as reserve documents, are not indexed. | [Major Activities](04-major-activities.md): out of scope (foreign regulation, institutions' internal rules, earlier strategies); [Risks](11-risks.md) R-03 |
+| C-02 | Data | D05 is used only for PDF pages 642–806. D08 contains only the AI-related Tedbir entries, each with its number and responsible institution. | [Major Activities](04-major-activities.md): in scope (extract and clean the selected parts); D6 in [Deliverables](05-deliverables.md); [Risks](11-risks.md) R-04 |
+| C-03 | Data | The collection is a fixed snapshot of the documents as downloaded on the collection date. Anything published after that date is not reflected. The collection date is shown to users (Feature 6). | [Major Activities](04-major-activities.md): in scope (record download dates, show the collection date), out of scope (automatic monitoring and updating of sources); [Risks](11-risks.md) R-03; Jira DI502-18 |
+| C-04 | Data | Questions, answers and source documents are in Turkish only. | [Risks](11-risks.md) R-10; Jira DI502-12 |
+| C-05 | Model | The solution is retrieval-augmented generation (RAG), as set by the Project Review Committee: answers are generated only from passages retrieved from the corpus. | [Major Activities](04-major-activities.md): in scope (indexing, retrieval, a prompt that restricts answers to the retrieved passages); [Risks](11-risks.md) R-10 |
+| C-06 | Model | The assistant answers text questions about the content of the corpus, including questions that combine several documents and follow-up questions in the same conversation. It gives no case-specific legal assessments and no predictions about the final AI law; for these and other out-of-scope questions it declines and names the competent authority. | [Project Executive Summary](01-project-executive-summary.md) exclusions; [Major Activities](04-major-activities.md): in scope (refusal prompt and out-of-scope test questions), out-of-scope list; [Risks](11-risks.md) R-11; Jira DI502-13, DI502-14 |
+| C-07 | Infrastructure | From Cloud deployment v1 (D10, 02/12/2026) onwards, the assistant is hosted on Google Cloud; the alpha runs on a local web page. | D10 in [Deliverables](05-deliverables.md); [Risks](11-risks.md) R-08 |
+| C-08 | Integration | Users reach the assistant only through a web page in a browser. The page has no user accounts and no field for personal data. | [Major Activities](04-major-activities.md): out of scope (user accounts, mobile app); C-11; [Risks](11-risks.md) R-12 |
+| C-09 | People / process | **Budget:** $100 of Google Cloud credits (fixed, per project). | Same statement as in [Project Executive Summary](01-project-executive-summary.md); [Cost & Funding](07-cost-and-funding.md); [Risks](11-risks.md) R-08 |
+| C-10 | People / process | **Duration:** 4 sprints. **Timeline:** 14 October 2026 to 30 December 2026. Charter v1 is due on 28/10/2026; the release candidate is shown at the final presentation on 30/12/2026. | [Milestones](02-milestones.md) M2, M16 |
+| C-11 | People / process | No personal data of users or pilot participants is stored in any database, log, vector index or evaluation file (Law No. 6698). Pilot participants are recorded only by a pseudonymous ID. Conversation context for follow-up questions is kept only for the open session. | [Major Activities](04-major-activities.md): in scope (mask personal data in questions before logging, pseudonymous participant IDs), out of scope (user accounts, saved conversation history); [Risks](11-risks.md) R-12; Jira DI502-20 |
+| C-12 | People / process | Four students: Muhammed Batuhan Tezcan (Product Owner), Elif Yeşim Koçoğlu (Data Scientist), Utku Uçar (Data Engineer) and Deniz Şenkutlu (Data Engineer). No additional recruitment is possible. | [Project Organization](08-project-organization.md); [Major Activities](04-major-activities.md): project management (All stages, pull request reviews); [Risks](11-risks.md) R-09 |
+| C-13 | People / process | DI 502 course rules: planning is done in Jira; documentation is kept as Markdown in Git and synced to Confluence; every branch, commit and pull request carries a Jira key; experiment results are logged in Weights & Biases; all parameters live in `config/rag.yaml`; the evaluation set is fixed before any experiment. | [Major Activities](04-major-activities.md): project management (All stages) |
 
-## Example (illustrative only)
+## References
 
-Scenario: a legal research assistant, a RAG chatbot over legal documents. All names, numbers and dates are illustrative.
-
-| # | Assumption | Basis | Validation (how, by when) | Owner | Linked risk |
-|---|---|---|---|---|---|
-| A-01 | The document set (statutes and case summaries, 2015 onward) covers the 5 practice areas in scope, with at least 150 documents each. | Index listing published by the data provider | Per-area document count, end of Sprint 1 | Data Scientist (named member) | R-01 |
-| A-02 | A legal expert is available at least 2 hours per week to review answers. | Verbal agreement at kick-off | Confirm in writing; check attendance at each sprint review | Business Analyst (named member) | R-06 |
-| A-03 | Using the documents for retrieval is permitted under their licence. | Licence text on the provider's site | Confirm with the data owner before indexing, Sprint 1 | Business Analyst (named member) | R-07 |
-| A-04 | The allocated GPU quota supports the latency target for 20 concurrent users. | Vendor benchmark for the chosen model size | Capacity test, end of Sprint 2 | Data Scientist, infrastructure (named member) | R-04 (the latency example in [Risks](03-project-canvas_v2/11-risks.md)) |
-
-| # | Category | Constraints | Linked activities / risks |
-|---|---|---|---|
-| C-01 | People / process | Four students; no additional recruitment; at most 5 hours per member per week. | [Risks](03-project-canvas_v2/11-risks.md) R-08 |
-| C-02 | Infrastructure | Compute is limited to the cloud credit allocated by the university. | [Facilities & Resources](03-project-canvas_v2/09-facilities-and-resources.md) row 1; [Risks](03-project-canvas_v2/11-risks.md) R-04 |
-| C-03 | People / process | The system shall not persist PII in any database, log or vector index. | [Major Activities](03-project-canvas_v2/04-major-activities.md) rows 7 (in scope: masking) and 12 (out of scope: user accounts); [Risks](03-project-canvas_v2/11-risks.md) R-03 |
-| C-04 | Model | Single-turn, fact-seeking questions about the indexed documents only; English text only. | [Major Activities](03-project-canvas_v2/04-major-activities.md) row 13 (out of scope: multi-turn memory) |
-| C-05 | Integration | The hosted LLM API allows 500 calls per day on the academic tier. | [Facilities & Resources](03-project-canvas_v2/09-facilities-and-resources.md) row 2; [Risks](03-project-canvas_v2/11-risks.md) R-05 |
-
-## Checklist before submitting
-
-- [ ] Every assumption could turn out false, and being wrong would change the plan (rule 1)
-- [ ] No assumption uses an undefined word such as "sufficient", "enough" or "stable" (rule 2)
-- [ ] Every assumption has a Basis (rule 3)
-- [ ] Every assumption has a validation method, a date or sprint, and a named owner (rule 4)
-- [ ] Every assumption has a Linked risk, and that risk exists in [Risks](03-project-canvas_v2/11-risks.md) with the same ID (rule 5)
-- [ ] No assumption is about the team's own work, model or API performance, user behaviour, available resources, goals or desired outcomes (rules 6–7)
-- [ ] Every constraint is stated as a fact, with a number or a named rule and no adjectives (rules 8–9)
-- [ ] Every constraint has one of the five categories, and constraints are grouped by category (rule 10)
-- [ ] Every constraint that creates or removes work has its rows in [Major Activities](03-project-canvas_v2/04-major-activities.md), and the IDs point both ways (rules 11–12)
-- [ ] No statement appears as both an assumption and a constraint (rule 14)
-- [ ] The budget statement here matches the one in [Project Executive Summary](03-project-canvas_v2/01-project-executive-summary.md)
+References [1]–[8] are listed in [Project Executive Summary](01-project-executive-summary.md).
