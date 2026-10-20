@@ -1,101 +1,32 @@
 # Major Activities
-
-Expand on the scope definition by outlining the major activities required to complete the project. Structure these around the AI system life cycle stages of ISO/IEC 5338 [1], listed below.
-
-Include activities such as project management, feature engineering, model training, performance evaluation and analysis.
-
-Mark each activity as In Scope or Out of Scope to reduce ambiguity.
-
-Add rows as required. The table should give a summary view; add narrative explanation below it where more detail is needed. Activities can be linked to Jira from this page.
-
-## Life cycle stages
- 
-Give every activity one stage from this table. The stage names and the processes in each stage come from ISO/IEC 5338 [1]; the typical activities are paraphrased for this course.
- 
-| Stage | Typical activities | ISO/IEC 5338 processes in this stage |
-|---|---|---|
-| **Inception** | Define the problem, the AI customer's needs and the success criteria; set model requirements; decide whether AI is needed at all | 6.4.1 Business or mission analysis; 6.4.2 Stakeholder needs and requirements definition; 6.4.3 System requirements definition |
-| **Design and development** | Architecture and design; acquire, label, explore, clean and prepare data; protect sensitive data; feature engineering; train and tune models; integrate components | 6.4.4–6.4.6; 6.4.7 Knowledge acquisition; 6.4.8 AI data engineering; 6.4.9 Implementation; 6.4.10 Integration |
-| **Verification and validation** | Test the model and system before deployment; check them against the AI customer's needs | 6.4.11 Verification; 6.4.13 Validation |
-| **Deployment** | Move the model and system into the environment where AI users reach it | 6.4.12 Transition |
-| **Operation and monitoring** | Run the system; fix and retrain it when needed | 6.4.15 Operation; 6.4.16 Maintenance |
-| **Continuous validation** | Monitor data drift, concept drift and other changing requirements after deployment; decide when to retrain | 6.4.14 Continuous validation |
-| **Re-evaluation** | Review results against the original needs; feed changes back to Inception or Design and development | 6.3.8 Quality assurance; 6.4.2; 6.4.13 |
-| **Retirement** | Decommission the system and its data | 6.4.17 Disposal |
- 
-Project management work (sprint planning, documentation, reviews, risk tracking) runs across every stage, as risk management and governance do in the standard [1]. Write **All stages** for these rows.
- 
-Stages group work in a rough order, but they need not happen one after another. In agile work, stages can run at the same time and can repeat [1].
-
-## In Scope and Out of Scope
-
-| Status | What it means | Question it answers |
-|---|---|---|
-| **In Scope** | Work the team will do | What will we build or carry out? |
-| **Out of Scope** | Work the team will not do at all | What are we deliberately not building? |
-
-An out-of-scope activity is not the same as a constraint. A constraint is a rule that limits how the in-scope work is done; it goes in [Assumptions & Constraints](03-project-canvas_v2/03-assumptions-and-constraints.md). If you want to show that the project's scope is narrow (for example, you plan no information-elicitation phase), list that here as Out of Scope. Limits on the system's inputs, such as a user-input boundary or English-only text, are constraints.
-
-## Activities that come from a constraint
-
-Many constraints create work and remove work at the same time. Write the decision as three statements, one per place, each pointing to the others:
-
-| Where | What it says | Example wording |
-|---|---|---|
-| Constraint ([Assumptions & Constraints](03-project-canvas_v2/03-assumptions-and-constraints.md)) | The rule the system must obey | "The system shall not persist personally identifiable information (e.g., names, email addresses, national ID numbers) in any database, log, or vector index." |
-| In Scope (this page) | The work you do because of the constraint | "Implement PII detection and masking on user inputs before logging." "Configure logs to retain only anonymised interaction data." |
-| Out of Scope (this page) | The features you give up because of it | "User accounts, personal profiles, and saved conversation history linked to an identity." |
-
-**Do not skip the In Scope row.** Users will type names, emails or account numbers into a chatbot whether you invite them to or not. A rule such as "no PII stored" is not true just because you did not build a profile feature; enforcing it takes work. That work belongs here, in the backlog and in the estimates. Count its effort in [Cost & Funding](03-project-canvas_v2/07-cost-and-funding.md).
-
-The uncertain part becomes a risk in [Risks](03-project-canvas_v2/11-risks.md), and the in-scope activity is its mitigation. For the example above, the risk is "Users submit PII in free-text queries, and it ends up in logs or the retrieval index".
-
-## Knock-on effect on user stories
-
-Once a constraint is in the charter, a user story that contradicts it is an inconsistency between documents. The review error types call this an External Inconsistency. For example, "As a returning analyst, I want to see my previous questions" contradicts a no-PII rule. Either drop such a story, or rewrite it so the history lives only in the session and is not stored.
-
-## Rules
-
-1. Every activity has exactly one stage from the life cycle table above, spelled as there, or **All stages** for project management work.
-2. Every activity is marked In Scope or Out of Scope.
-3. Every Out of Scope row says why in its Description, as row 2 below does.
-4. Every constraint in [Assumptions & Constraints](03-project-canvas_v2/03-assumptions-and-constraints.md) that creates work has at least one In Scope row here, and every constraint that removes features has at least one Out of Scope row here.
-5. Rows created by a constraint name the constraint ID in their Description (for example "Because of C-03").
-6. User authentication and PII storage, if you do not plan them, are listed as Out of Scope.
-7. Activities do not increase the scope of the project beyond the first proposal.
-
-## What doesn't belong here
-
-- **Rules the system must obey** go in [Assumptions & Constraints](03-project-canvas_v2/03-assumptions-and-constraints.md) as constraints.
-- **What could go wrong** with an activity goes in [Risks](03-project-canvas_v2/11-risks.md).
-- **The order in which activities must happen**, when one blocks another, goes in [Dependencies](03-project-canvas_v2/06-dependencies.md).
-- **Effort in person-hours** goes in [Cost & Funding](03-project-canvas_v2/07-cost-and-funding.md).
-
-## Activities
- 
 | # | Stage | Activity | Description | Status | Jira Task |
 |---|---|---|---|---|---|
-| 1 | Inception | Define chatbot purpose, users, and success criteria | Completed as part of project chartering. (See Project Executive Summary above) | In Scope | |
-| 2 | Inception | Market/competitive analysis of existing chatbot products | Not needed for an academic proof-of-concept | Out of Scope | |
-| 3 | | | | | |
- 
-## Example (illustrative only)
- 
-An excerpt from a longer table for a legal research assistant (a RAG chatbot over legal documents). It shows the rows created by constraints C-03 and C-04 in the example on `03-assumptions-and-constraints.md`.
- 
-| # | Stage | Activity | Description | Status | Jira Task |
-|---|---|---|---|---|---|
-| 7 | Design and development | Mask PII in user inputs before logging | Because of C-03. Detect names, emails and ID numbers in queries and mask them before any log write. Mitigation for R-03. | In Scope | (link) |
-| 8 | Deployment | Configure logs to keep only anonymized interaction data | Because of C-03. | In Scope | (link) |
-| 12 | Design and development | User accounts, personal profiles and saved conversation history | Because of C-03: these would require storing PII. | Out of Scope | |
-| 13 | Design and development | Multi-turn dialogue memory | Because of C-04: the system handles single-turn questions only. | Out of Scope | |
-
-## Checklist before submitting
-
-- [ ] Every activity has one ISO/IEC 5338 life cycle stage, or All stages (rule 1)
-- [ ] Every activity is marked In Scope or Out of Scope (rule 2)
-- [ ] Every Out of Scope row says why (rule 3)
-- [ ] Every work-creating constraint in [Assumptions & Constraints](03-project-canvas_v2/03-assumptions-and-constraints.md) has an In Scope row, and every feature-removing constraint has an Out of Scope row (rule 4)
-- [ ] Rows created by a constraint name its ID (rule 5)
-- [ ] User authentication and PII storage are listed as Out of Scope if you do not plan them (rule 6)
-- [ ] No activity goes beyond the first proposal's scope (rule 7)
+| 1 | Inception | Define the assistant's purpose, users and success criteria | Completed during chartering (see [Project Executive Summary](01-project-executive-summary.md), objectives 1–5). | In Scope | |
+| 2 | Inception | Market/competitive analysis of existing chatbot products | Not needed for an academic proof-of-concept. | Out of Scope | |
+| 3 | Inception | Write user stories and the User Story Map | Stories for features F1–F7, with acceptance criteria, priority, story points and assignee in Jira. | In Scope | |
+| 4 | Inception | Build evaluation set v1 (D2) | 30 in-scope and 10 out-of-scope questions (including compliance-judgement questions), reference answers and gold sources, a written correctness rule, and 10 randomly selected timed questions for Objective 1. A second member checks every answer (A-02). Because of C-13, the set is fixed before any experiment. | In Scope | |
+| 5 | Inception | Prepare the user sessions and measure the default state (D3) | Personas and task lists checked (A-01); participants recorded only by pseudonymous ID (because of C-11); median time on the 10 timed questions using only the official documents. | In Scope | |
+| 6 | Design and development | Learning spikes and system architecture design | Choose text extraction, embedding model, search index, LLM and web framework for Turkish RAG (because of C-04, C-05). Results in `docs/spikes/`; choices recorded in the System Architecture Design Document. | In Scope | |
+| 7 | Design and development | Collect the documents and build the document inventory | Because of C-03. Check terms of use (A-05); record official URL, licence, download date and SHA-256 in `data/manifest.csv`; record each document's legal status (binding law, policy/plan, guidance, report, institutional policy). The latest download date becomes the collection date. | In Scope | DI502-18 |
+| 8 | Design and development | Extract and clean the selected parts of the corpus (D4) | Because of C-01 and C-02: page cuts and entry selection documented so they can be repeated; hand-typed text where a PDF has no usable text layer; 10-passage spot check (A-04). | In Scope | |
+| 9 | Design and development | Chunk, embed and index the corpus with metadata | Because of C-05. Each chunk carries document, article/section, legal status, date and official URL; glossary terms are kept as separate entries for term definitions (F7). Parameters in `config/rag.yaml`. | In Scope | |
+| 10 | Design and development | Retrieval and grounded answer generation in Turkish | Because of C-04 and C-05. Answers only from retrieved passages, in Turkish, citing document and article/section with a link (F1, F2, F7), and showing each source's legal status from the inventory (F3). Prompts in `prompts/`. | In Scope | DI502-12 |
+| 11 | Design and development | Decline rule for out-of-scope and compliance-judgement questions | Because of C-06, feature F5. The assistant replies with the fixed notice instead of guessing; tested with the 10 out-of-scope questions. | In Scope | DI502-13, DI502-14 |
+| 12 | Design and development | Web chat page | Because of C-08 and C-11. Shows answers with sources, legal status and dates, the collection date (F6) and a "do not enter personal data" notice; keeps follow-up context only for the open session (F4); has no personal-data fields. | In Scope | |
+| 13 | Design and development | Mask personal data before logging | Because of C-11. ID numbers, e-mail addresses and phone numbers are masked before any log write, and logs keep only masked data. Mitigation for R-10. | In Scope | DI502-20 |
+| 14 | Verification and validation | Baseline RAG run and experiments | Because of C-13. All 40 questions run with the committed `config/rag.yaml` and logged in Weights & Biases (part of D5); later experiments change one setting at a time and are compared with the baseline. | In Scope | |
+| 15 | Verification and validation | MVP evaluation (D7) | All 30 in-scope answers judged with the D2 rule against the Objective 2 levels. | In Scope | |
+| 16 | Verification and validation | Pilot evaluation (D9) | Timed test (Objective 1, compared with D3), post-test survey (Objective 3), legal-status review (Objective 4) and out-of-scope test (Objective 5); no participant data stored (C-11). | In Scope | |
+| 17 | Deployment | Deploy on Google Cloud and release the beta (D8) | Because of C-07 and C-09. Alpha runs locally; the beta runs on Google Cloud with a billing budget alert and is given to the pilot participants. | In Scope | |
+| 18 | Deployment | Release candidate and live demo (D10) | Final version shown at the final presentation on 30/12/2026 (C-10). | In Scope | |
+| 19 | Operation and monitoring | Fix pilot defects and track cloud spending | Every pilot defect is fixed or listed with a reason (D10); spending recorded each sprint against the $100 credit (A-06, C-09). | In Scope | |
+| 20 | Continuous validation | Manual check of the sources at the start of each sprint | A-03, C-03. Check the Resmî Gazete and the publishers' sites; report any change to the Product Owner. | In Scope | |
+| 21 | Continuous validation | Automatic monitoring and re-indexing of sources | Because of C-03: the collection is a fixed snapshot with a visible collection date. | Out of Scope | |
+| 22 | Re-evaluation | Update the charter after reviews (D6) and write the final report (D11) | Every review point gets a change or a written rebuttal; the final report gives each objective's target and measured result, plus lessons learned. | In Scope | |
+| 23 | Retirement | Shut down cloud resources and delete logs after the final demo | Because of C-09 and C-11: stops credit use and removes stored interaction data. Hosting after 30/12/2026 is not planned (C-10). | In Scope | |
+| 24 | All stages | Project management | Because of C-12 and C-13: Scrum events and Jira backlog; Jira key on every branch, commit and pull request; Markdown documentation synced to Confluence; a second member reviews every pull request; assumptions, risks and budget reviewed at each sprint planning. | In Scope | |
+| 25 | Design and development | Training or fine-tuning an LLM or embedding model | Because of C-05 (RAG only) and C-09 (fixed $100 credit). | Out of Scope | |
+| 26 | Design and development | Documents outside the collection | Because of C-01: parliamentary bills, foreign regulation, institutions' internal rules, and the history of Türkiye's AI policy or comparisons with earlier strategies. | Out of Scope | |
+| 27 | Design and development | Compliance judgements, predictions and details the documents do not contain | Because of C-06: whether a specific institution's plan or practice complies, predictions about future legislation or policy, and implementation steps a plan says will be prepared later. The assistant declines instead (row 11). | Out of Scope | |
+| 28 | Design and development | Languages other than Turkish | Because of C-04. | Out of Scope | |
+| 29 | Design and development | User accounts, login, saved conversation history and a mobile app | Because of C-08 and C-11: accounts and saved history would require storing personal data; access is through a web page only. | Out of Scope | |
