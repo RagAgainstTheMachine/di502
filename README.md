@@ -44,11 +44,6 @@ Not available yet; instructions will be added with the alpha prototype.
 | `docs/sprints/` | One-page report per sprint |
 | `excess_folders/` | Course material from the template repo (reference only) |
 
-## Working conventions
-
-- Plan work in Jira; put the Jira key in every branch, commit and pull request (e.g. `DI502-31-major-activities`).
-- Never push to `main` directly: open a pull request and get one review.
-- Edit documentation in Git, not in Confluence. Merging to `main` updates Confluence, and direct Confluence edits are overwritten.
 
 ## Team
 
