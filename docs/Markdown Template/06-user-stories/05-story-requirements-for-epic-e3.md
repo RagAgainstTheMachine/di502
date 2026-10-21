@@ -1,5 +1,7 @@
 # Story Requirements for Epic E3: Safe and Trustworthy Use
 
+> **Superseded on 20/10/2026** by [User Story Map v2](02-user-story-map-v2.md) and its story requirement pages. Kept as the record of User Story Map v1.
+
 This will be a space for you to elaborate on stories and requirements for a given epic. (Duplicate page for more story epics.)
 
 | Epic | E3 Safe and Trustworthy Use (charter constraint: no personal data is requested from users) |
