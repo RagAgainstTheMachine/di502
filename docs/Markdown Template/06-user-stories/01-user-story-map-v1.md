@@ -1,5 +1,7 @@
 # User Story Map v1
 
+> **Superseded on 20/10/2026** by [User Story Map v2](02-user-story-map-v2.md) and its story requirement pages. Kept as the record of User Story Map v1.
+
 Plese present the full feature-epic-story-task hierarchy in a map.
 
 Version 1, 11 October 2026. Features are taken from the Project Executive Summary (section 3.1, F1–F6). Jira keys and story points are filled in after the stories are created in Jira and estimated with poker planning.
