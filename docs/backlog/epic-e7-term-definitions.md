@@ -7,13 +7,13 @@
 | Designer | TBD |
 | Developers | Deniz Şenkutlu, Utku Uçar and Elif Yeşim Koçoğlu |
 | Release Target (Sprint) | Sprint 3 |
-| Jira | |
+| Jira | [DI502-41](https://ragathemachine.atlassian.net/browse/DI502-41) |
 
 ## Requirements
 
 | # | User story title | User story description | Priority | Points | Owner | Sprint | Notes | Jira |
 |---|---|---|---|---|---|---|---|---|
-| S1 | Ask what an AI term means | As a training-unit staff member, I want to ask what an AI term means and get the glossary definition, so that I teach the definition the public sector uses. | High | | | Sprint 3 | US-18; F7; O2; Beta | |
+| S1 | Ask what an AI term means | As a training-unit staff member, I want to ask what an AI term means and get the glossary definition, so that I teach the definition the public sector uses. | High | | | Sprint 3 | US-18; F7; O2; Beta | [DI502-42](https://ragathemachine.atlassian.net/browse/DI502-42) |
 
 ## S1 · Ask what an AI term means
 
