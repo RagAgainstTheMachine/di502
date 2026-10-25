@@ -1,0 +1,9 @@
+# Maps the GitHub handles used in the Owner columns to Jira users.
+# Value: the email the person uses to log in to Jira, or their Jira account id.
+# Every owner in docs/backlog must appear here, without the "@".
+#
+# Add the four team mappings after confirming the Jira login emails/account ids.
+# Until then, Owner cells in docs/backlog stay empty so that no issue is assigned
+# to the wrong Jira account.
+
+{}

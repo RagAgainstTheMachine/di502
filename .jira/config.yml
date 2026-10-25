@@ -1,0 +1,45 @@
+# Settings for .jira/jira_sync.py. The defaults work for most Jira Cloud projects.
+# Connection details are NOT here: they come from the repository's Actions
+# variables (JIRA_BASE_URL, JIRA_PROJECT_KEY) and secrets (JIRA_EMAIL, JIRA_API_TOKEN).
+
+# Folder with one markdown file per epic. Files starting with "_" are ignored.
+backlog_dir: docs/backlog
+
+# Branch the sync runs on. Used for "edit this in GitHub" links in Jira descriptions.
+default_branch: main
+
+# Allowed values in the Points columns.
+points_scale: [0, 1, 2, 3, 5, 8, 13]
+
+# Allowed values in the Priority column (must match your Jira priority names).
+priorities: [Highest, High, Medium, Low, Lowest]
+
+# Issue type names in your Jira project. The sub-task type is found automatically.
+issue_types:
+  epic: Epic
+  story: Story
+  task: Task
+
+# Story points field: "auto" tries "Story point estimate" and then "Story Points".
+# You can also give an exact field name or id, e.g. customfield_10016.
+story_points_field: auto
+
+# Acceptance criteria go into the description under a heading by default.
+# If your project has a custom field for them, put its name here instead of "none".
+acceptance_criteria_field: none
+
+# Link created between a Model B task and its story ("task blocks story").
+# Set to "none" to skip links.
+link_type: Blocks
+
+# Labels added to every synced issue. The first one is also used to find
+# issues that were removed from the markdown (they are reported, never deleted).
+labels: [md-sync]
+
+# "Release Target (Sprint)" becomes a label with this prefix, e.g. target-sprint-3.
+release_target_label_prefix: "target-"
+
+# Scrum board whose sprints new issues are placed in. "auto" uses the project's
+# Scrum board; if the project has several, put the board id here (it is the number
+# in the board's URL, e.g. .../boards/12 -> 12).
+board_id: auto

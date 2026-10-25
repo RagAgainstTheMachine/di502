@@ -1,0 +1,164 @@
+name: Jira sync
+
+# Pull request -> check the epic files and comment the plan (nothing is sent to Jira).
+# Push to main -> create/update Jira issues and commit the issue keys back.
+# Manual run   -> "doctor" checks the Jira setup; "sync" re-runs the sync;
+#                 "import" writes Jira issues that no markdown file has yet into
+#                 docs/backlog and opens a pull request with them.
+
+on:
+  pull_request:
+    paths:
+      - "docs/backlog/**"
+      - ".jira/**"
+      - ".github/workflows/jira-sync.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/backlog/**"
+      - ".jira/**"
+      - ".github/workflows/jira-sync.yml"
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "What to run"
+        type: choice
+        options: [doctor, sync, import]
+        default: doctor
+
+env:
+  JIRA_BASE_URL: ${{ vars.JIRA_BASE_URL }}
+  JIRA_PROJECT_KEY: ${{ vars.JIRA_PROJECT_KEY }}
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    concurrency:
+      group: jira-check-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r .jira/requirements.txt
+      - name: Validate epic files
+        id: validate
+        continue-on-error: true
+        run: python .jira/jira_sync.py validate --report jira-report.md
+      - name: Comment the result on the pull request
+        if: always() && github.event.pull_request.head.repo.full_name == github.repository
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: jira-sync
+          path: jira-report.md
+      - name: Fail if the files have errors
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "The epic files have errors. See the pull request comment or the job summary."
+          exit 1
+
+  sync:
+    if: >-
+      (github.event_name == 'push') ||
+      (github.event_name == 'workflow_dispatch' && inputs.command == 'sync')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: jira-sync
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r .jira/requirements.txt
+      - name: Sync to Jira
+        env:
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: python .jira/jira_sync.py sync
+      - name: Commit issue keys back
+        # Runs even if some items failed, so keys of issues that were created are never lost.
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/backlog
+          if git diff --cached --quiet; then
+            echo "No new issue keys to record."
+            exit 0
+          fi
+          git commit -m "chore(jira): record Jira issue keys [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+  doctor:
+    if: github.event_name == 'workflow_dispatch' && inputs.command == 'doctor'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r .jira/requirements.txt
+      - name: Check the Jira setup
+        env:
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: python .jira/jira_sync.py doctor
+
+  import:
+    if: github.event_name == 'workflow_dispatch' && inputs.command == 'import'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    concurrency:
+      group: jira-sync
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r .jira/requirements.txt
+      - name: Import from Jira
+        env:
+          JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        run: python .jira/jira_sync.py import --report import-report.md
+      - name: Open a pull request with the imported issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: jira-import/${{ github.run_id }}
+        run: |
+          if [ -z "$(git status --porcelain docs/backlog)" ]; then
+            echo "Nothing new to import."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add docs/backlog
+          git commit -m "Import Jira issues into the backlog"
+          git push origin "$BRANCH"
+          {
+            cat import-report.md
+            echo
+            echo "_The pull request check doesn't start automatically for pull requests opened by this workflow. It runs as soon as anyone pushes a commit to this branch; the check above was run during the import._"
+          } > pr-body.md
+          if ! gh pr create --base main --head "$BRANCH" --title "Import Jira issues into the backlog" --body-file pr-body.md; then
+            echo "::warning::The branch $BRANCH was pushed, but the pull request could not be opened automatically. Open it by hand from the branch, or turn on 'Allow GitHub Actions to create and approve pull requests' in Settings > Actions > General."
+          fi
