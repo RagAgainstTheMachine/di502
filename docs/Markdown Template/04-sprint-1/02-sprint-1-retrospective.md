@@ -1,17 +1,27 @@
 # Sprint 1 Retrospective
 
-Retrospective meetings allow teams to identify points of strength, issues faced during the sprint, and let members discuss how to handle them next time. The table below is very basic, but feel free to follow a template from Miro:
+##  Overview
 
-Free Retrospective Templates & Examples \| Miro
+| **Date** |  |
+| --- | --- |
+| **Team** | Rag Against The Machine |
+| **Participants** | @Deniz Şenkutlu@batuhan tezcan@utku uçar@Elif Yeşim Koçoğlu |
 
-Sailboat Retrospective Template \| Miro is a good place to start. The link also has descriptions of each item to set the stage for the meeting.
+##  Retrospective
 
-| What went well? | What went bad? | Action | Assigned to |
-|---|---|---|---|
-|   |   |   |   |
+| **Liked** | **Learned** | **Lacked** | **Longed for** |
+| --- | --- | --- | --- |
+| The team was collaborative and supportive | Agile development with Scrum | Confluence usage | A weekly to-do list shared at the start of each week |
+| Meetings were productive | How Github actions works | PR reviews on GitHub | More time to prepare for presentations |
+| The workload was evenly distributed | How to create user stories | Story point estimates for charter-related tasks |  |
+| Everyone delivered on their sprint commitments | How to integrate Jira and Confluence with GitHub | Enough time for the traceability review |  |
+| We responded quickly to the project review committee’s feedback | How to draft a project charter |  |  |
+| We broke tasks down to the right level of detail | How to use Jira and Confluence |  |  |
 
-*Sailboat Retrospective Template* (embedded in the original page; not included here)
 
-## Lessons Learned
+##  Action Items
 
-List lessons learned from the retrospective, with special emphasis on actions to be taken to improve, for example: the development environment, the process, or team collaboration.
+* [ ] Require at least one approving review before any PR can be merged @Rag Against The Machine
+* [ ] Estimate every backlog item in sprint planning, including charter and documentation tasks @Deniz Şenkutlu
+* [ ] Add the traceability review as its own task with a time estimate @batuhan tezcan
+* [ ] Book a dry run before each presentation, with the team as the audience @Rag Against The Machine
