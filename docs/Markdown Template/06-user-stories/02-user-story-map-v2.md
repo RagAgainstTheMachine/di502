@@ -1,8 +1,10 @@
 # User Story Map v2
 
-Version 2, 20 October 2026 (latest version).
+Version 2, 20 October 2026.
 
-It replaces [User Story Map v1](01-user-story-map-v1.md) and follows the Week 3 lecture *User Stories, Jira and Sprint Planning* and the charter pages updated on 20/10/2026: the [Project Executive Summary](../03-project-canvas/01-project-executive-summary.md), [Milestones](../03-project-canvas/02-milestones.md) and [Deliverables](../03-project-canvas/05-deliverables.md). Features F1–F7 come from charter section 3.1. Each story's acceptance criteria are on the story requirements page of its epic. Story points will come from planning poker and assignees from sprint planning.
+It replaces [User Story Map v1](01-user-story-map-v1.md) and follows the Week 3 lecture *User Stories, Jira and Sprint Planning* and the charter pages updated on 20/10/2026: the [Project Executive Summary](../03-project-canvas/01-project-executive-summary.md), [Milestones](../03-project-canvas/02-milestones.md) and [Deliverables](../03-project-canvas/05-deliverables.md).
+
+Features F1–F7 come from charter section 3.1. Each story's acceptance criteria are on the story requirements page of its epic. Story points will come from planning poker and assignees from sprint planning.
 
 **17 user stories in 9 epics.** Every story stays inside the description of one charter feature and has one primary objective.
 
@@ -16,7 +18,7 @@ All personas are AI users from the Executive Summary (stakeholders 1 and 2). Sto
 | Strategy-unit specialist   | AI user (primary), stakeholder 1   | Prepares the institution's AI roadmap after the Action 7 appointments and briefs management            | Who is responsible, what by when                                      |
 | Legal-unit staff member    | AI user (primary), stakeholder 1   | Checks which rules apply to the institution and writes legal opinions; handles personal-data questions | Exact provisions, KVKK rules, transfers abroad                        |
 | Training-unit staff member | AI user (primary), stakeholder 1   | Prepares AI-literacy training for colleagues                                                           | The full picture across documents, what a term means, what is binding |
-| AI-policy researcher       | AI user (secondary), stakeholder 2 | Studies Türkiye's AI policy and compares positions between documents                                   | Dates, differing positions                                            |
+| AI-policy researcher       | AI user (secondary), stakeholder 2 | Studies Türkiye's AI policy and compares positions between documents                                  | Dates, differing positions                                            |
 | Graduate student           | AI user (secondary), stakeholder 2 | Writes a thesis or paper on AI policy                                                                  | Citable references                                                    |
 
 ## 2. Epics
@@ -44,8 +46,6 @@ Tasks are added under each story at sprint planning (slide 11). Columns follow t
 | **Alpha**, Sprint 2, 18/11 (D5)              |                        | US-1, US-2                      | US-4, US-5                            |                               |                     | US-9             | US-11                  |                        | US-14            |
 | **Beta**, Sprint 3, 09/12 (D7, D8)           | US-17                  |                                 | US-6                                  | US-7                          | US-18               | US-10            | US-12                  | US-13                  | US-15, US-16     |
 | **Release candidate**, Sprint 4, 30/12 (D10) |                        |                                 |                                       | US-8                          |                     |                  |                        |                        |                  |
-
-
 
 ## 4. Stories
 
@@ -77,14 +77,14 @@ Slice totals: Alpha 7, Beta 9, Release candidate 1. Priorities: Highest 6, High 
 
 | Story        | V1 ID | Change                                                                                                              | Reason                                                                                             |
 | ------------ | ----- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| US-1         | US-1  | Retitled; criteria rewritten in EARS                                                                                | "In Turkish" is slide 8's *unneeded* pattern; F1 is about the user's own words                     |
+| US-1         | US-1  | Retitled; criteria rewritten in EARS                                                                                | "In Turkish" is slide 8's*unneeded* pattern; F1 is about the user's own words                      |
 | US-13        | US-2  | "New conversation" criterion removed (parked)                                                                       | Two independently verified behaviours in one story; starting a new conversation is not a follow-up |
 | US-7         | US-3  | "Each part cites its document" moved to US-9                                                                        | Belonged to F2                                                                                     |
 | US-9         | US-4  | Official link kept; "cite the section that contains the supporting passage" added; per-part citation moved to US-10 | F2 describes both the citation and the link; multi-source answers arrive in the beta               |
 | US-11        | US-5  | "Not presented as an obligation" moved to US-12                                                                     | Distinct behaviour; v1 wording was an unverifiable negative                                        |
 | US-17        | US-6  | Source dates dropped (already US-11); time-sensitive criterion kept                                                 | Overlap with F3                                                                                    |
 | Removed      | US-7  | Removed from the backlog; its rules go to the Definition of Done                                                    | Privacy is a constraint, not a feature                                                             |
-| US-4, US-5   | New   | Kept as two stories (who leads; what must be done and by when); "my institution" → "public institutions"            | "Who leads" is asked on its own; judging a specific institution is excluded                        |
+| US-4, US-5   | New   | Kept as two stories (who leads; what must be done and by when); "my institution" → "public institutions"           | "Who leads" is asked on its own; judging a specific institution is excluded                        |
 | US-6         | New   | Cross-feature criterion removed; reworded as a lookup                                                               | One feature per story                                                                              |
 | US-8         | New   | Moved from F2 + F3 to F1 (E1.3); legal status left to US-11                                                         | One feature per story                                                                              |
 | US-15, US-16 | New   | Rewritten to the charter's clear decline                                                                            | Charter F5                                                                                         |
