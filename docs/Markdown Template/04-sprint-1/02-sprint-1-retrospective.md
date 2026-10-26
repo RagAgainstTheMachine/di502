@@ -2,7 +2,7 @@
 
 ##  Overview
 
-| **Date** |  |
+| **Date** | 26.10.2026 |
 | --- | --- |
 | **Team** | Rag Against The Machine |
 | **Participants** | @Deniz Şenkutlu@batuhan tezcan@utku uçar@Elif Yeşim Koçoğlu |
