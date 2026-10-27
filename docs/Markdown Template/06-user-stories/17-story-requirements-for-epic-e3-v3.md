@@ -1,4 +1,4 @@
-# Story Requirements for Epic E3: Follow-up Questions
+# Story Requirements for Epic E3: Follow-up Questions (v3)
 
 
 | Epic                    | E3 Follow-up questions (charter feature F4 Follow-up questions; objectives O1, O2, O3) |

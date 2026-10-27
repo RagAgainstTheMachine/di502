@@ -1,4 +1,4 @@
-# Story Requirements for Epic E6: Collection Currency
+# Story Requirements for Epic E6: Collection Currency (v2)
 
 
 | Epic                    | E6 Collection currency (charter feature F6 Collection date; objective O2) |

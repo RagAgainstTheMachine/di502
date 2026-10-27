@@ -1,4 +1,4 @@
-# Story Requirements for Epic E2: Cited Answers
+# Story Requirements for Epic E2: Cited Answers (v2)
 
 | Epic | E2 Cited answers (charter feature F2 Source reference; objective O2) |
 |---|---|

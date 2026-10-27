@@ -1,4 +1,4 @@
-# Story Requirements for Epic E1.2: Duties, Deadlines and Provisions
+# Story Requirements for Epic E1.2: Duties, Deadlines and Provisions (v2)
 
 
 | Epic                    | E1.2 Duties, deadlines and provisions (charter feature F1 Plain-language questions; objectives O1, O2) |

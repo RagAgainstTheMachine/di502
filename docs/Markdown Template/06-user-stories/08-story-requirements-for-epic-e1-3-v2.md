@@ -1,4 +1,4 @@
-# Story Requirements for Epic E1.3: Answers Across Documents
+# Story Requirements for Epic E1.3: Answers Across Documents (v2)
 
 
 | Epic                    | E1.3 Answers across documents (charter feature F1 Plain-language questions; objectives O1, O2) |

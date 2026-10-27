@@ -1,4 +1,4 @@
-# Story Requirements for Epic E3: Legal-Status Labels
+# Story Requirements for Epic E3: Legal-Status Labels (v2)
 
 
 | Epic                    | E3 Legal-status labels (charter feature F3 Legal status label; objective O4) |

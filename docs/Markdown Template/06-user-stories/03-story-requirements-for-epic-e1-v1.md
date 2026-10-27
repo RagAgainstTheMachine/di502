@@ -1,4 +1,4 @@
-# Story Requirements for Epic E1: Policy Question Answering
+# Story Requirements for Epic E1: Policy Question Answering (v1)
 
 > **Superseded on 20/10/2026** by [User Story Map v2](02-user-story-map-v2.md) and its story requirement pages. Kept as the record of User Story Map v1.
 

@@ -1,4 +1,4 @@
-# Story Requirements for Epic E7: Term Definitions
+# Story Requirements for Epic E7: Term Definitions (v2)
 
 
 | Epic                    | E7 Term definitions (charter feature F7 Term definitions; objective O2) |

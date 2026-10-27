@@ -1,4 +1,4 @@
-# Story Requirements for Epic E2: Source Transparency
+# Story Requirements for Epic E2: Source Transparency (v3)
 
 
 | Epic                    | E2 Source transparency (charter features F2 Source reference, F3 Legal status label and F6 Collection date; objectives O2, O4) |
