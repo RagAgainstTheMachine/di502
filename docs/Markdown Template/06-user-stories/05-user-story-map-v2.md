@@ -1,8 +1,10 @@
-# User Story Map v2
+# User Story Map (v2)
+
+> **Superseded on 25/10/2026** by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v2).
 
 Version 2, 20 October 2026.
 
-It replaces [User Story Map v1](01-user-story-map-v1.md) and follows the Week 3 lecture *User Stories, Jira and Sprint Planning* and the charter pages updated on 20/10/2026: the [Project Executive Summary](../03-project-canvas/01-project-executive-summary.md), [Milestones](../03-project-canvas/02-milestones.md) and [Deliverables](../03-project-canvas/05-deliverables.md).
+It replaces [User Story Map (v1)](01-user-story-map-v1.md) and follows the Week 3 lecture *User Stories, Jira and Sprint Planning* and the charter pages updated on 20/10/2026: the [Project Executive Summary](../03-project-canvas/01-project-executive-summary.md), [Milestones](../03-project-canvas/02-milestones.md) and [Deliverables](../03-project-canvas/05-deliverables.md).
 
 Features F1–F7 come from charter section 3.1. Each story's acceptance criteria are on the story requirements page of its epic. Story points will come from planning poker and assignees from sprint planning.
 

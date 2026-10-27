@@ -1,5 +1,7 @@
 # Story Requirements for Epic E1.3: Answers Across Documents (v2)
 
+> **Superseded on 25/10/2026** by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v2).
+
 
 | Epic                    | E1.3 Answers across documents (charter feature F1 Plain-language questions; objectives O1, O2) |
 | ----------------------- | ---------------------------------------------------------------------------------------------- |

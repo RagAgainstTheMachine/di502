@@ -1,6 +1,6 @@
 # Story Requirements for Epic E2: Source Transparency (v1)
 
-> **Superseded on 20/10/2026** by [User Story Map v2](02-user-story-map-v2.md) and its story requirement pages. Kept as the record of User Story Map v1.
+> **Superseded on 20/10/2026** by [User Story Map (v2)](05-user-story-map-v2.md) and since 25/10/2026 by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v1).
 
 This will be a space for you to elaborate on stories and requirements for a given epic. (Duplicate page for more story epics.)
 

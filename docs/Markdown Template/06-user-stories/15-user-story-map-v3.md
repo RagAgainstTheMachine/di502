@@ -1,8 +1,8 @@
-# User Story Map v3
+# User Story Map (v3)
 
 Version 3, 25 October 2026.
 
-It replaces [User Story Map v2](02-user-story-map-v2.md).
+It replaces [User Story Map (v2)](05-user-story-map-v2.md).
 
 
 **14 user stories in 5 epics.** Every story stays inside the description of one charter feature and has one primary objective.
@@ -25,11 +25,11 @@ All personas are AI users from the Executive Summary (stakeholders 1 and 2). Sto
 
 | Epic | Name                       | Charter feature                                                | Objectives of the feature (charter 3.1) | Stories                      | Jira     | Story requirements                                 |
 | ---- | -------------------------- | -------------------------------------------------------------- | --------------------------------------- | ---------------------------- | -------- | -------------------------------------------------- |
-| E1   | Asking and getting answers | F1 Plain-language questions                                    | O1, O2                                  | US-1, US-2, US-3, US-4, US-5 | DI502-11 | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| E2   | Source transparency        | F2 Source reference, F3 Legal status label, F6 Collection date | O2, O4                                  | US-6, US-7, US-8             | DI502-15 | [Epic E2](16-story-requirements-for-epic-e2-v3.md) |
-| E3   | Follow-up questions        | F4 Follow-up questions                                         | O1, O2, O3                              | US-9                         | new      | [Epic E3](17-story-requirements-for-epic-e3-v3.md) |
-| E4   | Clear decline              | F5 Clear decline                                               | O5                                      | US-10, US-11, US-12          | new      | [Epic E4](18-story-requirements-for-epic-e4-v3.md) |
-| E5   | Term definitions           | F7 Term definitions                                            | O2                                      | US-13, US-14                 | new      | [Epic E5](19-story-requirements-for-epic-e5-v3.md) |
+| E1   | Asking and getting answers | F1 Plain-language questions                                    | O1, O2                                  | US-1, US-2, US-3, US-4, US-5 | DI502-11 | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| E2   | Source transparency        | F2 Source reference, F3 Legal status label, F6 Collection date | O2, O4                                  | US-6, US-7, US-8             | DI502-15 | [Epic E2](17-story-requirements-for-epic-e2-v3.md) |
+| E3   | Follow-up questions        | F4 Follow-up questions                                         | O1, O2, O3                              | US-9                         | new      | [Epic E3](18-story-requirements-for-epic-e3-v3.md) |
+| E4   | Clear decline              | F5 Clear decline                                               | O5                                      | US-10, US-11, US-12          | new      | [Epic E4](19-story-requirements-for-epic-e4-v3.md) |
+| E5   | Term definitions           | F7 Term definitions                                            | O2                                      | US-13, US-14                 | new      | [Epic E5](20-story-requirements-for-epic-e5-v3.md) |
 
 ## 3. Map: feature → epic → story → task
 
@@ -47,20 +47,20 @@ Tasks are added under each story at sprint planning (slide 11). Columns follow t
 
 | Story | Title                                                             | Persona          | Feature | Epic | Primary objective | Priority | Release | Jira key      | Story points | Story requirements                                 |
 | ----- | ----------------------------------------------------------------- | ---------------- | ------- | ---- | ----------------- | -------- | ------- | ------------- | ------------ | -------------------------------------------------- |
-| US-1  | Ask a question about AI policy                                    | Strategy unit    | F1      | E1   | O2                | Highest  | Alpha   | DI502-12      | TBD          | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| US-2  | Find out what an AI policy action or measure requires and by when | Strategy unit    | F1      | E1   | O2                | High     | Alpha   | to be created | TBD          | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| US-3  | Find out who is responsible for an action                         | Strategy unit    | F1      | E1   | O2                | High     | Alpha   | to be created | TBD          | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| US-4  | Read a provision I know by number                                 | Legal unit       | F1      | E1   | O2                | High     | Beta    | to be created | TBD          | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| US-5  | See what all the documents say on a topic                         | Training unit    | F1      | E1   | O2                | High     | Beta    | DI502-14      | TBD          | [Epic E1](15-story-requirements-for-epic-e1-v3.md) |
-| US-6  | See the source of each answer                                     | Legal unit       | F2      | E2   | O2                | Highest  | Alpha   | DI502-16      | TBD          | [Epic E2](16-story-requirements-for-epic-e2-v3.md) |
-| US-7  | Know how binding and how recent each cited document is            | Legal unit       | F3      | E2   | O4                | Highest  | Alpha   | DI502-17      | TBD          | [Epic E2](16-story-requirements-for-epic-e2-v3.md) |
-| US-8  | See how current the documents are                                 | Researcher       | F6      | E2   | O2                | High     | Beta    | DI502-18      | TBD          | [Epic E2](16-story-requirements-for-epic-e2-v3.md) |
-| US-9  | Ask a follow-up without repeating myself                          | Legal unit       | F4      | E3   | O2                | High     | Beta    | DI502-13      | TBD          | [Epic E3](17-story-requirements-for-epic-e3-v3.md) |
-| US-10 | Be told when the documents have no answer                         | Researcher       | F5      | E4   | O5                | Highest  | Alpha   | to be created | TBD          | [Epic E4](18-story-requirements-for-epic-e4-v3.md) |
-| US-11 | Know what is mentioned but not prepared yet                       | Strategy unit    | F5      | E4   | O5                | High     | Beta    | to be created | TBD          | [Epic E4](18-story-requirements-for-epic-e4-v3.md) |
-| US-12 | Find the rules for my institution's case                          | Legal unit       | F5      | E4   | O5                | Highest  | Beta    | to be created | TBD          | [Epic E4](18-story-requirements-for-epic-e4-v3.md) |
-| US-13 | Ask what an AI term means                                         | Training unit    | F7      | E5   | O2                | High     | Beta    | to be created | TBD          | [Epic E5](19-story-requirements-for-epic-e5-v3.md) |
-| US-14 | Find the English name of an AI term                               | Graduate student | F7      | E5   | O2                | Medium   | RC      | to be created | TBD          | [Epic E5](19-story-requirements-for-epic-e5-v3.md) |
+| US-1  | Ask a question about AI policy                                    | Strategy unit    | F1      | E1   | O2                | Highest  | Alpha   | DI502-12      | TBD          | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| US-2  | Find out what an AI policy action or measure requires and by when | Strategy unit    | F1      | E1   | O2                | High     | Alpha   | to be created | TBD          | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| US-3  | Find out who is responsible for an action                         | Strategy unit    | F1      | E1   | O2                | High     | Alpha   | to be created | TBD          | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| US-4  | Read a provision I know by number                                 | Legal unit       | F1      | E1   | O2                | High     | Beta    | to be created | TBD          | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| US-5  | See what all the documents say on a topic                         | Training unit    | F1      | E1   | O2                | High     | Beta    | DI502-14      | TBD          | [Epic E1](16-story-requirements-for-epic-e1-v3.md) |
+| US-6  | See the source of each answer                                     | Legal unit       | F2      | E2   | O2                | Highest  | Alpha   | DI502-16      | TBD          | [Epic E2](17-story-requirements-for-epic-e2-v3.md) |
+| US-7  | Know how binding and how recent each cited document is            | Legal unit       | F3      | E2   | O4                | Highest  | Alpha   | DI502-17      | TBD          | [Epic E2](17-story-requirements-for-epic-e2-v3.md) |
+| US-8  | See how current the documents are                                 | Researcher       | F6      | E2   | O2                | High     | Beta    | DI502-18      | TBD          | [Epic E2](17-story-requirements-for-epic-e2-v3.md) |
+| US-9  | Ask a follow-up without repeating myself                          | Legal unit       | F4      | E3   | O2                | High     | Beta    | DI502-13      | TBD          | [Epic E3](18-story-requirements-for-epic-e3-v3.md) |
+| US-10 | Be told when the documents have no answer                         | Researcher       | F5      | E4   | O5                | Highest  | Alpha   | to be created | TBD          | [Epic E4](19-story-requirements-for-epic-e4-v3.md) |
+| US-11 | Know what is mentioned but not prepared yet                       | Strategy unit    | F5      | E4   | O5                | High     | Beta    | to be created | TBD          | [Epic E4](19-story-requirements-for-epic-e4-v3.md) |
+| US-12 | Find the rules for my institution's case                          | Legal unit       | F5      | E4   | O5                | Highest  | Beta    | to be created | TBD          | [Epic E4](19-story-requirements-for-epic-e4-v3.md) |
+| US-13 | Ask what an AI term means                                         | Training unit    | F7      | E5   | O2                | High     | Beta    | to be created | TBD          | [Epic E5](20-story-requirements-for-epic-e5-v3.md) |
+| US-14 | Find the English name of an AI term                               | Graduate student | F7      | E5   | O2                | Medium   | RC      | to be created | TBD          | [Epic E5](20-story-requirements-for-epic-e5-v3.md) |
 
 Slice totals: Alpha 6, Beta 7, Release candidate 1. Priorities: Highest 5, High 8, Medium 1. Story points are TBD until planning poker.
 

@@ -1,5 +1,7 @@
 # Story Requirements for Epic E1.1: Asking and Getting Answers (v2)
 
+> **Superseded on 25/10/2026** by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v2).
+
 | Epic | E1.1 Asking and getting answers (charter feature F1 Plain-language questions; objectives O1, O2) |
 |---|---|
 | Document Owner | Muhammed Batuhan Tezcan (Product Owner) |

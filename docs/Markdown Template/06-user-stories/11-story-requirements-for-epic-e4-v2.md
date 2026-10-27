@@ -1,5 +1,7 @@
 # Story Requirements for Epic E4: Follow-up Questions (v2)
 
+> **Superseded on 25/10/2026** by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v2).
+
 
 | Epic                    | E4 Follow-up questions (charter feature F4 Follow-up questions; objectives O1, O2, O3) |
 | ----------------------- | -------------------------------------------------------------------------------------- |
