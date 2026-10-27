@@ -230,7 +230,7 @@ Users reach the beta and release candidate through a browser only (C-08); there 
 
 ### DEC-03: Structure-aware chunking
 
-**Context:** Answers must cite the article or section (US-4).
+**Context:** Answers must cite the article or section (US-6).
 
 **Options considered:**
 

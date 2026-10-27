@@ -1,4 +1,6 @@
-# Story Requirements for Epic E3: Legal-Status Labels
+# Story Requirements for Epic E3: Legal-Status Labels (v2)
+
+> **Superseded on 25/10/2026** by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v2).
 
 
 | Epic                    | E3 Legal-status labels (charter feature F3 Legal status label; objective O4) |

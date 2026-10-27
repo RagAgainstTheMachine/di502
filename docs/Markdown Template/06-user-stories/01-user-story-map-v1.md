@@ -1,6 +1,6 @@
-# User Story Map v1
+# User Story Map (v1)
 
-> **Superseded on 20/10/2026** by [User Story Map v2](02-user-story-map-v2.md) and its story requirement pages. Kept as the record of User Story Map v1.
+> **Superseded on 20/10/2026** by [User Story Map (v2)](05-user-story-map-v2.md) and since 25/10/2026 by [User Story Map (v3)](15-user-story-map-v3.md), the current version. Epic IDs changed between versions; see the [epic lineage](README.md#epic-lineage). Kept as the record of User Story Map (v1).
 
 Plese present the full feature-epic-story-task hierarchy in a map.
 
@@ -11,9 +11,9 @@ Version 1, 11 October 2026. Features are taken from the Project Executive Summar
 
 | Epic | Name                      | Charter features                                             | Objectives served | Details                                                                |
 | ---- | ------------------------- | ------------------------------------------------------------ | ----------------- | ---------------------------------------------------------------------- |
-| E1   | Policy Question Answering | F1, F4                                                       | O1, O2, O3        | [Story requirements for Epic E1](03-story-requirements-for-epic-e1.md) |
-| E2   | Source Transparency       | F2, F3, F6                                                   | O2, O4            | [Story requirements for Epic E2](04-story-requirements-for-epic-e2.md) |
-| E3   | Safe and Trustworthy Use  | Charter constraint: no personal data is requested from users | —                | [Story requirements for Epic E3](05-story-requirements-for-epic-e3.md) |
+| E1   | Policy Question Answering | F1, F4                                                       | O1, O2, O3        | [Story requirements for Epic E1](02-story-requirements-for-epic-e1-v1.md) |
+| E2   | Source Transparency       | F2, F3, F6                                                   | O2, O4            | [Story requirements for Epic E2](03-story-requirements-for-epic-e2-v1.md) |
+| E3   | Safe and Trustworthy Use  | Charter constraint: no personal data is requested from users | —                | [Story requirements for Epic E3](04-story-requirements-for-epic-e3-v1.md) |
 
 ## Map: feature → epic → story → task
 

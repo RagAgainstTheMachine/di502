@@ -1,4 +1,4 @@
-# Story Requirements for Epic E4: Clear Decline
+# Story Requirements for Epic E4: Clear Decline (v3)
 
 
 | Epic                    | E4 Clear decline (charter feature F5 Clear decline; objective O5)              |
