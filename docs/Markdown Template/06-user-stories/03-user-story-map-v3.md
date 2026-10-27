@@ -4,7 +4,6 @@ Version 3, 25 October 2026.
 
 It replaces [User Story Map v2](02-user-story-map-v2.md).
 
-Epic 2- 3
 
 **14 user stories in 5 epics.** Every story stays inside the description of one charter feature and has one primary objective.
 
