@@ -1,1 +1,9 @@
-source_url,licence,version_date,sha256
+doc_id,source_url,licence,version_date,sha256,collection_date
+Doc01,https://sanayi.gov.tr/yapayzekaeylemplani/pdf/merge.pdf,No explicit terms,2026-06-13 (announced),66a697dc592dbb7620fd383bac73559b006bbd4a48f848d4e3bd61d444c4b1dd,2026-10-14
+Doc02,https://www.sbb.gov.tr/wp-content/uploads/2023/12/On-Ikinci-Kalkinma-Plani_2024-2028_11122023.pdf,Officially published,2023-11-01 (Official Gazette),20725545e5751d09e144c9284a23a30672708fe3e3da5896d5047a13a787ad95,2026-10-14
+Doc03,https://www.sbb.gov.tr/wp-content/uploads/2025/10/2026-Yili-Cumhurbaskanligi-Yillik-Programi.pdf,Officially published,2025-10-30 (Official Gazette),86634e0d2ae228edd329695c69d595166f6c389a08010ca29858c706705360a1,2026-10-14
+Doc04,https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf,Free (FSEK Art. 31),"2024-03-02 (consolidated, Law 7499)",b84c8222c35da293eace610a1634fb6f3652118b221992d1c6e26d73922b78b6,2026-10-14
+Doc05,https://cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y1/T10/DosyaKomisyonRaporunuVerdi/9f0e7abf-41f6-4133-ab3d-4879113f7f9f.pdf,No explicit terms,2026-03,f99d2e3ec8efaa44be306d3d079cd6c919307f1550509b5aa7e2525ee66c717f,2026-10-14
+Doc06,https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/MTY5MjNmNmIwZWY3YTE.pdf,No explicit terms,2025-11-24 (date on the KVKK page),8738c491ba9933193c4d2144ec28938ff677239701aa850a9dfaf25256cdd90b,2026-10-14
+Doc07,https://tubitak.gov.tr/sites/default/files/2026-03/TUBITAK_Yapay_Zeka_Politika_Belgesi_v1.0_tr.pdf,No explicit terms,2026-03,928085bab9a9df26512a6f2139d1889861da5ad314e52d4cdd4be7f0b8050d39,2026-10-14
+Doc08,https://yayinlar.iletisim.gov.tr/uploads/kamu_kurumlari_yapay_zeka_sozlugu.pdf,No explicit terms,2026-05 (PDF creation date; no date printed in the document),6d6892b160b3751b0d59a6d0fe6f5241e5245101493de75b598fc5ed8173b3ee,2026-10-14
