@@ -1,6 +1,6 @@
 # Cost & Funding
 
-This page shows what the project consumes and where it comes from. Human effort is counted in person-hours; cloud use is counted in US dollars of the Google Cloud credit. Rows 1–16 cost every in-scope row of [Major Activities](04-major-activities.md) and every deliverable D1–D11 in [Deliverables](05-deliverables.md); rows 17–24 cost every resource in [Facilities & Resources](09-facilities-and-resources.md). Story points from poker planning are used to size the work of each sprint in Jira; they are not converted to person-hours here.
+This page shows what the project consumes and where it comes from. Human effort is counted in person-hours; cloud use is counted in US dollars of the Google Cloud credit. Rows 1–16 cost every in-scope row of [Major Activities](04-major-activities.md), plus project management, source checks and shutting down cloud resources, and every deliverable D1–D11 in [Deliverables](05-deliverables.md); rows 17–24 cost every resource in [Facilities & Resources](09-facilities-and-resources.md). Story points from poker planning are used to size the work of each sprint in Jira; they are not converted to person-hours here.
 
 **Budget:** $100 of Google Cloud credits (fixed, per project). This is the same statement as in the [Project Executive Summary](01-project-executive-summary.md) and constraint C-09 in [Assumptions & Constraints](03-assumptions-and-constraints.md).
 
@@ -22,10 +22,10 @@ This page shows what the project consumes and where it comes from. Human effort 
 | 10 | Google Cloud deployment and beta release ([Major Activities](04-major-activities.md) row 17; D8) | One-time | 16 person-hours | Set-up and deployment because of C-07, 10 h; access test, 6 h. Sprint 3. Owner: Elif Yeşim Koçoğlu. |
 | 11 | Pilot evaluation ([Major Activities](04-major-activities.md) row 16; D9) | One-time | 24 person-hours | 10 participants × 1 h = 10 h; review of the results, 8 h; report, 6 h. Sprint 4. Owner: Muhammed Batuhan Tezcan. |
 | 12 | Release candidate, pilot defect fixes and final demo ([Major Activities](04-major-activities.md) rows 18, 19; D10) | One-time | 24 person-hours | Defect fixes, 16 h; demo preparation, 8 h. Sprint 4. Owner: Muhammed Batuhan Tezcan. |
-| 13 | Charter v2 and final report ([Major Activities](04-major-activities.md) row 22; D6, D11) | One-time | 20 person-hours | Charter v2, 8 h (Sprint 2); final report, 12 h (Sprint 4). Owner: Muhammed Batuhan Tezcan. |
-| 14 | Project management and Scrum events ([Major Activities](04-major-activities.md) row 24) | Ongoing | 56 person-hours | Scrum events, 2.5 h × 4 members × 4 sprints = 40 h; pull request reviews because of C-13, 1 h × 4 members × 4 sprints = 16 h. Sprints 1–4. Owner: Deniz Şenkutlu. |
-| 15 | Source check and spending tracking ([Major Activities](04-major-activities.md) rows 19, 20) | Ongoing | 8 person-hours | 2 h × 4 sprint starts; continues after deployment [1]. Sprints 1–4. Owners: Deniz Şenkutlu (sources) and Elif Yeşim Koçoğlu (spending). |
-| 16 | Shut down cloud resources and delete logs ([Major Activities](04-major-activities.md) row 23) | One-time | 2 person-hours | Once, after the final demo on 30/12/2026. Owner: Elif Yeşim Koçoğlu. |
+| 13 | Charter v2 and final report ([Major Activities](04-major-activities.md) row 21; D6, D11) | One-time | 20 person-hours | Charter v2, 8 h (Sprint 2); final report, 12 h (Sprint 4). Owner: Muhammed Batuhan Tezcan. |
+| 14 | Project management and Scrum events (all life-cycle stages) | Ongoing | 56 person-hours | Scrum events, 2.5 h × 4 members × 4 sprints = 40 h; pull request reviews, 1 h × 4 members × 4 sprints = 16 h. Sprints 1–4. Owner: Deniz Şenkutlu. |
+| 15 | Source check (A-03) and spending tracking ([Major Activities](04-major-activities.md) row 19) | Ongoing | 8 person-hours | 2 h × 4 sprint starts; continues after deployment [1]. Sprints 1–4. Owners: Deniz Şenkutlu (sources) and Elif Yeşim Koçoğlu (spending). |
+| 16 | Shut down cloud resources and delete logs (C-09, C-11) | One-time | 2 person-hours | Once, after the final demo on 30/12/2026. Owner: Elif Yeşim Koçoğlu. |
 | | **Total effort** | | **438 person-hours** | Within the team capacity of 440 to 660 person-hours: 4 members × 10 to 15 h per week × 11 weeks (A-07, C-12). |
 
 ### Material and financial resources
@@ -41,7 +41,7 @@ The cloud figures are planned on the GPU option in [Facilities & Resources](09-f
 | 21 | Credit reserve ([Facilities & Resources](09-facilities-and-resources.md) row 2) | One-time | $30 of the credit | Not planned for use (A-06); spending is watched against the trigger of R-06 in [Risks](11-risks.md). Sprints 1–4. Owner: Elif Yeşim Koçoğlu. |
 | | **Total Google Cloud credit** | | **$70 planned + $30 reserve = $100** | Matches the budget statement above. |
 | 22 | Managed vector database, free plan ([Facilities & Resources](09-facilities-and-resources.md) row 6) | Ongoing | $0 | Free cluster: 1 GB RAM, 4 GB disk; suspended after 1 week unused [6], so a snapshot is kept in the bucket (row 19). Sprints 2–4. Owner: Elif Yeşim Koçoğlu. |
-| 23 | Weights & Biases, free plan ([Facilities & Resources](09-facilities-and-resources.md) row 10) | Ongoing | $0 | Free plan: up to 5 seats and 5 GB per month [7]; the team has 4 members; used because of C-13. Sprints 2–4. Owner: Elif Yeşim Koçoğlu. |
+| 23 | Weights & Biases, free plan ([Facilities & Resources](09-facilities-and-resources.md) row 10) | Ongoing | $0 | Free plan: up to 5 seats and 5 GB per month [7]; the team has 4 members; used to track the baseline and experiment runs (D5, D7). Sprints 2–4. Owner: Elif Yeşim Koçoğlu. |
 | 24 | Resources at no charge ([Facilities & Resources](09-facilities-and-resources.md) rows 1, 4, 5, 7, 9) | One-time | $0 | Laptops owned by the members; open-weight models with no licence fee; documents published free of charge (A-05); GitHub, Jira and Confluence under the team's existing plans. Sprints 1–4. Owners: Utku Uçar (documents) and Muhammed Batuhan Tezcan (tools). |
 
 ## 2. Source of Funding
