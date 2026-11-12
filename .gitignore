@@ -5,3 +5,7 @@ __pycache__/
 *.pyc
 .env
 deploy/trial/data/
+
+# Spike S4: generated passages and embedding cache
+data/chunks/
+data/emb_cache/
