@@ -14,7 +14,7 @@ Can the answer path (search, language model, citation check) run on Cloud Run, a
 
 - **Project:** personal project `utku-llm-deneme`, region `europe-west1`, paid from the education credit. Steps: [Cloud Run trial deployment guide](../deploy/cloud-run-trial-guide.md).
 - **Search (the same in both runs):** BM25 on 5-letter prefixes over 977 passages (paragraphs joined up to 900 characters), top 4 passages sent to the model. Offline check on the 32 development questions: the gold passage is in the top 4 for 23/32. S4's structure splitting with ID lookup reached 29/32 in the top 5.
-- **Prompt and decline rule:** taken from `src/experiments/ask.py`. The fixed decline notice is shown when the model writes CEVAP_YOK or cites no valid source number.
+- **Prompt and decline rule:** taken from `src/spikes/s4/ask.py`. The fixed decline notice is shown when the model writes CEVAP_YOK or cites no valid source number.
 
 | Run | Service | Model | Hardware |
 |---|---|---|---|
