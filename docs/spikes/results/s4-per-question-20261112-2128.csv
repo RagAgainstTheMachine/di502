@@ -1,0 +1,97 @@
+﻿strategy,method,id,type,rank,top1,question
+structure,bm25s5+id,dev01,factual,1,Doc01-s0082 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu kurumlarında yapay zekâdan sorumlu yönetici atandıktan sonra yol haritasını hazırlamak için ne kadar süre var?
+structure,bm25s5+id,dev02,responsible,1,Doc01-s0084 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Eylem Planı'nda kamuda yapay zekâ dönüşümüne öncülük etme eyleminin ana sorumlusu hangi kurum?
+structure,bm25s5+id,dev03,factual,1,Doc01-s0076 EKSEN 2: İSTİFADE ET. > Eylem 6- Herkes için GPU programı ba,Girişimler ve KOBİ'ler yapay zekâ için gereken hesaplama gücüne nasıl erişebilecek?
+structure,bm25s5+id,dev04,factual,1,Doc01-s0048 EKSEN 1: FARK ET. > Eylem 1- Ulusal Yapay Zekâ Okuryazarlığı,Yapay zekâ okuryazarlığı eğitimleri vatandaşlara hangi kanallardan sunulacak?
+structure,bm25s5+id,dev05,factual,1,Doc01-s0119 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Yenilikçi yapay zekâ çözümlerinin denenebileceği düzenleyici deney alanları hangi sektörlerde kurulacak?
+structure,bm25s5+id,dev06,factual,1,Doc01-s0080 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu yatırım bütçesinin ne kadarının yapay zekâ projelerine ayrılması hedefleniyor?
+structure,bm25s5+id,dev07,number,1,Doc01-s0122 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Eylem 16 neyi kapsıyor?
+structure,bm25s5+id,dev08,factual,1,Doc03-s0040 Tedbir 920.1 [2.5.1. Adalet Hizmetleri],Yargıda karar destek sistemleri için yıllık programda hangi tedbir var?
+structure,bm25s5+id,dev09,factual,1,Doc03-s0010 Tedbir 411.9 [2.1.7  Sosyal Güvenlik Sistemi ve Finansmanı],Sağlık hizmeti sunucularının denetiminde yapay zekâ nasıl kullanılacak?
+structure,bm25s5+id,dev10,responsible,2,Doc08-s0023 BÖLÜM B VERİ VE ALTYAPI > B2 - Eğitim Verisi / Training Data,Kamuda yapay zekâ yönetim sistemi belgelendirme mekanizmasını hangi kurum kuracak?
+structure,bm25s5+id,dev11,number,1,Doc03-s0031 Tedbir 688.2 [2.3.1. Eğitim],Tedbir 688.2'den sorumlu kurum hangisi?
+structure,bm25s5+id,dev12,factual,1,Doc03-s0005 Tedbir 400.2 [2.1.6. Maliye Politikası],Vergi dairelerinin sunduğu hizmetlerde yapay zekâdan nasıl yararlanılacak?
+structure,bm25s5+id,dev13,factual,2,Doc01-s0012 SUNUŞ,Kalkınma Planı yapay zekâda kamu üniversite ve özel sektör iş birliği için ne öngörüyor?
+structure,bm25s5+id,dev14,factual,1,Doc02-s0033 Paragraf 591.2 [3.2.3.6.  Bilgi ve İletişim Teknolojileri | ,On İkinci Kalkınma Planı'na göre yapay zekâda uluslararası iş birliği için ne yapılacak?
+structure,bm25s5+id,dev15,term,1,Doc08-s0044 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C4 - İstem Mü,İstem mühendisliği ne demektir?
+structure,bm25s5+id,dev16,term,1,Doc08-s0098 BÖLÜM G YAPAY ZEKÂ GÜVENLİĞİ > G3 - Model Zehirleme / Model ,Bir modelin eğitim verisine kasıtlı olarak hatalı veri eklenmesine ne ad verilir?
+structure,bm25s5+id,dev17,english-name,1,Doc08-s0048 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C8 - Halüsina,Hallucination kavramı sözlükte nasıl tanımlanıyor?
+structure,bm25s5+id,dev18,english-name,1,Doc08-s0047 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C7 - Geri Get,Retrieval-Augmented Generation teriminin Türkçe karşılığı nedir?
+structure,bm25s5+id,dev19,factual,3,Doc06-s0149 10. Üretken Yapay Zekâ Sistemlerinde Kişisel Verilerin Yurt ,Üretken yapay zekâ kullanılırken kişisel veriler yurt dışına hangi şartlarla aktarılabilir?
+structure,bm25s5+id,dev20,factual,7,Doc05-s0330 4.3.4.3.6 Yapay Zekâya Yaptırım Uygulanması,Üretken yapay zekâ sistemlerinde veri sorumlusu kime denir?
+structure,bm25s5+id,dev21,factual,,Doc06-s0029 1. Üretken Yapay Zekâ Nedir?,Sohbet botlarına hangi kişisel bilgilerimi yazmamalıyım?
+structure,bm25s5+id,dev22,factual,2,Doc06-s0005 İçindekiler,Çocukları üretken yapay zekâ araçlarını kullanırken ebeveynler nelere dikkat etmeli?
+structure,bm25s5+id,dev23,responsible,5,Doc07-s0001 Yapay Zekâ Koordinasyon Grubu,TÜBİTAK'ta yapay zekâ çalışmalarını kim koordine ediyor?
+structure,bm25s5+id,dev24,factual,1,Doc07-s0011 1.6. Mevzuat ve Uyum,TÜBİTAK'ta kullanılan yapay zekâ sistemleri hangi mevzuata uymak zorunda?
+structure,bm25s5+id,dev25,factual,1,Doc05-s0549 KURUMSAL YAPILANMA ÖNERİLERİ,Komisyon kamu kurumlarında yapay zekâ için nasıl bir birim kurulmasını öneriyor?
+structure,bm25s5+id,dev26,factual,4,"Doc05-s0179 4.3.2.3.1.1 Politikalar, Mevzuat ve Düzenlemeler",TBMM için yapay zekâ kullanımına dair hangi rehberin hazırlanması önerildi?
+structure,bm25s5+id,dev27,factual,1,Doc05-s0384 4.4.3.1 Genel ve Çerçeve Nitelikli Türk Yapay Zekâ Kanunu’nu,Komisyon Türkiye için genel bir yapay zekâ kanunu çıkarılmasını öneriyor mu?
+structure,bm25s5+id,dev28,factual,1,Doc05-s0549 KURUMSAL YAPILANMA ÖNERİLERİ,Dijital Yetenek Haritası ne amaçla oluşturulacak?
+structure,bm25s5+id,dev29,number,1,Doc04-s0019 ÜÇÜNCÜ BÖLÜM - Haklar ve Yükümlülükler > Madde 11 - İlgili k,Madde 11'e göre ilgili kişinin hakları nelerdir?
+structure,bm25s5+id,dev30,factual,1,Doc04-s0033 ALTINCI BÖLÜM - Kişisel Verileri Koruma Kurumu ve Teşkilat >,Kişisel Verileri Koruma Kurulu kaç üyeden oluşur?
+structure,bm25s5+id,dev31,factual,1,"Doc04-s0022 DÖRDÜNCÜ BÖLÜM - Başvuru, Şikâyet ve Veri Sorumluları Sicili",Veri sorumlusuna yapılan başvuru en geç kaç gün içinde sonuçlandırılmalı?
+structure,bm25s5+id,dev32,factual,,Doc05-s0083 4.3.1.3.3 Veri İşleme Şartlarının Belirlenmesi,Kişisel veriler hangi hâllerde açık rıza olmadan işlenebilir?
+structure,dense:intfloat/multilingual-e5-base,dev01,factual,1,Doc01-s0082 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu kurumlarında yapay zekâdan sorumlu yönetici atandıktan sonra yol haritasını hazırlamak için ne kadar süre var?
+structure,dense:intfloat/multilingual-e5-base,dev02,responsible,2,Doc01-s0082 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Eylem Planı'nda kamuda yapay zekâ dönüşümüne öncülük etme eyleminin ana sorumlusu hangi kurum?
+structure,dense:intfloat/multilingual-e5-base,dev03,factual,,Doc01-s0091 EKSEN 3: ÜRET. > Eylem 9- Yapay Zekâ Büyüme Bölgeleri ve Böl,Girişimler ve KOBİ'ler yapay zekâ için gereken hesaplama gücüne nasıl erişebilecek?
+structure,dense:intfloat/multilingual-e5-base,dev04,factual,1,Doc01-s0048 EKSEN 1: FARK ET. > Eylem 1- Ulusal Yapay Zekâ Okuryazarlığı,Yapay zekâ okuryazarlığı eğitimleri vatandaşlara hangi kanallardan sunulacak?
+structure,dense:intfloat/multilingual-e5-base,dev05,factual,1,Doc01-s0119 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Yenilikçi yapay zekâ çözümlerinin denenebileceği düzenleyici deney alanları hangi sektörlerde kurulacak?
+structure,dense:intfloat/multilingual-e5-base,dev06,factual,1,Doc01-s0080 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu yatırım bütçesinin ne kadarının yapay zekâ projelerine ayrılması hedefleniyor?
+structure,dense:intfloat/multilingual-e5-base,dev07,number,1,Doc01-s0119 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Eylem 16 neyi kapsıyor?
+structure,dense:intfloat/multilingual-e5-base,dev08,factual,1,Doc03-s0040 Tedbir 920.1 [2.5.1. Adalet Hizmetleri],Yargıda karar destek sistemleri için yıllık programda hangi tedbir var?
+structure,dense:intfloat/multilingual-e5-base,dev09,factual,,Doc05-s0272 4.3.4.2.1.5 Sağlık Uygulamaları,Sağlık hizmeti sunucularının denetiminde yapay zekâ nasıl kullanılacak?
+structure,dense:intfloat/multilingual-e5-base,dev10,responsible,6,Doc01-s0081 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamuda yapay zekâ yönetim sistemi belgelendirme mekanizmasını hangi kurum kuracak?
+structure,dense:intfloat/multilingual-e5-base,dev11,number,5,Doc05-s0165 4.3.2.2.2 2024 Yılı Cumhurbaşkanlığı Yıllık Programı,Tedbir 688.2'den sorumlu kurum hangisi?
+structure,dense:intfloat/multilingual-e5-base,dev12,factual,2,Doc05-s0487 4.4.3.8 Vergi Mevzuatında Yapay Zekâ Reformu,Vergi dairelerinin sunduğu hizmetlerde yapay zekâdan nasıl yararlanılacak?
+structure,dense:intfloat/multilingual-e5-base,dev13,factual,1,Doc02-s0032 Paragraf 591.1 [3.2.3.6.  Bilgi ve İletişim Teknolojileri | ,Kalkınma Planı yapay zekâda kamu üniversite ve özel sektör iş birliği için ne öngörüyor?
+structure,dense:intfloat/multilingual-e5-base,dev14,factual,1,Doc02-s0033 Paragraf 591.2 [3.2.3.6.  Bilgi ve İletişim Teknolojileri | ,On İkinci Kalkınma Planı'na göre yapay zekâda uluslararası iş birliği için ne yapılacak?
+structure,dense:intfloat/multilingual-e5-base,dev15,term,1,Doc08-s0044 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C4 - İstem Mü,İstem mühendisliği ne demektir?
+structure,dense:intfloat/multilingual-e5-base,dev16,term,1,Doc08-s0098 BÖLÜM G YAPAY ZEKÂ GÜVENLİĞİ > G3 - Model Zehirleme / Model ,Bir modelin eğitim verisine kasıtlı olarak hatalı veri eklenmesine ne ad verilir?
+structure,dense:intfloat/multilingual-e5-base,dev17,english-name,1,Doc08-s0048 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C8 - Halüsina,Hallucination kavramı sözlükte nasıl tanımlanıyor?
+structure,dense:intfloat/multilingual-e5-base,dev18,english-name,1,Doc08-s0047 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C7 - Geri Get,Retrieval-Augmented Generation teriminin Türkçe karşılığı nedir?
+structure,dense:intfloat/multilingual-e5-base,dev19,factual,4,Doc06-s0147 10. Üretken Yapay Zekâ Sistemlerinde Kişisel Verilerin Yurt ,Üretken yapay zekâ kullanılırken kişisel veriler yurt dışına hangi şartlarla aktarılabilir?
+structure,dense:intfloat/multilingual-e5-base,dev20,factual,5,Doc06-s0085 7. Üretken Yapay Zekâ Sistemlerinin Yaşam Döngüsü Kapsamında,Üretken yapay zekâ sistemlerinde veri sorumlusu kime denir?
+structure,dense:intfloat/multilingual-e5-base,dev21,factual,1,Doc06-s0178 14. Günlük Hayatta Üretken Yapay Zekâ Uygulamalarını Kullanı,Sohbet botlarına hangi kişisel bilgilerimi yazmamalıyım?
+structure,dense:intfloat/multilingual-e5-base,dev22,factual,1,Doc06-s0190 15. Üretken Yapay Zekâ Araçlarını Kullanan Çocuklara Yönelik,Çocukları üretken yapay zekâ araçlarını kullanırken ebeveynler nelere dikkat etmeli?
+structure,dense:intfloat/multilingual-e5-base,dev23,responsible,1,"Doc07-s0020 3. Uygulama, İzleme ve Yönetişim",TÜBİTAK'ta yapay zekâ çalışmalarını kim koordine ediyor?
+structure,dense:intfloat/multilingual-e5-base,dev24,factual,1,Doc07-s0011 1.6. Mevzuat ve Uyum,TÜBİTAK'ta kullanılan yapay zekâ sistemleri hangi mevzuata uymak zorunda?
+structure,dense:intfloat/multilingual-e5-base,dev25,factual,2,Doc05-s0546 KURUMSAL YAPILANMA ÖNERİLERİ,Komisyon kamu kurumlarında yapay zekâ için nasıl bir birim kurulmasını öneriyor?
+structure,dense:intfloat/multilingual-e5-base,dev26,factual,1,Doc05-s0550 KURUMSAL YAPILANMA ÖNERİLERİ,TBMM için yapay zekâ kullanımına dair hangi rehberin hazırlanması önerildi?
+structure,dense:intfloat/multilingual-e5-base,dev27,factual,1,Doc05-s0390 4.4.3.1 Genel ve Çerçeve Nitelikli Türk Yapay Zekâ Kanunu’nu,Komisyon Türkiye için genel bir yapay zekâ kanunu çıkarılmasını öneriyor mu?
+structure,dense:intfloat/multilingual-e5-base,dev28,factual,1,Doc05-s0549 KURUMSAL YAPILANMA ÖNERİLERİ,Dijital Yetenek Haritası ne amaçla oluşturulacak?
+structure,dense:intfloat/multilingual-e5-base,dev29,number,3,Doc06-s0161 12. Üretken Yapay Zekâ Sistemleri Kapsamında İlgili Kişileri,Madde 11'e göre ilgili kişinin hakları nelerdir?
+structure,dense:intfloat/multilingual-e5-base,dev30,factual,2,Doc04-s0031 ALTINCI BÖLÜM - Kişisel Verileri Koruma Kurumu ve Teşkilat >,Kişisel Verileri Koruma Kurulu kaç üyeden oluşur?
+structure,dense:intfloat/multilingual-e5-base,dev31,factual,1,"Doc04-s0022 DÖRDÜNCÜ BÖLÜM - Başvuru, Şikâyet ve Veri Sorumluları Sicili",Veri sorumlusuna yapılan başvuru en geç kaç gün içinde sonuçlandırılmalı?
+structure,dense:intfloat/multilingual-e5-base,dev32,factual,3,Doc05-s0069 4.3.1.3.3 Veri İşleme Şartlarının Belirlenmesi,Kişisel veriler hangi hâllerde açık rıza olmadan işlenebilir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev01,factual,1,Doc01-s0082 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu kurumlarında yapay zekâdan sorumlu yönetici atandıktan sonra yol haritasını hazırlamak için ne kadar süre var?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev02,responsible,1,Doc01-s0084 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Eylem Planı'nda kamuda yapay zekâ dönüşümüne öncülük etme eyleminin ana sorumlusu hangi kurum?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev03,factual,,Doc01-s0091 EKSEN 3: ÜRET. > Eylem 9- Yapay Zekâ Büyüme Bölgeleri ve Böl,Girişimler ve KOBİ'ler yapay zekâ için gereken hesaplama gücüne nasıl erişebilecek?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev04,factual,1,Doc01-s0048 EKSEN 1: FARK ET. > Eylem 1- Ulusal Yapay Zekâ Okuryazarlığı,Yapay zekâ okuryazarlığı eğitimleri vatandaşlara hangi kanallardan sunulacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev05,factual,1,Doc01-s0119 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Yenilikçi yapay zekâ çözümlerinin denenebileceği düzenleyici deney alanları hangi sektörlerde kurulacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev06,factual,1,Doc01-s0080 EKSEN 2: İSTİFADE ET. > Eylem 7- Kamu yapay zekâ dönüşümüne ,Kamu yatırım bütçesinin ne kadarının yapay zekâ projelerine ayrılması hedefleniyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev07,number,1,Doc01-s0122 EKSEN 4: YÖNET. > Eylem 16- Güvenlik değerlendirme kapasites,Eylem 16 neyi kapsıyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev08,factual,1,Doc03-s0040 Tedbir 920.1 [2.5.1. Adalet Hizmetleri],Yargıda karar destek sistemleri için yıllık programda hangi tedbir var?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev09,factual,,Doc06-s0058 4. Üretken Yapay Zekâ Hangi Alanlarda Kullanılmaktadır?,Sağlık hizmeti sunucularının denetiminde yapay zekâ nasıl kullanılacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev10,responsible,1,Doc03-s0046 Tedbir 968.2 [2.5.8. Dijital Devlet],Kamuda yapay zekâ yönetim sistemi belgelendirme mekanizmasını hangi kurum kuracak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev11,number,1,Doc03-s0031 Tedbir 688.2 [2.3.1. Eğitim],Tedbir 688.2'den sorumlu kurum hangisi?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev12,factual,1,Doc03-s0005 Tedbir 400.2 [2.1.6. Maliye Politikası],Vergi dairelerinin sunduğu hizmetlerde yapay zekâdan nasıl yararlanılacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev13,factual,1,Doc02-s0032 Paragraf 591.1 [3.2.3.6.  Bilgi ve İletişim Teknolojileri | ,Kalkınma Planı yapay zekâda kamu üniversite ve özel sektör iş birliği için ne öngörüyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev14,factual,1,Doc02-s0033 Paragraf 591.2 [3.2.3.6.  Bilgi ve İletişim Teknolojileri | ,On İkinci Kalkınma Planı'na göre yapay zekâda uluslararası iş birliği için ne yapılacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev15,term,1,Doc08-s0044 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C4 - İstem Mü,İstem mühendisliği ne demektir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev16,term,1,Doc08-s0098 BÖLÜM G YAPAY ZEKÂ GÜVENLİĞİ > G3 - Model Zehirleme / Model ,Bir modelin eğitim verisine kasıtlı olarak hatalı veri eklenmesine ne ad verilir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev17,english-name,1,Doc08-s0048 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C8 - Halüsina,Hallucination kavramı sözlükte nasıl tanımlanıyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev18,english-name,1,Doc08-s0047 BÖLÜM C ÜRETKEN YAPAY ZEKÂ VE MODEL AİLELERİ > C7 - Geri Get,Retrieval-Augmented Generation teriminin Türkçe karşılığı nedir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev19,factual,4,Doc06-s0149 10. Üretken Yapay Zekâ Sistemlerinde Kişisel Verilerin Yurt ,Üretken yapay zekâ kullanılırken kişisel veriler yurt dışına hangi şartlarla aktarılabilir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev20,factual,4,Doc06-s0084 7. Üretken Yapay Zekâ Sistemlerinin Yaşam Döngüsü Kapsamında,Üretken yapay zekâ sistemlerinde veri sorumlusu kime denir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev21,factual,6,Doc06-s0155 11. Üretken Yapay Zekâ Sistemleri Bağlamında Şeffaflık Nasıl,Sohbet botlarına hangi kişisel bilgilerimi yazmamalıyım?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev22,factual,1,Doc06-s0190 15. Üretken Yapay Zekâ Araçlarını Kullanan Çocuklara Yönelik,Çocukları üretken yapay zekâ araçlarını kullanırken ebeveynler nelere dikkat etmeli?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev23,responsible,1,"Doc07-s0020 3. Uygulama, İzleme ve Yönetişim",TÜBİTAK'ta yapay zekâ çalışmalarını kim koordine ediyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev24,factual,1,Doc07-s0011 1.6. Mevzuat ve Uyum,TÜBİTAK'ta kullanılan yapay zekâ sistemleri hangi mevzuata uymak zorunda?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev25,factual,1,Doc05-s0549 KURUMSAL YAPILANMA ÖNERİLERİ,Komisyon kamu kurumlarında yapay zekâ için nasıl bir birim kurulmasını öneriyor?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev26,factual,1,Doc05-s0550 KURUMSAL YAPILANMA ÖNERİLERİ,TBMM için yapay zekâ kullanımına dair hangi rehberin hazırlanması önerildi?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev27,factual,1,Doc05-s0384 4.4.3.1 Genel ve Çerçeve Nitelikli Türk Yapay Zekâ Kanunu’nu,Komisyon Türkiye için genel bir yapay zekâ kanunu çıkarılmasını öneriyor mu?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev28,factual,1,Doc05-s0549 KURUMSAL YAPILANMA ÖNERİLERİ,Dijital Yetenek Haritası ne amaçla oluşturulacak?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev29,number,1,Doc04-s0019 ÜÇÜNCÜ BÖLÜM - Haklar ve Yükümlülükler > Madde 11 - İlgili k,Madde 11'e göre ilgili kişinin hakları nelerdir?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev30,factual,1,Doc04-s0033 ALTINCI BÖLÜM - Kişisel Verileri Koruma Kurumu ve Teşkilat >,Kişisel Verileri Koruma Kurulu kaç üyeden oluşur?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev31,factual,1,"Doc04-s0022 DÖRDÜNCÜ BÖLÜM - Başvuru, Şikâyet ve Veri Sorumluları Sicili",Veri sorumlusuna yapılan başvuru en geç kaç gün içinde sonuçlandırılmalı?
+structure,hybrid:intfloat/multilingual-e5-base+id,dev32,factual,,Doc06-s0126 A. Kanun’un 5’inci Maddesi Kapsamında Uygun İşleme Şartının ,Kişisel veriler hangi hâllerde açık rıza olmadan işlenebilir?
