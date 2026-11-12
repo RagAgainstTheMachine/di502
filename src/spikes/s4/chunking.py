@@ -12,7 +12,7 @@ Each passage keeps its document, section, legal status, PDF pages and the line
 range in the source .md file (used to check retrieval against gold sources).
 
 Usage:
-  python src/rag/chunking.py --text-dir data/text --strategy structure --out data/chunks/structure.jsonl
+  python src/spikes/s4/chunking.py --text-dir data/text --strategy structure --out data/chunks/structure.jsonl
 """
 from __future__ import annotations
 
