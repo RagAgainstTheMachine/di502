@@ -15,9 +15,9 @@ Methods:
                   "Eylem N", "Tedbir N.N", "Paragraf N" or "Madde N"
 
 Usage (BM25 only, no downloads):
-  python src/experiments/s4_retrieval_spike.py
+  python src/spikes/s4/s4_retrieval_spike.py
 With embeddings:
-  python src/experiments/s4_retrieval_spike.py --methods bm25,bm25s5,dense:intfloat/multilingual-e5-base,hybrid:intfloat/multilingual-e5-base
+  python src/spikes/s4/s4_retrieval_spike.py --methods bm25,bm25s5,dense:intfloat/multilingual-e5-base,hybrid:intfloat/multilingual-e5-base
 """
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "rag"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import chunking  # noqa: E402
 import retrieval  # noqa: E402
 
