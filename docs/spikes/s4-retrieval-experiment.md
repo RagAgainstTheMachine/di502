@@ -13,17 +13,17 @@ On our own corpus, does splitting at the documents' own structure find the right
 ## Setup
 
 - **Corpus:** the extracted `.md` files of all 8 documents (`data/text/`). Doc01–Doc03 and Doc05–Doc08 were made by `src/extraction/extract.py` (see `EXTRACTION_REPORT.md`). Doc04 (Law No. 6698) was blocked there because the wrong PDF had been supplied; it was extracted on 03/11/2026 from the correct 21-page PDF by `src/extraction/doc04_law_6698.py` (pdfplumber 0.11.10; 33 articles, 3 provisional articles, 8 footnotes). Check with the report's method: 25 of 25 sampled sentences found on the marked page; mean character coverage 0.9989, no page below 0.98.
-- **Splitting** (`src/rag/chunking.py`):
+- **Splitting** (`src/spikes/s4/chunking.py`):
   - *structure*: one passage per heading (action, Tedbir, paragraph, glossary term or section); sections over 1,000 characters are split at paragraph or sentence boundaries; every passage starts with the document title and section path. 1,226 passages.
   - *fixed*: windows of 1,000 characters with 200 characters of overlap, no title or section. 1,126 passages.
-- **Search** (`src/rag/retrieval.py`):
+- **Search** (`src/spikes/s4/retrieval.py`):
   - *bm25*: keyword search on whole words [1].
   - *bm25s5*: the same on the first 5 letters of each word, a simple form of Turkish stemming [2] (S1, finding 6).
   - *+id*: when the question names "Eylem N", "Tedbir N.N", "Paragraf N" or "Madde N", passages under that heading go first (US-4).
   - *dense*: embedding search with `intfloat/multilingual-e5-base` [4] ("query: " and "passage: " prefixes, cosine similarity), run on Utku Uçar's laptop CPU on 12/11/2026 with sentence-transformers 6.3.0, transformers 5.22.2, torch 2.15.0.
   - *hybrid*: reciprocal rank fusion [3] of bm25s5 and dense, equal weights, top 50 of each.
 - **Questions:** 32 development questions (`docs/eval/dev-set-v0.csv`), 2–7 per document, each with a gold anchor (a phrase in the source). This set is separate from evaluation set v1 (D2) and is used only to choose settings, so that D2 stays unseen until the baseline run.
-- **Measures** (`src/experiments/s4_retrieval_spike.py`): hit@1 (the first passage covers the gold anchor), recall@5 (one of the first 5 does), MRR@10 (the mean of 1 ÷ the rank of the first passage that covers the gold anchor, counted as 0 when it is not in the first 10: rank 1 gives 1, rank 2 gives 0.5, rank 5 gives 0.2), and query time.
+- **Measures** (`src/spikes/s4/s4_retrieval_spike.py`): hit@1 (the first passage covers the gold anchor), recall@5 (one of the first 5 does), MRR@10 (the mean of 1 ÷ the rank of the first passage that covers the gold anchor, counted as 0 when it is not in the first 10: rank 1 gives 1, rank 2 gives 0.5, rank 5 gives 0.2), and query time.
 
 ## Results
 
@@ -73,11 +73,11 @@ BM25 answers a query in under 2 ms and builds its index in 0.1 s. Dense search a
 ## How to reproduce
 
 ```cmd
-python src\experiments\s4_retrieval_spike.py --methods bm25,bm25s5,bm25s5+id
-python src\experiments\s4_retrieval_spike.py --strategies structure --methods bm25s5+id,dense:intfloat/multilingual-e5-base,hybrid:intfloat/multilingual-e5-base+id
+python src\spikes\s4\s4_retrieval_spike.py --methods bm25,bm25s5,bm25s5+id
+python src\spikes\s4\s4_retrieval_spike.py --strategies structure --methods bm25s5+id,dense:intfloat/multilingual-e5-base,hybrid:intfloat/multilingual-e5-base+id
 ```
 
-Packages: `requirements.txt`. The first dense run downloads the model (about 1 GB) and writes the passage embeddings to `data/emb_cache/`.
+Packages: `src/spikes/s4/requirements.txt`. The first dense run downloads the model (about 1 GB) and writes the passage embeddings to `data/emb_cache/`.
 
 Each run writes a summary and a per-question file to `docs/spikes/results/`.
 
