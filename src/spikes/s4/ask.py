@@ -6,9 +6,9 @@ Needs Ollama running locally (https://ollama.com) with a model pulled, e.g.
 Search uses BM25 with 5-letter prefixes and the exact-ID lookup (no downloads).
 
 Usage:
-  python src/experiments/ask.py "Kamu kurumları yapay zekâ yol haritasını ne zamana kadar hazırlamalı?"
-  python src/experiments/ask.py --model qwen2.5:7b --k 5 "..."
-  python src/experiments/ask.py --dev-set docs/eval/dev-set-v0.csv     # all development questions, saved to CSV
+  python src/spikes/s4/ask.py "Kamu kurumları yapay zekâ yol haritasını ne zamana kadar hazırlamalı?"
+  python src/spikes/s4/ask.py --model qwen2.5:7b --k 5 "..."
+  python src/spikes/s4/ask.py --dev-set docs/eval/dev-set-v0.csv     # all development questions, saved to CSV
 """
 from __future__ import annotations
 
@@ -23,7 +23,6 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "rag"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import chunking  # noqa: E402
 import retrieval  # noqa: E402
