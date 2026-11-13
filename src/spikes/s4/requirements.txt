@@ -1,0 +1,9 @@
+# Spike S4: pinned packages for the code in this folder (exact versions).
+# Versions used for spike S4 on 12/11/2026 (Python 3.12.0, Windows).
+numpy==2.5.4
+torch==2.15.0
+transformers==5.22.2
+sentence-transformers==6.3.0
+huggingface_hub==2.4.0
+# Only for src/extraction/doc04_law_6698.py (run on 03/11/2026)
+pdfplumber==0.11.10

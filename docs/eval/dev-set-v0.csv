@@ -1,0 +1,33 @@
+﻿id,question,type,gold_doc,gold_anchor,note
+dev01,Kamu kurumlarında yapay zekâdan sorumlu yönetici atandıktan sonra yol haritasını hazırlamak için ne kadar süre var?,factual,Doc01,12 hafta içinde üç yıllık,Eylem 7
+dev02,Eylem Planı'nda kamuda yapay zekâ dönüşümüne öncülük etme eyleminin ana sorumlusu hangi kurum?,responsible,Doc01,"Ana sorumlu: Siber Güvenlik Başkanlığı (Sanayi ve Teknoloji Bakanlığı, Hazine",Eylem 7
+dev03,Girişimler ve KOBİ'ler yapay zekâ için gereken hesaplama gücüne nasıl erişebilecek?,factual,Doc01,Herkes İçin GPU”) ile girişimler,Eylem 6
+dev04,Yapay zekâ okuryazarlığı eğitimleri vatandaşlara hangi kanallardan sunulacak?,factual,Doc01,e-Devlet ve EBA başta olmak üzere,Eylem 1
+dev05,Yenilikçi yapay zekâ çözümlerinin denenebileceği düzenleyici deney alanları hangi sektörlerde kurulacak?,factual,Doc01,"Finans, sağlık, enerji, mobilite ve telekomünikasyon",Eylem 16
+dev06,Kamu yatırım bütçesinin ne kadarının yapay zekâ projelerine ayrılması hedefleniyor?,factual,Doc01,en az %2 pay,Eylem 7
+dev07,Eylem 16 neyi kapsıyor?,number,Doc01,Eylem 16- Güvenlik değerlendirme,Eylem 16 heading
+dev08,Yargıda karar destek sistemleri için yıllık programda hangi tedbir var?,factual,Doc03,Tedbir 920.1. Yapay zekânın getirdiği,Tedbir 920.1
+dev09,Sağlık hizmeti sunucularının denetiminde yapay zekâ nasıl kullanılacak?,factual,Doc03,Yapay zekâ destekli risk analizi modellerinin,Tedbir 411.9
+dev10,Kamuda yapay zekâ yönetim sistemi belgelendirme mekanizmasını hangi kurum kuracak?,responsible,Doc03,Tedbir 968.2. Kamuda,Tedbir 968.2
+dev11,Tedbir 688.2'den sorumlu kurum hangisi?,number,Doc03,Tedbir 688.2. Üniversitelerde,Tedbir 688.2
+dev12,Vergi dairelerinin sunduğu hizmetlerde yapay zekâdan nasıl yararlanılacak?,factual,Doc03,vergi daireleri tarafından verilen hizmetlerin etkinliği,Tedbir 400.2
+dev13,Kalkınma Planı yapay zekâda kamu üniversite ve özel sektör iş birliği için ne öngörüyor?,factual,Doc02,"591.1. Kamu, üniversite ve özel sektörün",Paragraf 591.1
+dev14,On İkinci Kalkınma Planı'na göre yapay zekâda uluslararası iş birliği için ne yapılacak?,factual,Doc02,591.2. Yapay zekâ alanında uluslararası,Paragraf 591.2
+dev15,İstem mühendisliği ne demektir?,term,Doc08,"İstem mühendisliği, istenen çıktı",C4
+dev16,Bir modelin eğitim verisine kasıtlı olarak hatalı veri eklenmesine ne ad verilir?,term,Doc08,"Model zehirleme, saldırganların",G3
+dev17,Hallucination kavramı sözlükte nasıl tanımlanıyor?,english-name,Doc08,C8 - Halüsinasyon,C8
+dev18,Retrieval-Augmented Generation teriminin Türkçe karşılığı nedir?,english-name,Doc08,C7 - Geri Getirmeli,C7
+dev19,Üretken yapay zekâ kullanılırken kişisel veriler yurt dışına hangi şartlarla aktarılabilir?,factual,Doc06,"Kişisel verilerin yurt dışına aktarımı, 6698 sayılı Kanun’un 9’uncu",Question 10
+dev20,Üretken yapay zekâ sistemlerinde veri sorumlusu kime denir?,factual,Doc06,kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen,Question 7
+dev21,Sohbet botlarına hangi kişisel bilgilerimi yazmamalıyım?,factual,Doc06,"Özellikle ad-soyad, adres, telefon numarası",Question 14
+dev22,Çocukları üretken yapay zekâ araçlarını kullanırken ebeveynler nelere dikkat etmeli?,factual,Doc06,15. Üretken Yapay Zekâ Araçlarını Kullanan Çocuklara,Question 15 heading
+dev23,TÜBİTAK'ta yapay zekâ çalışmalarını kim koordine ediyor?,responsible,Doc07,Yapay Zekâ Koordinasyon Grubu kurulmuştur,Section 3
+dev24,TÜBİTAK'ta kullanılan yapay zekâ sistemleri hangi mevzuata uymak zorunda?,factual,Doc07,tedarik edilen veya kullanılan tüm yapay zekâ sistem,Section 1.6
+dev25,Komisyon kamu kurumlarında yapay zekâ için nasıl bir birim kurulmasını öneriyor?,factual,Doc05,23. Kamu kurum ve kuruluşlarında ayrı YZ yönetim,Recommendation 23
+dev26,TBMM için yapay zekâ kullanımına dair hangi rehberin hazırlanması önerildi?,factual,Doc05,Parlamento Yapay Zekâ Kullanım İlkeleri Rehberi,Recommendation 26
+dev27,Komisyon Türkiye için genel bir yapay zekâ kanunu çıkarılmasını öneriyor mu?,factual,Doc05,4.4.3.1 Genel ve Çerçeve Nitelikli Türk Yapay Zekâ Kanunu || 27. Genel ve çerçeve nitelikte,Section 4.4.3.1 or recommendation 27
+dev28,Dijital Yetenek Haritası ne amaçla oluşturulacak?,factual,Doc05,Dijital Yetenek Haritası,Recommendation 24
+dev29,Madde 11'e göre ilgili kişinin hakları nelerdir?,number,Doc04,### Madde 11 - İlgili kişinin hakları,Madde 11 heading
+dev30,Kişisel Verileri Koruma Kurulu kaç üyeden oluşur?,factual,Doc04,"Kurul, dokuz üyeden oluşur",Madde 21
+dev31,Veri sorumlusuna yapılan başvuru en geç kaç gün içinde sonuçlandırılmalı?,factual,Doc04,en kısa sürede ve en geç otuz gün,Madde 13
+dev32,Kişisel veriler hangi hâllerde açık rıza olmadan işlenebilir?,factual,Doc04,"Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın",Madde 5(2)
