@@ -12,7 +12,7 @@ Details: [Project Executive Summary](docs/Markdown%20Template/03-project-canvas/
 
 ## Status
 
-Document ingestion and hybrid retrieval are available. Grounded answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 14/11/2026.
+Document ingestion, hybrid retrieval, grounded answer generation and the web page (alpha) are available. The alpha prototype (local web page) is due 14/11/2026.
 
 ## Install
 
@@ -33,7 +33,13 @@ python -m src.retrieval.search "Data Sovereignty nedir?" --limit 3
 python -m src.ingestion.index --output data/processed --all --dry-run
 ```
 
-Search defaults to hybrid (E5 + BM25 + RRF), with BM25 on `text` only and parent expansion off. Seven documents and 1183 points are already indexed in `ai_plan_text_only`; no reparse or upload is needed to search them. The web interface is not available yet.
+Search defaults to hybrid (E5 + BM25 + RRF), with BM25 on `text` only and parent expansion off. Seven documents and 1183 points are already indexed in `ai_plan_text_only`; no reparse or upload is needed to search them.
+
+Web page (needs a language model; see the [application guide](docs/deploy/app-deploy-guide.md)):
+
+```bash
+python -m src.app.server        # then open http://localhost:8080
+```
 
 See [pipeline instructions](docs/pipeline/README.md) and the [branch delivery plan](docs/pipeline/branch-plan.md).
 
@@ -42,9 +48,11 @@ See [pipeline instructions](docs/pipeline/README.md) and the [branch delivery pl
 | Path | Contents |
 | --- | --- |
 | `src/ingestion/` | PDF/MD preparation, chunking, validation and Qdrant upload |
-| `src/retrieval/` | Importable hybrid search for the future LLM layer |
+| `src/retrieval/` | Importable hybrid search used by the application |
+| `src/app/` | Answer generation, JSON API and web page |
 | `src/shared/` | Configuration, payload and Qdrant helpers |
 | `config/rag.yaml` | All parameters: chunking, models, top-k, prompt variant |
+| `config/documents.yaml` | Legal status of each indexed document, for source cards |
 | `prompts/` | Prompt templates, one file per template |
 | `data/markdown/`, `data/processed/` | Reviewed sources and ready chunk bundles |
 | `data/manifest.csv` | Source URL, licence, download date and hash of each document |
