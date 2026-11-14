@@ -1,0 +1,38 @@
+# Document catalog for answer citations.
+# Keys are the exact `document_name` values stored in the Qdrant payloads.
+# URL, version date and collection date come from data/manifest.csv (by doc_id),
+# so they are recorded in one place only. Legal status uses the same labels as
+# docs/eval/eval-set-v1.csv.
+documents:
+  "Türkiye Yapay Zekâ Eylem Planı 2026-2030":
+    doc_id: Doc01
+    short_title: Yapay Zekâ Eylem Planı 2026–2030
+    legal_status: policy/plan
+  "On İkinci Kalkınma Planı (2024–2028)":
+    doc_id: Doc02
+    short_title: On İkinci Kalkınma Planı (2024–2028)
+    legal_status: policy/plan
+  "2026 Yılı Cumhurbaşkanlığı Yıllık Programı":
+    doc_id: Doc03
+    short_title: 2026 Yılı Cumhurbaşkanlığı Yıllık Programı
+    legal_status: policy/plan
+  "6698 sayılı Kişisel Verilerin Korunması Kanunu":
+    doc_id: Doc04
+    short_title: 6698 sayılı Kişisel Verilerin Korunması Kanunu
+    legal_status: binding law
+  "TBMM Yapay Zekâ Araştırma Komisyonu Raporu (Sıra Sayısı 260)":
+    doc_id: Doc05
+    short_title: TBMM Yapay Zekâ Araştırma Komisyonu Raporu
+    legal_status: report
+  "Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi (15 Soruda) — KVKK Yayın No. 113":
+    doc_id: Doc06
+    short_title: KVKK Üretken Yapay Zekâ Rehberi
+    legal_status: guidance
+  "TÜBİTAK Yapay Zekâ Politikası":
+    doc_id: Doc07
+    short_title: TÜBİTAK Yapay Zekâ Politikası
+    legal_status: institutional policy
+  "Kamu Kurumları İçin Yapay Zekâ Sözlüğü":
+    doc_id: Doc08
+    short_title: Kamu Kurumları İçin Yapay Zekâ Sözlüğü
+    legal_status: guidance
