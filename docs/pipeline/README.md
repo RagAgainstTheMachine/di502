@@ -1,12 +1,14 @@
-# Document ingestion
+# Document ingestion and hybrid retrieval
 
-This branch delivers document ingestion and the shared code required by a separate retrieval branch.
+The selected production pipeline is split into two modules in this repository.
 
 | Module | Responsibility | Runs when |
 | --- | --- | --- |
 | `src/ingestion/` | PDF/Markdown conversion, cleaning, structure-aware chunking, validation, embedding/upload and BM25 index setup | Documents or the index change |
+| `src/retrieval/` | E5 semantic retrieval, BM25 text retrieval, RRF fusion, metadata filters and optional parent expansion | A user asks a question |
 | `src/shared/` | Configuration, file validation, payload projection, Cloud connection and lightweight schema checks | Both |
 
+Runtime retrieval does not import Docling, Transformers or the ingestion modules.
 CLI entry points use `python -m` from the repository root; no `sys.path` changes are required.
 
 ## Install
@@ -101,30 +103,67 @@ not artificial prefixes in embedding text. TOC and heading-only fragments are
 excluded conservatively. Short factual answers and responsibility paragraphs
 are retained. Parent reconstruction and token bounds are validated.
 
-## Index setup and retrieval hand-off
+## Search and the future LLM interface
 
-For a new collection, create its text BM25 index after uploading:
+```bash
+python -m src.retrieval.search "Data Sovereignty nedir?" --limit 3
+python -m src.retrieval.search "Etik Kurul yaptırım uygulayabilir mi?" --mode semantic --limit 3
+python -m src.retrieval.search "Data Sovereignty" --mode bm25 --limit 3
+python -m src.retrieval.search "Hedefler nelerdir?" --document-name "Türkiye Yapay Zekâ Eylem Planı 2026-2030" --json
+```
+
+The default is **hybrid**: E5 and BM25 each retrieve 20 candidates, then Qdrant
+combines the rankings with RRF and returns the configured `top_k` (5 by default).
+BM25 searches **only `text`**, using word tokenization and lowercasing, without
+stemming or stopword removal. Hybrid fusion, BM25 and dense search execute on
+Qdrant; the Python client sends the request and receives the results. RRF scores
+are neither cosine similarities nor probabilities.
+
+For a new collection, create the BM25 index once after uploading the data:
 
 ```bash
 python -m src.ingestion.setup_hybrid --collection ai_plan_text_only --report output/hybrid_setup.json
 ```
 
-The existing collection already has this index. Setup preserves the point IDs,
-payloads and E5 vectors. The BM25 settings are word tokenization and lowercasing
-on `text`, without stemming or stopword removal. Qdrant 1.20+ is required.
+The existing Cloud collection is already configured; this command is not needed
+again for migration. Setup verifies that IDs, payloads and vectors remain intact.
+New/updated text is indexed automatically. Native BM25 scoring requires Qdrant
+1.20+; the client version is pinned in `requirements.txt`.
 
-Request-time search is intentionally delivered in `feature/hybrid-retrieval`.
-It depends on this branch's shared configuration and index schema. See the
-[two-branch delivery plan](branch-plan.md).
+Application integration:
+
+```python
+from src.retrieval.search import search
+
+hits = search(user_question, limit=5)
+# Each hit carries id, score, text, document_name, section and available pages.
+# Optional native paragraph/action and parent fields are preserved when present.
+```
+
+The next application layer can build the LLM context from these results, retain
+the source metadata for citations, and call the selected model. This migration
+does not implement answer generation, a reranker, question understanding or a web UI.
+The current payloads do not contain all the legal-status/date/URL fields planned
+in the architecture; those can later be resolved from a document catalog.
+
+Parent expansion is **off** by default. `--expand-parent` or
+`search(question, expand_parent=True)` adds the siblings of hits that have a
+parent ID; it does not change the retrieval ranking. Deduplicate expanded
+parents before sending them to an LLM.
 
 ## Checks
 
 ```bash
+# Retrieval checks only; runtime requirements are sufficient:
+python -m unittest discover -s tests/retrieval -p test_hybrid_search.py -v
+# Full selected-pipeline checks; install ingestion requirements first:
 python -m unittest discover -s tests -v
-python -m src.ingestion.index --output data/processed --all --dry-run
 ```
 
-Tests use in-memory storage and substitute remote embedding inference. They do
-not upload test points to Cloud. Tokenizer-dependent tests may download the E5
-tokenizer once; ready-bundle validation is offline. Original source extraction
-limitations and manually reviewed Markdown are retained as documented above.
+Tests use an in-memory Qdrant client and replace only remote embedding inference;
+they do not upload test documents to Cloud. Some full-suite tests use the E5
+tokenizer and may download it on the first run. Ready-bundle validation is offline.
+No comparison/admin scripts, caches, model weights or credentials are copied.
+
+References: [Qdrant BM25](https://qdrant.tech/documentation/search/text-search/full-text-search/),
+[Qdrant hybrid queries](https://qdrant.tech/documentation/search/hybrid-queries/).
