@@ -1,0 +1,111 @@
+{
+  "format_version": 2,
+  "document_id": "doc07-tubitak-yapay-zeka-politikasi",
+  "title": "TÜBİTAK Yapay Zekâ Politikası",
+  "profile": "generic",
+  "source_format": "md",
+  "source_path": "data/processed/doc07-tubitak-yapay-zeka-politikasi/retrieval_input.md",
+  "source_metadata": {
+    "doc_id": "Doc07",
+    "title": "TÜBİTAK Yapay Zekâ Politikası",
+    "source_pdf": "doc07_tubitak_yapay_zeka_politikasi.pdf",
+    "source_pdf_sha256": "928085bab9a9df26512a6f2139d1889861da5ad314e52d4cdd4be7f0b8050d39",
+    "source_pdf_pages": 8,
+    "tool": "PyMuPDF 1.28.2 (MuPDF 1.28.2), Python 3.10.12",
+    "extractor": "src/extraction/extract.py (sha256 377ed8abb1aff0b3…)",
+    "extraction_date": "2026-11-02",
+    "part_used_inventory": "All, 8 pp.",
+    "pages_used": "PDF pages 1–8",
+    "selection_rule": "All 8 pages. Page number (bottom 85 pt) moved into the marker; the ruled table on p. 5 is read cell by cell.",
+    "page_marker_format": "<!-- page: pdf N | printed M -->  (printed = number printed on the page, or none)",
+    "verbatim": "text-layer only; line breaks become spaces; a line-end hyphen is removed only when the joined word occurs elsewhere in the same PDF (see report)",
+    "status": "reviewed_against_pdf",
+    "review_date": "2026-11-10",
+    "source_markdown_sha256": "14d644c9e4a5ddd32d49f5632c11130635a0a29baa7f1c43c9ddbf6b0c557a85",
+    "review_scope": "8 PDF sayfasının tamamı; kapak ve kaynakça dahil.",
+    "review_tools": "pypdfium2; pypdf; sekiz kaynak sayfanın görüntüsü",
+    "review_notes": "Metin aktarımı doğrulandı. Başlık seviyeleri, giriş paragrafları, dört liste maddesi, üç sayfa geçişi, beş satırlı politika tablosu ve dört kaynak kaydı düzenlendi. Kaynağın ifadeleri değiştirilmedi.",
+    "retrieval_preprocessing": {
+      "policy_version": 1,
+      "reviewed_markdown_file": "doc07_tubitak_yapay_zeka_politikasi.md",
+      "reviewed_markdown_sha256": "2585c8d492ceaee5b8491b700455f95fed6b4759aac1899290f5f9baea90dcb7",
+      "excluded_pdf_pages": [
+        1,
+        8
+      ],
+      "retained_pdf_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "citation_callouts_removed": 13,
+      "bibliography_records_archived": 4,
+      "numbered_policy_sections_retained_in_section_metadata": true
+    }
+  },
+  "blocks_with_page_annotations": 51,
+  "source_file": "retrieval_input.md",
+  "source_sha256": "d0b611d9aae1913c4d1ee6ef3f06fc20b6e7541d2dfc06dba306a25c41034f25",
+  "page_count": 0,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "max_tokens": 300,
+  "merge_peers": true,
+  "embedding_context": "text_only",
+  "compact_payload": true,
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "parent_id",
+    "section",
+    "text"
+  ],
+  "retrieval_review": {
+    "policy_version": 1,
+    "excluded_total": 0
+  },
+  "chunk_count": 20,
+  "parent_count": 16,
+  "validation": {
+    "errors": [],
+    "actions": 0,
+    "glossary_terms": 0,
+    "max_observed_tokens": 280,
+    "parent_text_reconstruction": true,
+    "retrieval_exclusions": 0,
+    "headings_used_as_context": 17,
+    "body_blocks_preserved": true,
+    "pages_without_extracted_blocks": []
+  },
+  "files": {
+    "chunks.jsonl": "e7d58dea8a91c2b5f74597081729da2ae49ac5d50275a1115681c3ad02bc0ba1",
+    "parents.jsonl": "81b200df91908d3396f0f20add7d5cf60a7ed5cfe94f771d595f50ba82cb2a6e",
+    "excluded_chunks.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "excluded_parents.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "chunking_source.md": "93067f412e8749b9b89d0cf4fe902d920598ec8e910c791e3865c9438e14ec50",
+    "excluded_footnotes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "markdown_preprocessing.json": "1f48eb6ce25a6d0ddc420d9068a5724612fdca74e4064548bf82dd0173032753",
+    "retrieval_input.md": "d0b611d9aae1913c4d1ee6ef3f06fc20b6e7541d2dfc06dba306a25c41034f25",
+    "guide_preprocessing.json": "e41dd60f5d8c60f5398a0f078c29c7a72c2fae52423fd62ead4bec76891014af",
+    "source_exclusions.jsonl": "6a9235f8f53dfff9331e851186b4dd02b7dfa243cc80c67543a777bb6a870c55"
+  },
+  "packages": {
+    "docling": "2.145.0",
+    "docling-core": "2.105.0",
+    "transformers": "4.57.6",
+    "qdrant-client": "1.20.0"
+  },
+  "markdown_options": {},
+  "markdown_preprocessing": {
+    "excluded_footnotes": 0,
+    "removed_footnote_references": 0,
+    "numbered_units": [],
+    "numbered_unit_label": "Paragraf"
+  },
+  "source_pdf_page_count": 8
+}

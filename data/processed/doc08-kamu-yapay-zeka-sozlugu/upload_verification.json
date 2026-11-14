@@ -1,0 +1,23 @@
+{
+  "collection": "ai_plan_text_only",
+  "document_id": "doc08-kamu-yapay-zeka-sozlugu",
+  "document_name": "Kamu Kurumları İçin Yapay Zekâ Sözlüğü",
+  "points": 107,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "source_sha256": "36529d11278ea85227147bb659961f2109499e3751dcbb033c195fe278d4a0f2",
+  "stale_points_removed": 0,
+  "embedding_context": "text_only",
+  "payload_fields": [
+    "document_name",
+    "page_end",
+    "page_start",
+    "section",
+    "text"
+  ],
+  "verified_points": 107,
+  "other_points": 1076,
+  "other_payloads_and_vectors_unchanged": true,
+  "other_points_sha256": "e886919b6e404733eab9fc615b0347cd1cabefc5603a0abfd7f1ae5dc7b80f3e",
+  "collection_total_points": 1183
+}

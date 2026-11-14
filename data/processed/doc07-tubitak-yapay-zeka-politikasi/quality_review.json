@@ -1,0 +1,46 @@
+{
+  "chunk_count": 20,
+  "parent_count": 16,
+  "principle_sections": 6,
+  "policy_subsections": 5,
+  "all_5_table_rows_intact": true,
+  "source_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "excluded_pdf_pages": [
+    1,
+    8
+  ],
+  "source_citation_callouts_removed": 13,
+  "source_reference_records_archived": 4,
+  "reviewed_markdown_sha256": "2585c8d492ceaee5b8491b700455f95fed6b4759aac1899290f5f9baea90dcb7",
+  "reviewed_markdown_unchanged": true,
+  "selected_markdown_normalized_text_preserved": true,
+  "markdown_visible_text_matches_docling_blocks": true,
+  "all_chunks_have_source_pages": true,
+  "text_only": true,
+  "parent_text_reconstruction": true,
+  "max_token_budget": 300,
+  "max_observed_tokens": 280,
+  "min_observed_tokens": 37,
+  "chunks_with_parent_id": 7,
+  "chunks_without_parent_id": 13,
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "parent_id",
+    "section",
+    "text"
+  ],
+  "section_number_policy": "Source section numbers stay in section; paragraph_id is not invented.",
+  "profile": "profiles/tubitak_policy.py; generic HybridChunker reused",
+  "cloud_upload_performed": true,
+  "collection": "ai_plan_text_only"
+}

@@ -1,0 +1,39 @@
+{
+  "chunk_count": 107,
+  "source_term_count": 107,
+  "one_complete_term_per_chunk": true,
+  "section_counts": {
+    "A": 21,
+    "B": 19,
+    "C": 19,
+    "D": 13,
+    "E": 10,
+    "F": 13,
+    "G": 12
+  },
+  "source_fields_verified": 428,
+  "source_languages_verified": 214,
+  "all_term_source_pages_match_pdf": true,
+  "reviewed_markdown_sha256": "36529d11278ea85227147bb659961f2109499e3751dcbb033c195fe278d4a0f2",
+  "reviewed_markdown_unchanged": true,
+  "markdown_visible_text_matches_docling_blocks": true,
+  "term_text_reconstruction": true,
+  "text_only": true,
+  "max_token_budget": 300,
+  "min_observed_tokens": 135,
+  "max_observed_tokens": 200,
+  "chunks_with_parent_id": 0,
+  "chunks_without_parent_id": 107,
+  "payload_fields": [
+    "document_name",
+    "page_end",
+    "page_start",
+    "section",
+    "text"
+  ],
+  "term_code_policy": "Native A1–G12 identifiers remain in section; numeric paragraph_id is not invented.",
+  "selection_policy": "Supplied and reviewed 107-term selection; no front matter or bibliography added.",
+  "retrieval_exclusions": 0,
+  "cloud_upload_performed": true,
+  "collection": "ai_plan_text_only"
+}

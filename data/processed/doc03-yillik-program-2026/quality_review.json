@@ -1,0 +1,67 @@
+{
+  "document_name": "2026 Yılı Cumhurbaşkanlığı Yıllık Programı",
+  "chunks": 46,
+  "parents": 42,
+  "source_pdf_pages": 465,
+  "represented_pdf_pages": 46,
+  "source_measures_preserved": 32,
+  "source_activities_preserved": 77,
+  "added_explanatory_paragraphs": 12,
+  "added_policy_rows": 1,
+  "source_field_matches_pdfium": 173,
+  "source_field_matches_pypdf": 173,
+  "added_source_fragments_matched_pypdf": 15,
+  "explicit_keyword_occurrences": 68,
+  "uncovered_explicit_keyword_occurrences": 0,
+  "max_tokens": 300,
+  "observed_max_tokens": 290,
+  "text_only": true,
+  "body_blocks_with_pages": 391,
+  "all_activity_numbers_retained_with_their_text": true,
+  "orphan_field_labels_or_numbers": 0,
+  "multi_chunk_parents": {
+    "397.5": 3,
+    "441.5": 2,
+    "557.1": 2
+  },
+  "payload_shapes": [
+    {
+      "fields": [
+        "chunk_index",
+        "document_name",
+        "page_end",
+        "page_start",
+        "paragraph_id",
+        "parent_id",
+        "section",
+        "text"
+      ],
+      "points": 7
+    },
+    {
+      "fields": [
+        "document_name",
+        "page_end",
+        "page_start",
+        "paragraph_id",
+        "section",
+        "text"
+      ],
+      "points": 30
+    },
+    {
+      "fields": [
+        "document_name",
+        "page_end",
+        "page_start",
+        "section",
+        "text"
+      ],
+      "points": 9
+    }
+  ],
+  "embedding_model_for_future_upload": "intfloat/multilingual-e5-small",
+  "cloud_upload_performed": true,
+  "command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python prepare.py --input data/doc03_2026_yillik_programi.md --document-id doc03-yillik-program-2026 --output output/text_only --profile generic --max-tokens 300 --merge-peers --compact-payload",
+  "collection": "ai_plan_text_only"
+}

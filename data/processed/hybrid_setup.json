@@ -1,0 +1,29 @@
+{
+  "collection": "ai_plan_text_only",
+  "points": 1183,
+  "payloads_and_vectors_unchanged": true,
+  "points_sha256": "d20cc811b420cc3220b1edc938412c4f0c4bea12cc5f6aa91d40b1737f9c2452",
+  "text_index": {
+    "data_type": "text",
+    "params": {
+      "type": "text",
+      "tokenizer": "word",
+      "min_token_len": null,
+      "max_token_len": null,
+      "lowercase": true,
+      "ascii_folding": null,
+      "phrase_matching": null,
+      "stopwords": null,
+      "on_disk": null,
+      "memory": null,
+      "stemmer": null,
+      "enable_hnsw": null,
+      "scoring": {
+        "type": "bm25"
+      },
+      "nested": null
+    },
+    "points": 1183
+  },
+  "retrieval": "E5 dense + text BM25 + RRF"
+}

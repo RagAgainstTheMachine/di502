@@ -1,0 +1,6 @@
+2026 Yılı Cumhurbaşkanlığı Yıllık Programı
+Belge: doc03-yillik-program-2026 | Profil: generic | Kaynak: md
+Chunk: 46 | Parent: 42 | Kaynak PDF sayfası: 465
+Token sınırı: 300; gözlenen: 290
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 474; işaretsiz kaynakta bölüm başlığı kullanılır.

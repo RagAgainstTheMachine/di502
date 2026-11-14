@@ -1,0 +1,6 @@
+TBMM Yapay Zekâ Araştırma Komisyonu Raporu (Sıra Sayısı 260)
+Belge: doc05-yapay-zeka-komisyon-raporu | Profil: generic | Kaynak: md
+Chunk: 574 | Parent: 178 | Kaynak PDF sayfası: 923
+Token sınırı: 300; gözlenen: 287
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 902; işaretsiz kaynakta bölüm başlığı kullanılır.

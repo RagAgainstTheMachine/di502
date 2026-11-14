@@ -1,10 +1,27 @@
-# All RAG parameters live here.
+# Defaults for the selected, text-only E5 + BM25 pipeline.
+# Secrets come from environment variables or the repository-root .env.
+paths:
+  processed: data/processed
 chunking:
-  size:
-  overlap:
+  size: 300  # tokens, including E5 prefix and special tokens
+  overlap: 0
+  generic_merge_peers: false
+  ai_plan_merge_peers: true
 models:
   embedding:
-  llm:
+    name: intfloat/multilingual-e5-small
+    dimensions: 384
+    context_tokens: 512
+  llm: null  # Answer generation is not implemented yet.
+qdrant:
+  collection: ai_plan_text_only
 retrieval:
-  top_k:
-prompt_variant:
+  mode: hybrid
+  top_k: 5
+  candidates: 20
+  expand_parent: false
+  bm25:
+    field: text
+    tokenizer: word
+    lowercase: true
+prompt_variant: null

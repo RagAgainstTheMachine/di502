@@ -4,6 +4,11 @@ venv/
 __pycache__/
 *.pyc
 .env
+.cache/
+output/
+tmp/
+.pytest_cache/
+data/raw/
 deploy/trial/data/
 
 # Spike S4: generated passages and embedding cache

@@ -1,0 +1,20 @@
+{
+  "policy_version": 1,
+  "reviewed_markdown_file": "doc07_tubitak_yapay_zeka_politikasi.md",
+  "reviewed_markdown_sha256": "2585c8d492ceaee5b8491b700455f95fed6b4759aac1899290f5f9baea90dcb7",
+  "excluded_pdf_pages": [
+    1,
+    8
+  ],
+  "retained_pdf_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "citation_callouts_removed": 13,
+  "bibliography_records_archived": 4,
+  "numbered_policy_sections_retained_in_section_metadata": true
+}

@@ -1,0 +1,66 @@
+{
+  "policy_version": 1,
+  "reviewed_markdown_sha256": "3bd3094ae859d387d8225833fde3baba4b0683e1c755ccc165364380f7d7b42a",
+  "reviewed_markdown_file": "doc06_kvkk_rehberi_yapay_zeka.md",
+  "inline_explanatory_footnotes": [
+    "2",
+    "6",
+    "17"
+  ],
+  "footnote_definitions_archived": 33,
+  "citation_only_footnotes_excluded": 30,
+  "excluded_sections": [
+    "İçindekiler",
+    "Rehberin Hazırlanmasında Faydalanılan Kaynaklar"
+  ],
+  "excluded_pages": [
+    1,
+    64
+  ],
+  "glossary_terms": [
+    "Açık veri (open data)",
+    "Algoritma (algorithm)",
+    "Algoritmik karar sistemleri (algorithmic decision systems)",
+    "Büyük dil modeli (large language model)",
+    "Büyük veri (big data)",
+    "Dar/zayıf yapay zekâ (narrow/weak AI)",
+    "Derin kurgu/derin sahte (deep fake)",
+    "Derin öğrenme (deep learning)",
+    "Doğal dil işleme (natural language processing)",
+    "Gözetimli makine öğrenmesi (supervised machine learning)",
+    "Gözetimsiz makine öğrenmesi (unsupervised machine learning)",
+    "Güçlü/yapay genel zekâ (strong AI/artificial general intelligence)",
+    "Halüsinasyon (hallucination)",
+    "İnce ayar (fine-tuning)",
+    "İnsan merkezli yapay zekâ (human-centric AI)",
+    "Kara kutu (black box)",
+    "Komut (prompt)",
+    "Mahremiyet artırıcı teknolojiler (privacy-enhancing technologies)",
+    "Makine öğrenmesi (machine learning)",
+    "Makine öğrenmesi modeli (machine learning model)",
+    "Pekiştirmeli öğrenme (reinforcement learning)",
+    "Profilleme (profiling)",
+    "Sentetik veri (synthetic data)",
+    "Tasarımdan itibaren mahremiyet (privacy by design)",
+    "Temel model (foundation model)",
+    "Varsayılan olarak mahremiyet (privacy by default)",
+    "Yapay sinir ağı (artificial neural network)",
+    "Yapay süper zekâ (artificial superintelligence)",
+    "Yapay zekâ (artificial intelligence-AI)",
+    "Yapay zekâ etmeni (AI agent)",
+    "Yapay zekâ geliştiricisi (AI developer)",
+    "Yapay zekâ modeli (AI model)",
+    "Yapay zekâ servis sağlayıcısı (AI service provider)",
+    "Yapay zekâ sistemi (AI system)",
+    "Yarı gözetimli makine öğrenmesi (semi-supervised machine learning)"
+  ],
+  "footnote_processing": {
+    "excluded_footnotes": 33,
+    "removed_footnote_references": 33,
+    "numbered_units": [],
+    "numbered_unit_label": "Paragraf"
+  },
+  "numbered_questions_in_section_metadata": 15,
+  "source_ordered_step_markers_preserved": 0,
+  "risk_infographic_retained_as_one_paragraph": true
+}

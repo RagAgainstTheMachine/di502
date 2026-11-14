@@ -1,0 +1,21 @@
+{
+  "collection": "ai_plan_text_only",
+  "document_id": "doc03-yillik-program-2026",
+  "document_name": "2026 Yılı Cumhurbaşkanlığı Yıllık Programı",
+  "points": 46,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "source_sha256": "238a1e5dd1312f460fe3a44df00ac7d7000eb1052a7f916224cc470c63ec83c8",
+  "stale_points_removed": 0,
+  "embedding_context": "text_only",
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "paragraph_id",
+    "parent_id",
+    "section",
+    "text"
+  ]
+}

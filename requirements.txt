@@ -1,1 +1,4 @@
-# Pinned dependencies, exact versions only (e.g. package==1.2.3)
+# Runtime: hybrid retrieval and shared configuration.
+qdrant-client==1.20.0
+python-dotenv==1.2.4
+PyYAML==6.0.3

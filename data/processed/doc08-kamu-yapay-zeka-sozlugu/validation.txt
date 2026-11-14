@@ -1,0 +1,6 @@
+Kamu Kurumları İçin Yapay Zekâ Sözlüğü
+Belge: doc08-kamu-yapay-zeka-sozlugu | Profil: generic | Kaynak: md
+Chunk: 107 | Parent: 107 | Kaynak PDF sayfası: 80
+Token sınırı: 300; gözlenen: 200
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 1398; işaretsiz kaynakta bölüm başlığı kullanılır.

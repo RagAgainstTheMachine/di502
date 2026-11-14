@@ -1,0 +1,20 @@
+{
+  "collection": "ai_plan_text_only",
+  "document_id": "doc07-tubitak-yapay-zeka-politikasi",
+  "document_name": "TÜBİTAK Yapay Zekâ Politikası",
+  "points": 20,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "source_sha256": "d0b611d9aae1913c4d1ee6ef3f06fc20b6e7541d2dfc06dba306a25c41034f25",
+  "stale_points_removed": 0,
+  "embedding_context": "text_only",
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "parent_id",
+    "section",
+    "text"
+  ]
+}
