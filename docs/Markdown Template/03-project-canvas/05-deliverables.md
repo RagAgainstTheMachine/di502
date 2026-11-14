@@ -20,7 +20,7 @@
 |---|---|
 | Description: | Record of how long pilot participants take today to answer AI-policy questions, using only the official documents and websites (Objective 1). |
 | Acceptance Criteria: | 1. 10 pilot participants each answer the 10 timed questions of D2. 2. The time for each question and participant is recorded. 3. The median time is reported. 4. Participants are recorded only by a pseudonymous ID. |
-| Due Date: | 18/11/2026 |
+| Due Date: | 14/11/2026 |
 | Stakeholders: | Project Review Committee (AI customer); AI users: pilot participants |
 | Approving Stakeholder(s): | Project Review Committee |
 
@@ -28,7 +28,7 @@
 |---|---|
 | Description: | Dataset Report (course template, after Gebru et al.) for the document collection. |
 | Acceptance Criteria: | 1. Every section of the Dataset Report template is answered. 2. Every document in the collection is extracted to text. 3. Every page cut, entry selection or manual step is documented so it can be repeated. 4. Each document's legal status, official URL and download date are recorded. 5. In a check of 10 randomly chosen passages, at least 9 match the source PDF in wording and numbers. |
-| Due Date: | 18/11/2026 |
+| Due Date: | 14/11/2026 |
 | Stakeholders: | Project team; Quality Team |
 | Approving Stakeholder(s): | Product Owner |
 
@@ -36,7 +36,7 @@
 |---|---|
 | Description: | First working version of the assistant on a local web page, used by the team, with the user stories planned for Sprint 2 in Jira, and its baseline RAG run on the full evaluation set. |
 | Acceptance Criteria: | 1. A team member submits a question in Turkish and receives an answer in Turkish. 2. Every answer that cites a source names the document and the article or section, with a link to its official URL. 3. The interface has no field for personal data. 4. All 40 questions of D2 are run with the configuration committed in `config/rag.yaml` and logged in Weights & Biases. 5. The number of correct answers (by the D2 rule) and of answers citing a supporting source is recorded and linked to its Weights & Biases run. |
-| Due Date: | 18/11/2026 |
+| Due Date: | 14/11/2026 |
 | Stakeholders: | Project team (alpha users); Quality Team |
 | Approving Stakeholder(s): | Product Owner |
 
@@ -44,7 +44,7 @@
 |---|---|
 | Description: | Charter updated after the Sprint 2 review. |
 | Acceptance Criteria: | 1. Every point in the Quality Team's Sprint 2 review has either a change in the charter or a written rebuttal. 2. Every change lists its reason and the affected requirements and test questions. |
-| Due Date: | 18/11/2026 |
+| Due Date: | 14/11/2026 |
 | Stakeholders: | Project Review Committee; Quality Team; project team |
 | Approving Stakeholder(s): | Project Review Committee |
 
