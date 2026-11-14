@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YZ Politika Asistanı</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --line:#e4e7ec; --text:#1f2933; --muted:#667085; --soft:#98a2b3;
+    --primary:#ea580c; --primary-soft:#fff3ea;
+    --info:#1d4ed8; --info-soft:#eef4ff;
+    --warn:#b45309; --warn-soft:#fff8eb;
+    --law:#b42318; --law-soft:#fef3f2;
+    --plan:#175cd3; --plan-soft:#eff8ff;
+    --report:#6941c6; --report-soft:#f4f3ff;
+    --guide:#067647; --guide-soft:#ecfdf3;
+    --inst:#0e7090; --inst-soft:#ecfdff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:Inter,"Segoe UI",system-ui,"DejaVu Sans",sans-serif;color:var(--text);font-size:14px;line-height:1.5}
+  .page{max-width:1440px;margin:0 auto;padding:24px 28px 20px}
+  .header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#ea580c,#f59e0b);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;flex:none}
+  .title{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .subtitle{color:var(--muted);font-size:13px}
+  .tag{font-size:11px;font-weight:600;color:var(--primary);background:var(--primary-soft);border:1px solid #fed7aa;border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+  .hdr-right{display:flex;align-items:center;gap:10px}
+  .counter{font-size:13px;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 12px}
+  .counter b{color:var(--text)}
+  button{font:inherit;cursor:pointer}
+  .btn-ghost{font-size:13px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 14px;color:var(--text)}
+  .btn-ghost:hover{border-color:#cfd4dc}
+  .banner{background:var(--info-soft);border:1px solid #c7d7fe;border-radius:10px;padding:10px 16px;margin-bottom:16px;color:#1e3a8a}
+  .banner b{color:#172554}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:16px;align-items:start}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .chat{display:flex;flex-direction:column;min-height:640px}
+  .panel-label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:12px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+  .panel-label .note{text-transform:none;letter-spacing:0;font-weight:500}
+  .msgs{flex:1;padding:18px 18px 8px;display:flex;flex-direction:column;gap:14px;overflow-y:auto;max-height:70vh}
+  .empty{color:var(--soft);text-align:center;margin:auto;max-width:420px;font-size:13px}
+  .user{align-self:flex-end;max-width:72%;background:var(--primary-soft);border:1px solid #fed7aa;border-radius:14px 14px 4px 14px;padding:10px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+  .bot{align-self:flex-start;max-width:90%;background:#fff;border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:12px 16px;cursor:pointer}
+  .bot.selected{border-color:#c7d7fe;box-shadow:0 0 0 2px var(--info-soft)}
+  .bot p{margin:0 0 8px}
+  .bot p:last-of-type{margin-bottom:0}
+  .cite{display:inline-block;font-size:11px;font-weight:700;color:var(--info);background:var(--info-soft);border:1px solid #c7d7fe;border-radius:6px;padding:0 6px;margin-left:3px;vertical-align:1px}
+  .srcline{border-top:1px dashed var(--line);margin-top:10px;padding-top:8px;font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+  .srcline .n{font-weight:700;color:var(--info)}
+  .chip{display:inline-block;white-space:nowrap;font-size:11px;font-weight:600;border-radius:999px;padding:1px 8px;border:1px solid}
+  .c-plan{color:var(--plan);background:var(--plan-soft);border-color:#b2ddff}
+  .c-report{color:var(--report);background:var(--report-soft);border-color:#d9d6fe}
+  .c-law{color:var(--law);background:var(--law-soft);border-color:#fecdca}
+  .c-guide{color:var(--guide);background:var(--guide-soft);border-color:#abefc6}
+  .c-inst{color:var(--inst);background:var(--inst-soft);border-color:#a5f0fc}
+  .decline{border-left:4px solid var(--warn);background:var(--warn-soft);border-color:#fedf89;cursor:default}
+  .decline .dh{font-weight:700;color:var(--warn);margin-bottom:4px}
+  .notice{margin-top:8px;font-size:13px;background:#fff;border:1px solid #fedf89;border-radius:8px;padding:8px 10px;color:#7a2e0e}
+  .error{border-left:4px solid var(--law);background:var(--law-soft);border-color:#fecdca;cursor:default}
+  .pending{color:var(--muted);cursor:default}
+  .dots::after{content:"…";animation:blink 1.2s infinite}
+  @keyframes blink{50%{opacity:.2}}
+  .meta{font-size:11.5px;color:var(--soft);margin-top:6px}
+  .composer{border-top:1px solid var(--line);padding:14px 18px 12px}
+  .inputrow{display:flex;gap:10px;align-items:flex-end}
+  textarea{flex:1;font:inherit;border:1px solid #d0d5dd;border-radius:10px;padding:11px 14px;resize:none;min-height:46px;max-height:140px;color:var(--text)}
+  textarea:focus{outline:2px solid #fed7aa;border-color:var(--primary)}
+  .send{background:var(--primary);color:#fff;font-weight:600;border:0;border-radius:10px;padding:12px 22px}
+  .send:disabled{opacity:.5;cursor:not-allowed}
+  .privacy{font-size:12px;color:var(--muted);margin-top:8px}
+  .limit{font-size:12.5px;color:var(--warn);margin-top:8px}
+  .srcs{padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+  .src{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .src-top{display:flex;gap:10px;align-items:flex-start}
+  .num{flex:none;width:24px;height:24px;border-radius:7px;background:var(--info-soft);color:var(--info);font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;border:1px solid #c7d7fe}
+  .doc{font-weight:600;line-height:1.35}
+  .loc{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .facts{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0 8px 34px;font-size:12px;color:var(--muted)}
+  .quote{margin-left:34px;font-size:12.5px;color:#344054;background:#f9fafb;border-left:3px solid #d0d5dd;padding:6px 10px;border-radius:0 6px 6px 0}
+  .open{display:inline-block;margin:8px 0 0 34px;font-size:12.5px;font-weight:600;color:var(--info);text-decoration:none}
+  .open span{font-weight:400;color:var(--soft)}
+  .side-empty{padding:18px;color:var(--soft);font-size:13px}
+  @media (max-width:960px){
+    .page{padding:16px}
+    .grid{grid-template-columns:1fr}
+    .chat{min-height:0}
+    .msgs{max-height:none}
+    .user{max-width:88%}
+    .bot{max-width:100%}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="brand">
+      <div class="logo">YZ</div>
+      <div>
+        <div class="title">YZ Politika Asistanı <span class="tag">Alpha</span></div>
+        <div class="subtitle">Türkiye'nin yapay zekâ politikası belgelerinden, kaynak göstererek cevap verir</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="counter">Bu sohbette <b id="count">0 / 5</b> soru</div>
+      <button class="btn-ghost" id="newchat" type="button">＋ Yeni sohbet</button>
+    </div>
+  </div>
+
+  <div class="banner" id="banner">📅 Belge koleksiyonu güncellik tarihi yükleniyor…</div>
+
+  <div class="grid">
+    <div class="panel chat">
+      <div class="panel-label"><span>Sohbet</span><span class="note">Sohbet yalnızca bu sekme açıkken saklanır</span></div>
+      <div class="msgs" id="msgs" aria-live="polite">
+        <div class="empty" id="empty">Türkiye'nin yapay zekâ politikası belgeleriyle ilgili bir soru sorun. Örneğin: “Kamu kurumları yapay zekâ yol haritasını ne kadar sürede hazırlamalı?”</div>
+      </div>
+      <div class="composer">
+        <form class="inputrow" id="form">
+          <textarea id="q" rows="1" maxlength="500" placeholder="Sorunuzu Türkçe yazın… (ör. “Tedbir 968.2'den hangi kurum sorumlu?”)" aria-label="Soru"></textarea>
+          <button class="send" id="send" type="submit">Gönder</button>
+        </form>
+        <div class="limit" id="limit" hidden>Bu sohbette soru sınırına ulaştınız. Devam etmek için “Yeni sohbet” başlatın.</div>
+        <div class="privacy">🔒 Kişisel veri (ad-soyad, T.C. kimlik no, telefon, e-posta) yazmayın. Asistan hukuki tavsiye vermez; yalnızca koleksiyondaki belgelerden cevap verir.</div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <div class="panel-label"><span id="srcTitle">Kaynaklar</span><span class="note" id="srcCount"></span></div>
+        <div id="srcs"><div class="side-empty">Bir cevap geldiğinde kaynakları burada görünür. Önceki bir cevabın kaynaklarını görmek için o cevaba tıklayın.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const state = {limit: 5, asked: 0, answers: 0, busy: false};
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+async function loadConfig() {
+  try {
+    const c = await (await fetch("api/config")).json();
+    state.limit = c.questions_per_chat || 5;
+    const b = $("banner"); b.textContent = "";
+    b.append("📅 Belge koleksiyonu ", el("b", "", c.collection_date), " itibarıyla günceldir. Bu tarihten sonra yayımlanan veya değişen belgeler cevaplara yansımaz.");
+  } catch (e) {
+    $("banner").textContent = "📅 Belge koleksiyonunun tarihi şu an alınamadı.";
+  }
+  updateCounter();
+}
+
+function updateCounter() {
+  $("count").textContent = `${state.asked} / ${state.limit}`;
+  const full = state.asked >= state.limit;
+  $("limit").hidden = !full;
+  $("q").disabled = full || state.busy;
+  $("send").disabled = full || state.busy;
+}
+
+// Answer text: paragraphs, with [n] turned into citation chips. Built with DOM nodes, never innerHTML.
+function renderAnswer(container, text) {
+  for (const para of text.split(/\n\s*\n|\n/).filter(p => p.trim())) {
+    const p = el("p");
+    for (const part of para.split(/(\[\d+\]|\*\*[^*]+\*\*)/)) {
+      const cite = part.match(/^\[(\d+)\]$/);
+      const bold = part.match(/^\*\*([^*]+)\*\*$/);
+      if (cite) p.append(el("span", "cite", cite[1]));
+      else if (bold) p.append(el("b", "", bold[1]));
+      else if (part) p.append(document.createTextNode(part.replace(/\*\*/g, "")));
+    }
+    container.append(p);
+  }
+}
+
+function sourceLine(s) {
+  const d = el("div");
+  d.append(el("span", "n", `[${s.n}] `), `${s.document}${s.location ? " · " + s.location : ""} `);
+  d.append(el("span", `chip c-${s.legal_category}`, s.legal_status));
+  if (s.date) d.append(` ${s.date}`);
+  return d;
+}
+
+function showSources(result, answerNo, bubble) {
+  document.querySelectorAll(".bot.selected").forEach(b => b.classList.remove("selected"));
+  if (bubble) bubble.classList.add("selected");
+  $("srcTitle").textContent = `Kaynaklar · ${answerNo}. cevap`;
+  $("srcCount").textContent = `${result.sources.length} kaynak`;
+  const box = $("srcs"); box.textContent = "";
+  const list = el("div", "srcs");
+  for (const s of result.sources) {
+    const card = el("div", "src");
+    const top = el("div", "src-top");
+    const info = el("div");
+    info.append(el("div", "doc", s.document), el("div", "loc", s.location));
+    top.append(el("div", "num", String(s.n)), info);
+    const facts = el("div", "facts");
+    facts.append(el("span", `chip c-${s.legal_category}`, s.legal_status));
+    if (s.date) facts.append(el("span", "", `Tarih: ${s.date}`));
+    card.append(top, facts, el("div", "quote", `“${s.quote}”`));
+    if (s.url) {
+      const a = el("a", "open", "Resmî metni aç ↗ ");
+      a.href = s.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.append(el("span", "", s.domain));
+      card.append(a);
+    }
+    list.append(card);
+  }
+  box.append(list);
+}
+
+function addBot(result) {
+  const msgs = $("msgs");
+  if (result.status === "decline") {
+    const b = el("div", "bot decline");
+    b.append(el("div", "dh", `⚠ ${result.title}`), document.createTextNode(result.answer), el("div", "notice", result.notice));
+    msgs.append(b);
+    return b;
+  }
+  const b = el("div", "bot");
+  renderAnswer(b, result.answer);
+  const line = el("div", "srcline");
+  result.sources.forEach(s => line.append(sourceLine(s)));
+  b.append(line, el("div", "meta", `${(result.timing.total_ms / 1000).toFixed(1)} sn`));
+  const no = ++state.answers;
+  b.title = "Kaynakları yan panelde göster";
+  b.addEventListener("click", () => showSources(result, no, b));
+  msgs.append(b);
+  showSources(result, no, b);
+  return b;
+}
+
+async function ask(question) {
+  if (state.busy || state.asked >= state.limit) return;
+  state.busy = true; state.asked++;
+  $("empty")?.remove();
+  const msgs = $("msgs");
+  msgs.append(el("div", "user", question));
+  const pending = el("div", "bot pending");
+  pending.append(el("span", "dots", "Belgeler aranıyor ve cevap hazırlanıyor"));
+  msgs.append(pending);
+  updateCounter();
+  msgs.scrollTop = msgs.scrollHeight;
+  try {
+    const r = await fetch("api/ask", {method: "POST", headers: {"Content-Type": "application/json"},
+                                      body: JSON.stringify({question})});
+    const data = await r.json();
+    pending.remove();
+    if (!r.ok) throw new Error(data.error || `Hata ${r.status}`);
+    addBot(data);
+    msgs.scrollTop = msgs.scrollHeight;
+  } catch (e) {
+    pending.remove();
+    msgs.append(el("div", "bot error", e.message || "Bir hata oluştu."));
+    msgs.scrollTop = msgs.scrollHeight;
+    state.asked--;  // a failed question does not count against the limit
+  } finally {
+    state.busy = false;
+    updateCounter();
+    $("q").focus();
+  }
+}
+
+$("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const q = $("q").value.trim();
+  if (!q) return;
+  $("q").value = ""; $("q").style.height = "";
+  ask(q);
+});
+$("q").addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("form").requestSubmit(); }
+});
+$("q").addEventListener("input", e => { e.target.style.height = ""; e.target.style.height = e.target.scrollHeight + "px"; });
+$("newchat").addEventListener("click", () => {
+  if (state.busy) return;
+  state.asked = 0; state.answers = 0;
+  const msgs = $("msgs"); msgs.textContent = "";
+  const empty = el("div", "empty", "Yeni sohbet başladı. Bir soru sorun.");
+  empty.id = "empty";
+  msgs.append(empty);
+  $("srcTitle").textContent = "Kaynaklar"; $("srcCount").textContent = "";
+  $("srcs").textContent = "";
+  $("srcs").append(el("div", "side-empty", "Bir cevap geldiğinde kaynakları burada görünür."));
+  updateCounter();
+  $("q").focus();
+});
+loadConfig();
+</script>
+</body>
+</html>
