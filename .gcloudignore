@@ -1,0 +1,13 @@
+# Files not uploaded by `gcloud run deploy --source .` from the repository root.
+# Everything in .gitignore (including .env with the Qdrant key) is excluded too.
+#!include:.gitignore
+.git/
+.github/
+.jira/
+docs/
+excess_folders/
+tests/
+deploy/
+data/markdown/
+data/processed/
+src/spikes/
