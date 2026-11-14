@@ -1,62 +1,94 @@
 # Evaluation Metrics
 
-This page lists what we measure and how. The targets come from the objectives in the [Project Executive Summary](../Markdown%20Template/03-project-canvas/01-project-executive-summary.md), and the way we judge answers follows spike [S2](../spikes/s2-rag-evaluation-methods.md). Results are written in [results.md](results.md), and every experiment run is logged in Weights & Biases.
+This page lists what we measure, how we measure it, and which objective each measure checks. The targets come from the objectives in the [Project Executive Summary](../Markdown%20Template/03-project-canvas/01-project-executive-summary.md). The metric choices follow the course literature review on building test datasets for RAG [1], and spike [S2](../spikes/s2-rag-evaluation-methods.md) covers the earlier research on judging answers.
 
-We test with evaluation set v1 (D2): 30 in-scope and 10 out-of-scope questions, each with a reference answer and a gold source. Ten of the in-scope questions are also used for the timed test in the pilot. Since the sets are small, we report counts ("24 of 30") rather than percentages.
+We test on the current version of the evaluation set (D2) in `docs/eval/`, described in [eval-set-metadata.md](eval-set-metadata.md). Each row has a question, a gold answer and the gold source that contains it, which is the minimum a test example needs [1]. The set has in-scope questions, which the documents answer, and out-of-scope questions, which the assistant should decline.
 
-## Metrics we report
+The questions and their number can change between versions, so the targets below are rates. A target is met when the share of passing questions reaches it, rounded up to a whole question. We report both the count and the rate, for example "33 of 40 (83%)".
 
-Two of us judge each answer using the correctness rule in D2. If we disagree, we talk it through and note the disagreement.
+## 1. Metrics we report
 
-| Metric | How we count it | Target | Objective |
-|---|---|---|---|
-| Answer correctness | Answers that contain the key points of the reference answer and say nothing beyond the documents | 24 of 30 | O2 |
-| Citation support | Answers where every citation supports the sentence it is attached to | 24 of 30 | O2 |
-| Legal-status accuracy | Answers where the legal status shown for each source matches the document inventory | 27 of 30 | O4 |
-| Declines | Out-of-scope and compliance questions that get a clear decline instead of a guess | 8 of 10 | O5 |
-| Time per task | Median time on the 10 timed questions, compared with the default state (D3) | Half of D3 or less | O1 |
-| Would use again | Pilot participants who say yes in the survey | 7 of 10 | O3 |
+These decide whether objectives O2, O4 and O5 are met. They are computed with DeepEval [3] and RAGAS [2]. Where no built-in metric fits, we use DeepEval's G-Eval [8], which scores an answer against a rule we write, or a small custom metric. A question passes when its score reaches the threshold, and we report the number of questions that pass.
 
-Correctness and citation support are measured at the baseline (D5) and the MVP evaluation (D7). The others are measured in the pilot (D9), together with the business outcomes in the Executive Summary.
+| Metric | Objective | Tool and metric | Scored on | Target |
+|---|---|---|---|---|
+| Answer correctness | O2 | RAGAS `FactualCorrectness` and DeepEval `FaithfulnessMetric` (both must pass) | In-scope questions | 80% |
+| Citation support | O2 | G-Eval: every cited sentence is supported by the passage it cites [7] | In-scope questions | 80% |
+| Legal-status accuracy | O4 | Custom metric: each cited document's label matches the `legal_status` column | In-scope questions | 90% |
+| Decline accuracy | O5 | G-Eval: the response declines and gives no answer, guess or yes/no verdict | Out-of-scope questions | 80% |
 
-## Metrics we use to debug
+With the current set of 40 in-scope and 10 out-of-scope questions, these targets are 32, 32, 36 and 8 passing questions.
 
-These have no target. We log them in each run so we can see what went wrong:
+The decline rule is also run on the in-scope questions to count false declines, so declining everything cannot pass.
 
-- **Retrieval hit at 5:** was the gold source in the top 5 passages? If not, the problem is the search, not the answer.
-- **Wrong declines:** how many in-scope questions were declined. This keeps us from hitting the decline target just by refusing more.
-- **Follow-up accuracy:** did a follow-up question get answered about the right item?
-- **Response time:** median and slowest answers.
-- **Cost per run:** cloud spending for one run of the 40 questions, so we stay inside the $100 credit.
+**Judge setup.** The judge is a self-hosted model, different from the one that answers. The G-Eval rules, thresholds, tool versions and judge model are fixed before the baseline run. Before the baseline, two of us label 10 questions by hand to check that the judge agrees with us.
 
-We may use a language model for a quick score during experiments, but never for the results we report. If we do, it gets the reference answer and is a different model from the one being tested.
+## 2. Retrieval metrics
 
-We also check, before the beta, that no personal data ends up in logs, evaluation files or the index.
+Retrieval is scored separately, so a wrong answer can be traced to the search or to the writing.
 
-## What the literature uses
+- **Recall at 5 and MRR**, computed from the gold source in each row. These need no judge [1].
+- **Context precision and context recall** (RAGAS, DeepEval): are the right passages retrieved and ranked at the top?
+- **Context entities recall** (RAGAS): are the article and measure numbers from the gold answer in the passages? This matters for our documents.
 
-Most RAG papers split evaluation into retrieval, the answer, and citations.
+## 3. Other answer metrics
 
-**Retrieval.** Recall at k, precision at k and nDCG are standard measures [5], and mean reciprocal rank (MRR) comes from question-answering evaluation [7]. We use hit at 5 because it is simple and each question has one gold source. MRR could help when comparing retrieval settings. nDCG needs graded relevance labels, which we don't have.
+- **Answer relevancy** (RAGAS, DeepEval): does the answer address the question?
+- **Turn relevancy and knowledge retention** (DeepEval): are follow-up questions in a chat answered correctly (US-9)?
 
-**The answer.** RAGAS [1] and ARES [2] score faithfulness (are the answer's statements supported by the passages?), answer relevance and context relevance. Our correctness rule covers the first two by hand. Word-overlap scores such as exact match, F1, ROUGE and BLEU are common in older QA work, but they work poorly for free-form Turkish answers, where the same word can take many endings. BERTScore [6] compares meaning instead of words and could be a useful extra check with a multilingual model.
+These have no target; we use them to compare runs.
 
-**Citations.** ALCE [3] separates citation recall (is each statement supported by its citations?) from citation precision (is each citation needed?). Our citation support metric is citation recall.
+## 4. Results by slice
 
-**Declines.** The RGB benchmark [4] calls this "negative rejection": declining when the retrieved passages hold no answer. It also tests noise robustness and combining information from several documents, which our multi-document questions cover.
+An overall score can hide a weak group of questions, so every run is also reported per slice [1]:
+
+- **Question type:** factual, procedural, conditional/multi-hop, follow-up and out-of-scope (the `type` column).
+- **User story:** the `story_tag` column, so a weak result points to the story it affects.
+- **Single vs. multi-document:** questions whose gold source names one document vs. several.
+
+## 5. Hard cases
+
+A test set needs questions the assistant should not simply answer [1]. Ours are the out-of-scope questions in D2. The literature names a few kinds, and we check how many of each the set contains:
+
+| Kind | Example for our corpus | Expected behaviour |
+|---|---|---|
+| Unanswerable | A question about a topic none of the eight documents covers | Say it cannot answer from the documents (US-10) |
+| False premise | "When did Türkiye's AI law come into force?" (there is no AI-specific law yet) | Correct the assumption instead of inventing a date [6] |
+| Not yet prepared | Details that a plan says will be prepared later | Quote the passage and say the details are not in the documents (US-11) |
+| Compliance judgement | "Does my institution's plan comply with the Action Plan?" | Give no verdict; state what the documents say (US-12) |
+| Time-sensitive | A question about the current legal state | Answer from the collection and show the collection date (US-8) [6] |
+
+It is hard to prove that no document answers an "unanswerable" question [4], so each one is checked by hand against the eight documents.
+
+## 6. Checking the test set itself
+
+The scores are only as good as the test set. Before the baseline run we check three things [1]:
+
+1. **Is it correct?** Every gold answer is stated in its gold source, and every question is clear without seeing the document. A second member checks each row (the `checked_by` column).
+2. **Is it really multi-document?** We ask each multi-document question with only one of its gold documents, then with none. If it is still answered correctly, it has a shortcut and is not a real multi-document question [5].
+3. **Is it balanced?** We count questions per type, question word (who, what, when, which, why) and user persona, and compare them with what the users in the Story Map would ask.
+
+## 7. Running the evaluation
+
+- **Each run** goes through the normal application flow on the full set and is logged in Weights & Biases with its Git commit, settings, per-question scores and totals. Full questions, answers and prompts stay in the project files.
+- **Regression tests:** DeepEval tests can fail when a metric drops below a threshold and can run in GitHub Actions [3]. We set the thresholds from the baseline run.
+- **Data stays with us:** we do not use the DeepEval cloud platform or any other hosted service that would receive our questions and answers.
+- **Versions are pinned:** both tools change their interfaces between versions [1].
 
 ## References
 
-[1] S. Es, J. James, L. Espinosa Anke and S. Schockaert, "RAGAs: Automated Evaluation of Retrieval Augmented Generation," in *Proc. EACL 2024: System Demonstrations*, St. Julians, Malta, 2024, pp. 150–158.
+[1] T. Taskaya Temizel, "Building Test Datasets for RAG: Methods, Tools and Quality Control," literature review (slides), 2026.
 
-[2] J. Saad-Falcon, O. Khattab, C. Potts and M. Zaharia, "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems," in *Proc. NAACL 2024 (Volume 1: Long Papers)*, Mexico City, Mexico, 2024, pp. 338–354.
+[2] RAGAS, "Documentation: Available Metrics, Testset Generation, Experimentation, Multi-turn Evaluation." docs.ragas.io.
 
-[3] T. Gao, H. Yen, J. Yu and D. Chen, "Enabling Large Language Models to Generate Text with Citations," in *Proc. EMNLP 2023*, Singapore, 2023, pp. 6465–6488.
+[3] DeepEval, "Documentation: Metrics, Golden Synthesizer, Conversation Simulator, Evaluation." deepeval.com/docs.
 
-[4] J. Chen, H. Lin, X. Han and L. Sun, "Benchmarking Large Language Models in Retrieval-Augmented Generation," in *Proc. AAAI 2024*, vol. 38, no. 16, 2024, pp. 17754–17762.
+[4] S. Filice, G. Horowitz, D. Carmel, Z. Karnin, L. Lewin-Eytan and Y. Maarek, "Generating Diverse Q&A Benchmarks for RAG Evaluation with DataMorgana," arXiv:2501.12789, 2025.
 
-[5] C. D. Manning, P. Raghavan and H. Schütze, *Introduction to Information Retrieval*, Cambridge University Press, 2008, ch. 8.
+[5] S. Min, E. Wallace, S. Singh, M. Gardner, H. Hajishirzi and L. Zettlemoyer, "Compositional Questions Do Not Necessitate Multi-hop Reasoning," in *Proc. ACL 2019*, 2019.
 
-[6] T. Zhang, V. Kishore, F. Wu, K. Q. Weinberger and Y. Artzi, "BERTScore: Evaluating Text Generation with BERT," in *Proc. ICLR 2020*, 2020.
+[6] X. Yang et al., "CRAG – Comprehensive RAG Benchmark," in *Proc. NeurIPS 2024 Datasets and Benchmarks Track*, 2024.
 
-[7] E. M. Voorhees, "The TREC-8 Question Answering Track Report," in *Proc. Eighth Text REtrieval Conference (TREC-8)*, NIST, 1999, pp. 77–82.
+[7] T. Gao, H. Yen, J. Yu and D. Chen, "Enabling Large Language Models to Generate Text with Citations," in *Proc. EMNLP 2023*, 2023, pp. 6465–6488.
+
+[8] Y. Liu, D. Iter, Y. Xu, S. Wang, R. Xu and C. Zhu, "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment," in *Proc. EMNLP 2023*, 2023.
