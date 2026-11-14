@@ -1,13 +1,13 @@
 # Separate document ingestion from request-time retrieval
 
-Status: ingestion implemented; retrieval follows in a separate branch · Date: 2026-11-14
+Status: implemented baseline · Date: 2026-11-14
 
 The production code previously ran from a standalone homework folder. This repo
 needs reproducible document preparation and an importable retriever for the
 future question-answering application.
 
 Document conversion, source cleaning, chunking, validation, upload and index
-setup live in `src/ingestion/`. Request-time search will be added in `src/retrieval/` by the dependent retrieval branch.
+setup live in `src/ingestion/`. Request-time search lives in `src/retrieval/`.
 Common configuration, payload projection and connection/schema helpers live
 in `src/shared/`. Retrieval has no dependency on ingestion or Docling. Separate
 requirement files keep parsing dependencies out of the retrieval runtime.

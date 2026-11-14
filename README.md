@@ -12,7 +12,7 @@ Details: [Project Executive Summary](docs/Markdown%20Template/03-project-canvas/
 
 ## Status
 
-Document ingestion is available on this branch. Hybrid retrieval follows in the separate `feature/hybrid-retrieval` branch; answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 18/11/2026.
+Document ingestion and hybrid retrieval are available. Grounded answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 18/11/2026.
 
 ## Install
 
@@ -29,10 +29,11 @@ pip install -r requirements-ingestion.txt
 Copy `.env.example` to `.env` in the repository root and fill in the existing Qdrant connection values. Then:
 
 ```bash
+python -m src.retrieval.search "Data Sovereignty nedir?" --limit 3
 python -m src.ingestion.index --output data/processed --all --dry-run
 ```
 
-Seven documents and 1183 points are already indexed in `ai_plan_text_only`. This branch prepares and uploads documents and configures the text BM25 index; request-time search is delivered by the separate retrieval branch. The web interface is not available yet.
+Search defaults to hybrid (E5 + BM25 + RRF), with BM25 on `text` only and parent expansion off. Seven documents and 1183 points are already indexed in `ai_plan_text_only`; no reparse or upload is needed to search them. The web interface is not available yet.
 
 See [pipeline instructions](docs/pipeline/README.md) and the [branch delivery plan](docs/pipeline/branch-plan.md).
 
@@ -41,6 +42,7 @@ See [pipeline instructions](docs/pipeline/README.md) and the [branch delivery pl
 | Path | Contents |
 | --- | --- |
 | `src/ingestion/` | PDF/MD preparation, chunking, validation and Qdrant upload |
+| `src/retrieval/` | Importable hybrid search for the future LLM layer |
 | `src/shared/` | Configuration, payload and Qdrant helpers |
 | `config/rag.yaml` | All parameters: chunking, models, top-k, prompt variant |
 | `prompts/` | Prompt templates, one file per template |
