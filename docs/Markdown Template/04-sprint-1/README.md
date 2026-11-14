@@ -1,9 +1,15 @@
 # Sprint 1 Welcome Page
 
-Welcome.
+This is the main page of Sprint 1 (14/10/2026 – 27/10/2026) of the Rag Against The Machine team.
 
-This is the main page of “Sprint 1” made by the ‘XXX’ team.
+## Summary
 
-Please present a brief summary of what is done in the 1st sprint.
+Sprint 1 was the chartering sprint. The team filled every page of the [Project Canvas](../03-project-canvas/README.md) for Project Charter v1 (D1), wrote the first user stories, and drafted the system architecture.
 
-In this sprint, you are going to use the template given for [Project Canvas](04-project-canvas.md) .
+- **Project Canvas:** Executive Summary, Milestones, Assumptions & Constraints, Major Activities, Deliverables, Dependencies, Cost & Funding, Project Organization, Facilities & Resources, Release Plan and Risks were filled and reviewed.
+- **User stories:** written for epics E1–E3, then revised twice (v2 and v3, 14 stories in 5 epics).
+- **Architecture:** a first System Architecture Design Document with six proposed decisions.
+- **Research:** three spike notes on Turkish RAG, judging RAG answers, and chunking.
+- **Tooling:** Jira, Confluence and GitHub connected; Markdown pages sync to Confluence and the backlog syncs to Jira.
+
+All 20 Jira tasks in the sprint were completed. Details are in the [Sprint 1 report](https://github.com/RagAgainstTheMachine/di502/blob/main/docs/sprints/sprint-1.md), the [burndown chart](../04-burndown-chart.md#sprint-1) and the [retrospective](02-sprint-1-retrospective.md).
