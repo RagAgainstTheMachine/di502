@@ -1,0 +1,54 @@
+{
+  "title": "Türkiye Yapay Zekâ Eylem Planı 2026-2030",
+  "source_file": "doc01_yapay_zeka_eylem_plani.pdf",
+  "source_sha256": "66a697dc592dbb7620fd383bac73559b006bbd4a48f848d4e3bd61d444c4b1dd",
+  "page_count": 44,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "max_tokens": 300,
+  "chunk_count": 196,
+  "parent_count": 95,
+  "validation": {
+    "errors": [],
+    "actions": 16,
+    "glossary_terms": 38,
+    "max_observed_tokens": 270,
+    "parent_text_reconstruction": true
+  },
+  "files": {
+    "chunks.jsonl": "184214c5202c744b9cc295bddc3ab8eb53166a1ca2b4d1592a95a37a4619c83b",
+    "parents.jsonl": "ff148e4a114d793cb92862931af03b6bf5a866bbdd5274e3d1ca3b8f2bc72081",
+    "excluded_chunks.jsonl": "06f43e25fea7ae2b95dab21a070b1872858161632ba30d3605c2767efc9d69db",
+    "excluded_parents.jsonl": "3bad844873322b9fd465674f51c69b9d8371306d81648c9123cb266a07926957"
+  },
+  "packages": {
+    "docling": "2.145.0",
+    "docling-core": "2.105.0",
+    "transformers": "4.57.6",
+    "qdrant-client": "1.20.0"
+  },
+  "document_id": "turkiye_ai_eylem_plani_2026_2030",
+  "embedding_context": "text_only",
+  "derived_from": {
+    "kind": "validated_pdf_chunks",
+    "chunks_sha256": "7a560476a206f443971edf4a70f997c6ccc6f66dcd23a9a9f6f81a85aca7cbff"
+  },
+  "retrieval_review": {
+    "policy_version": 1,
+    "excluded_total": 7
+  },
+  "profile": "ai-plan",
+  "source_format": "pdf",
+  "source_path": "data/raw/doc01_yapay_zeka_eylem_plani.pdf",
+  "payload_fields": [
+    "action_id",
+    "chunk_index",
+    "document_name",
+    "kind",
+    "page_end",
+    "page_start",
+    "parent_id",
+    "section",
+    "text"
+  ]
+}

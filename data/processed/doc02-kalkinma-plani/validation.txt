@@ -1,0 +1,6 @@
+On İkinci Kalkınma Planı (2024–2028)
+Belge: doc02-kalkinma-plani | Profil: generic | Kaynak: md
+Chunk: 48 | Parent: 48 | PDF sayfası: 0
+Token sınırı: 300; gözlenen: 219
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 137; işaretsiz kaynakta bölüm başlığı kullanılır.

@@ -1,0 +1,6 @@
+TÜBİTAK Yapay Zekâ Politikası
+Belge: doc07-tubitak-yapay-zeka-politikasi | Profil: generic | Kaynak: md
+Chunk: 20 | Parent: 16 | Kaynak PDF sayfası: 8
+Token sınırı: 300; gözlenen: 280
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 51; işaretsiz kaynakta bölüm başlığı kullanılır.

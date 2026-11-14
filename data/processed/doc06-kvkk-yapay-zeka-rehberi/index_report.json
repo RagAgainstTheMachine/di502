@@ -1,0 +1,20 @@
+{
+  "collection": "ai_plan_text_only",
+  "document_id": "doc06-kvkk-yapay-zeka-rehberi",
+  "document_name": "Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi (15 Soruda) — KVKK Yayın No. 113",
+  "points": 192,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "source_sha256": "eac8fa296e45a0287f106b1e367d279df581263bcbab51d9067f97e2c215620e",
+  "stale_points_removed": 0,
+  "embedding_context": "text_only",
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "parent_id",
+    "section",
+    "text"
+  ]
+}

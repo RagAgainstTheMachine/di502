@@ -1,0 +1,87 @@
+{
+  "format_version": 2,
+  "document_id": "doc08-kamu-yapay-zeka-sozlugu",
+  "title": "Kamu Kurumları İçin Yapay Zekâ Sözlüğü",
+  "profile": "generic",
+  "source_format": "md",
+  "source_path": "data/markdown/doc08_kamu_kurumlari_yapay_zeka_sozlugu.md",
+  "source_metadata": {
+    "doc_id": "Doc08",
+    "title": "Kamu Kurumları İçin Yapay Zekâ Sözlüğü",
+    "source_pdf": "doc08_kamu_kurumlari_yapay_zeka_sozlugu.pdf",
+    "source_pdf_sha256": "6d6892b160b3751b0d59a6d0fe6f5241e5245101493de75b598fc5ed8173b3ee",
+    "source_pdf_pages": 80,
+    "tool": "PyMuPDF 1.28.2 (MuPDF 1.28.2), Python 3.10.12",
+    "extractor": "src/extraction/extract.py (sha256 377ed8abb1aff0b3…)",
+    "extraction_date": "2026-11-02",
+    "part_used_inventory": "107 term entries (sections A–G)",
+    "pages_used": "PDF pages 9–76",
+    "selection_rule": "Term entries only: a heading line matching ENTRY_REGEX ('A1 - Türkçe / English') opens an entry; field labels are the white label lines ending left of x = 145 pt; value lines are the 9 pt lines right of x = 125 pt, grouped by vertical gaps and matched to the label whose centre lies inside the group. Section intro texts, foreword, contents (pp. 1-8), KAYNAKÇA (pp. 77-78) and blank pp. 79-80 are not used. Turkish name = heading text before the first ' / ', English name = the rest.",
+    "page_marker_format": "<!-- page: pdf N | printed M -->  (printed = number printed on the page, or none)",
+    "verbatim": "text-layer only; line breaks become spaces; a line-end hyphen is removed only when the joined word occurs elsewhere in the same PDF (see report)",
+    "status": "reviewed_against_pdf",
+    "selected_units": 107,
+    "review_date": "2026-11-10",
+    "source_markdown_sha256": "e4ec3b387f8a0661ca40326b90813d1612f82fd3a887571bdb3d059d2cdba112",
+    "review_scope": "A–G bölümlerindeki 107 terim; kapak, ön söz, içindekiler, bölüm giriş açıklamaları ve kaynakça mevcut seçkinin dışında.",
+    "review_tools": "pypdfium2 grid-cell extraction; independent pypdf text comparison; source page images",
+    "review_notes": "428 açıklama hücresi ve 107 başlık doğrulandı. A21, B9, C7, D10 ve G11 İngilizce adları kaynakta alt satıra taşan kısımlarla tamamlandı. Yedi bölüm başlangıcının basılı sayfa numarası düzeltildi. Üç metinsiz kırmızı ara sayfa doğru işaretlendi."
+  },
+  "blocks_with_page_annotations": 1398,
+  "source_file": "doc08_kamu_kurumlari_yapay_zeka_sozlugu.md",
+  "source_sha256": "36529d11278ea85227147bb659961f2109499e3751dcbb033c195fe278d4a0f2",
+  "page_count": 0,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "max_tokens": 300,
+  "merge_peers": true,
+  "embedding_context": "text_only",
+  "compact_payload": true,
+  "payload_fields": [
+    "document_name",
+    "page_end",
+    "page_start",
+    "section",
+    "text"
+  ],
+  "retrieval_review": {
+    "policy_version": 1,
+    "excluded_total": 0
+  },
+  "chunk_count": 107,
+  "parent_count": 107,
+  "validation": {
+    "errors": [],
+    "actions": 0,
+    "glossary_terms": 0,
+    "max_observed_tokens": 200,
+    "parent_text_reconstruction": true,
+    "retrieval_exclusions": 0,
+    "headings_used_as_context": 115,
+    "body_blocks_preserved": true,
+    "pages_without_extracted_blocks": []
+  },
+  "files": {
+    "chunks.jsonl": "31d194090e1893a192fe14ae56df0ab9f14493dff58d7949d1421a22558ec2d9",
+    "parents.jsonl": "45d7a3aa1f8584c2d7cf0f9cb449daa1bfc75bba4777000a27b50edd7b1fadf9",
+    "excluded_chunks.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "excluded_parents.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "chunking_source.md": "f154d5a90fdf2a39c547905e8d697270b6d917d5955670f7eba1a7a4cf5dab87",
+    "excluded_footnotes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "markdown_preprocessing.json": "1f48eb6ce25a6d0ddc420d9068a5724612fdca74e4064548bf82dd0173032753"
+  },
+  "packages": {
+    "docling": "2.145.0",
+    "docling-core": "2.105.0",
+    "transformers": "4.57.6",
+    "qdrant-client": "1.20.0"
+  },
+  "markdown_options": {},
+  "markdown_preprocessing": {
+    "excluded_footnotes": 0,
+    "removed_footnote_references": 0,
+    "numbered_units": [],
+    "numbered_unit_label": "Paragraf"
+  },
+  "source_pdf_page_count": 80
+}

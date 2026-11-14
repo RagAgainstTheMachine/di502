@@ -1,0 +1,26 @@
+{
+  "collection": "ai_plan_text_only",
+  "document_id": "doc05-yapay-zeka-komisyon-raporu",
+  "document_name": "TBMM Yapay Zekâ Araştırma Komisyonu Raporu (Sıra Sayısı 260)",
+  "points": 574,
+  "model": "intfloat/multilingual-e5-small",
+  "dimensions": 384,
+  "source_sha256": "90139ebd1edac75514bfca8c100a7d41c668b2318f97b3d70238b6a450306f25",
+  "stale_points_removed": 0,
+  "embedding_context": "text_only",
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "paragraph_id",
+    "parent_id",
+    "section",
+    "text"
+  ],
+  "verified_points": 574,
+  "other_points": 290,
+  "other_payloads_and_vectors_unchanged": true,
+  "other_points_sha256": "065a33314f0f72c00fbde147465a939d36bc972c21086db4d89bc7ab6a1449ed",
+  "collection_total_points": 864
+}

@@ -1,0 +1,3 @@
+Chunk: 196 | Parent: 95
+Review: 7 çıkarıldı; gövde ve ID değişikliği yok.
+Hatalar: 0

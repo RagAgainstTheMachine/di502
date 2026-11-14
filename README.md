@@ -12,7 +12,7 @@ Details: [Project Executive Summary](docs/Markdown%20Template/03-project-canvas/
 
 ## Status
 
-Sprint 1: charter and design. The alpha prototype (local web page) is due 18/11/2026.
+Document ingestion is available on this branch. Hybrid retrieval follows in the separate `feature/hybrid-retrieval` branch; answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 18/11/2026.
 
 ## Install
 
@@ -20,19 +20,31 @@ Sprint 1: charter and design. The alpha prototype (local web page) is due 18/11/
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+# For document preparation and the full test suite:
+pip install -r requirements-ingestion.txt
 ```
 
 ## Run
 
-Not available yet; instructions will be added with the alpha prototype.
+Copy `.env.example` to `.env` in the repository root and fill in the existing Qdrant connection values. Then:
+
+```bash
+python -m src.ingestion.index --output data/processed --all --dry-run
+```
+
+Seven documents and 1183 points are already indexed in `ai_plan_text_only`. This branch prepares and uploads documents and configures the text BM25 index; request-time search is delivered by the separate retrieval branch. The web interface is not available yet.
+
+See [pipeline instructions](docs/pipeline/README.md) and the [branch delivery plan](docs/pipeline/branch-plan.md).
 
 ## Repository structure
 
 | Path | Contents |
 | --- | --- |
-| `src/` | Code |
+| `src/ingestion/` | PDF/MD preparation, chunking, validation and Qdrant upload |
+| `src/shared/` | Configuration, payload and Qdrant helpers |
 | `config/rag.yaml` | All parameters: chunking, models, top-k, prompt variant |
 | `prompts/` | Prompt templates, one file per template |
+| `data/markdown/`, `data/processed/` | Reviewed sources and ready chunk bundles |
 | `data/manifest.csv` | Source URL, licence, download date and hash of each document |
 | `requirements.txt` | Pinned dependencies (exact versions) |
 | `ai-bom.yaml` | AI Bill of Materials (from Sprint 2) |

@@ -1,0 +1,6 @@
+Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi (15 Soruda) — KVKK Yayın No. 113
+Belge: doc06-kvkk-yapay-zeka-rehberi | Profil: generic | Kaynak: md
+Chunk: 192 | Parent: 65 | Kaynak PDF sayfası: 64
+Token sınırı: 300; gözlenen: 250
+Hatalar: 0; parent metinleri child'lardan eksiksiz yeniden oluşturuldu.
+Kaynak sayfa işaretiyle eşleşen Markdown bloğu: 468; işaretsiz kaynakta bölüm başlığı kullanılır.

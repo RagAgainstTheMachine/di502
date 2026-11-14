@@ -1,0 +1,54 @@
+{
+  "source_markdown_sha256": "90139ebd1edac75514bfca8c100a7d41c668b2318f97b3d70238b6a450306f25",
+  "source_scope_pdf_pages": [
+    642,
+    806
+  ],
+  "chunk_count": 574,
+  "parent_count": 178,
+  "recommendation_ids": 100,
+  "recommendation_chunks": 100,
+  "narrative_chunks": 474,
+  "max_embedding_tokens_including_e5_prefix": 287,
+  "min_embedding_tokens": 34,
+  "text_only": true,
+  "all_165_source_pages_represented": true,
+  "all_body_blocks_have_source_pages": true,
+  "markdown_visible_text_matches_docling_blocks": true,
+  "all_100_recommendations_match_reviewed_markdown": true,
+  "parent_text_reconstruction": true,
+  "excluded_source_citation_footnotes": 229,
+  "heading_only_or_toc_chunks": 0,
+  "recommendation_52_term": null,
+  "payload_fields": [
+    "chunk_index",
+    "document_name",
+    "page_end",
+    "page_start",
+    "paragraph_id",
+    "parent_id",
+    "section",
+    "text"
+  ],
+  "payload_examples": {
+    "recommendation_52": {
+      "document_name": "TBMM Yapay Zekâ Araştırma Komisyonu Raporu (Sıra Sayısı 260)",
+      "paragraph_id": "52",
+      "section": "BEŞİNCİ BÖLÜM — SONUÇ VE ÖNERİLER / 5.2 SONUÇ VE ÖNERİ TABLOSU / RİSK YÖNETİMİ VE DENETİM ÖNERİLERİ",
+      "text": "52.\n\nYZ’nin hem sistem seviyesinde hem de etkileşime geçtiği kişilere karşı şeffaflığını ve açıklanabilirliğini sağlayacak önlemler alınması, açıklanabilir YZ tedbirlerinin yaygınlaştırılması ve YZ ile etkileşime geçen kişilerin bu etkileşimin farkında olmalarına imkân tanıyacak tasarım ve bilgilendirme çerçevelerinin geliştirilmesi. — Vade: —",
+      "page_start": 799,
+      "page_end": 799
+    },
+    "narrative": {
+      "document_name": "TBMM Yapay Zekâ Araştırma Komisyonu Raporu (Sıra Sayısı 260)",
+      "section": "4.3 TÜRKİYE’DE YAPAY ZEKÂ BAĞLAMINDA UYGULANABİLECEK MEVCUT HUKUKİ ÇERÇEVE",
+      "text": "Raporun önceki bölümlerinde görüldüğü gibi YZ’ye ilişkin regülasyon ve hukuki düzenleme tartışmaları hem uluslararası hem de ulusal düzlemde hızlı şekilde devam etmektedir. Türkiye’nin de bu tartışmaları izlemesi ve gerekli olduğu ölçüde YZ’nin regülasyonuna ilişkin adımlar atması YZ’nin avantajlarından etkin şekilde yararlanırken aynı zamanda zararlarından korunabilmesi ve bu alanda atılım yapabilmesi için gereklidir. Daha önceki örneklerde de görüldüğü üzere regülasyon adımları her zaman yeni bir kanuni ya da genel anlamda hukuki düzenleme yapılması anlamına gelmemektedir. Bazı alanlarda hukuki düzenleme yapmanın gerektireceği insan gücü, zaman ve harcama maliyetlerine katlanılmasına gerek kalmadan mevcut düzenleme çerçevesinin sağladığı esneklik kapsamında YZ’nin regülasyonuna ilişkin adım atmak mümkün olabilmektedir. Böyle bir yöntem bazı durumlarda sadece daha kolay ya da etkili değil aynı zamanda oldukça dinamik bir teknolojiye ilişkin hızlıca yapılacak hukuki değişikliklerin getireceği olası çatışmalardan korunmak için gerekli de olabilmektedir.",
+      "parent_id": "doc05-yapay-zeka-komisyon-raporu:section_0001",
+      "chunk_index": 0,
+      "page_start": 642,
+      "page_end": 642
+    }
+  },
+  "cloud_upload_performed": true,
+  "collection": "ai_plan_text_only"
+}
