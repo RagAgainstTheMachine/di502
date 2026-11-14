@@ -12,7 +12,7 @@ Details: [Project Executive Summary](docs/Markdown%20Template/03-project-canvas/
 
 ## Status
 
-Document ingestion and hybrid retrieval are available. Grounded answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 18/11/2026.
+Document ingestion and hybrid retrieval are available. Grounded answer generation and the web interface are not implemented yet. The alpha prototype (local web page) is due 14/11/2026.
 
 ## Install
 
