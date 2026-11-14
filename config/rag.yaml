@@ -12,7 +12,13 @@ models:
     name: intfloat/multilingual-e5-small
     dimensions: 384
     context_tokens: 512
-  llm: null  # Answer generation is not implemented yet.
+  llm:  # Served by Ollama; the server address comes from the LLM_URL environment variable.
+    name: qwen3:8b
+    think: false  # qwen3 reasoning mode off: faster, and citations stay parseable
+    temperature: 0
+    context_tokens: 8192
+    max_tokens: 500
+    timeout_seconds: 280
 qdrant:
   collection: ai_plan_text_only
 retrieval:
@@ -24,4 +30,7 @@ retrieval:
     field: text
     tokenizer: word
     lowercase: true
-prompt_variant: null
+prompt_variant: answer_v1  # prompts/answer_v1.txt
+app:
+  questions_per_chat: 5
+  quote_chars: 450  # length of the source excerpt on a source card
